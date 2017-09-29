@@ -1,0 +1,109 @@
+Perception presents:
+------------ Understanding The X-Modem File Transfer Protocol ---------------
+
+		by Em Decay [last edit 2013 by Craig Scratchley for 
+		correctness and clarity.  Replaced all instances of the word 
+		"section" with the word "chunk" to match the wording used in
+		the Christensen document.  Original available at 
+		http://www.programmersheaven.com/download/2167/0/ZipView.aspx]
+
+This has to be one of the most internationally accepted protocols for upload-
+ ing and downloading binary and text files.  It is fairly straight-forward as
+ to how it is set up and there are some error checking capabilities.
+
+
+--- Before you begin ---
+
+Things you need to know beforehand...
+
+The following terms are simply ascii codes:
+    SOH = chr(1)  = CTRL-A = [Start of Header -- wcs]
+    EOT = chr(4)  = CTRL-D = End of Transmission
+    ACK = chr(6)  = CTRL-F = Positive Acknowledgement
+    NAK = chr(21) = CTRL-U = Negative Acknowledgement
+    CAN = chr(24) = CTRL-X = Cancel
+[         chr(26) = CTRL-Z -- wcs]
+
+In order to send the file, you must first divide it into 128 byte chunks.  
+Bytes 0-127 of the file make up the first chunk, bytes 128-255
+ make up the second chunk, etc.
+
+The block number sent is derived from the number of the chunk.  If the chunk
+ number is greater than 255, then subtract 256 repeatedly until the number is
+ between 0 and 255.  For example, if you were sending chunk 731, then you
+ would send block number 731 - 256 - 256 = 219.
+
+The 1's complement of a byte (to make life easy) is simply 255 minus the
+ byte.  For example, if you had to take the 1's complement of 142, the answer
+ would be 255 - 142 = 133.
+
+The checksum is based on the value of all the bytes in the chunk added together.  For
+ example, if the [last] five bytes in the chunk were 45, 12, 64, 236, 173 and the 
+ other 123 bytes were zeroes, the sum would be 0+0+...+0+45+12+64+236+173 = 530.
+ However, one must repeatedly subtract 256 from the sum until the result, the 
+ checksum, is between 0 and 255.  In this case, the checksum
+ would be 530 - 256 - 256 = 18.
+
+The first byte the receiver sends is referred to as the NCGbyte.
+
+Provided that you aren't lost already, here is what happens next.  The steps
+ below describe who sends what when :)
+
+
+--- The Actual Transfer ---
+
+The sender waits until the receiver sends a NAK byte.  The NAK byte
+ is the signal that the receiver is ready to start.  This byte is referred
+ to as the NCGbyte.  If the receiver takes too long [...] then 
+ the sender will stop waiting or "Time Out".  If this happens, then the 
+ file transfer must [be restarted by the user].
+
+For each chunk...
+
+    The sender sends:
+
+    1. an SOH byte                             {1 byte}
+    2. the block number                        {1 byte}
+    3. the 1's complement of the block number  {1 byte}
+    4. the chunk                            {128 bytes}
+    5. the checksum                            {1 byte}
+    The above five things are called the block.
+
+    The receiver:
+
+    1. adds the block number and the 1's complement of it together to make
+	 sure that they add up to 255.  if they don't --> NAK the block
+    2. if step 1 is okay, ensures that the block number sent is either 
+	 the block number expected 
+	 or the number of the error-free block previously received.  If not, 
+	 cancel the transfer by sending 8 CAN bytes. (If the third block sent 
+	 has a '4' as the second byte, something is wrong)
+    3. adds up all the bytes in the received chunk together --> the SUM
+    4. compares the least significant byte of the SUM with the checksum
+    5. if everything looks ok (LSB(SUM)=checksum), then the receiver appends the
+	 bytes in the chunk to the file being [assembled].  The 
+	 receiver then sends an ACK byte which tells the sender to send the
+	 next block.
+       if the sums do not match then the receiver sends an NAK byte which
+	 tells the sender to send the same block it just sent over again.
+
+When the sender sends an EOT byte instead of an SOH byte, the receiver
+ sends a NAK byte.  If the sender sends another EOT immediately after that,
+ the receiver sends an ACK byte and the transfer is complete.
+
+Another thing, the receiver can cancel the transfer by sending
+ 8 CAN bytes instead of an ACK or a NAK.  The sender can only cancel between 
+ blocks by sending 8 CAN
+ bytes.  2 CAN bytes in a row must be received at an appropriate time in 
+ order to know that the other end wants to cancel.
+
+
+--- Wrap Up ---
+
+Hopefully, you were able to follow along. :)  If not, you can e-mail me at
+ em_decay@norlink.net  and I will try to clarify it for you.  Have fun :)
+
+Perception:    Em Decay -- Mark Korhonen
+	       Cmf ------- Chris Fillion
+
+Written on Dec.28/95

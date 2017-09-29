@@ -1,0 +1,27 @@
+18:19:11 **** Incremental Build of configuration Debug for project Ensc351 ****
+make all 
+make: Nothing to be done for 'all'.
+18:19:12 **** Incremental Build of configuration Debug for project Ensc351Part2 ****
+make all 
+Building file: ../src/SenderX.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++1y -I"/media/sf_U_ensc251/workspace-cpp-Neon3/Ensc351" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/SenderX.d" -MT"src/SenderX.o" -o "src/SenderX.o" "../src/SenderX.cpp"
+Finished building: ../src/SenderX.cpp
+ 
+Building target: Ensc351Part2
+Invoking: GCC C++ Linker
+g++ -L"/media/sf_U_ensc251/workspace-cpp-Neon3/Ensc351/Debug" -o "Ensc351Part2"  ./src/Ensc351Part2.o ./src/Medium.o ./src/PeerX.o ./src/ReceiverX.o ./src/SenderX.o ./src/myIO.o   -lEnsc351 -lpthread
+Finished building target: Ensc351Part2
+ 
+18:19:15 **** Incremental Build of configuration Debug for project Ensc351 ****
+make all 
+make: Nothing to be done for 'all'.
+18:19:15 **** Incremental Build of configuration Debug for project Ensc351Part2 ****
+make all 
+make: Nothing to be done for 'all'.
+18:19:24 **** Incremental Build of configuration Debug for project Ensc351 ****
+make all 
+make: Nothing to be done for 'all'.
+18:19:24 **** Incremental Build of configuration Debug for project Ensc351Part2 ****
+make all 
+make: Nothing to be done for 'all'.
