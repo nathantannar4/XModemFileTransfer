@@ -54,10 +54,10 @@ void ReceiverX::receiveFile()
 	mode_t mode = S_IRUSR | S_IWUSR | S_IRGRP | S_IROTH;
 
 	transferringFileD = PE2(creat(fileName, mode), fileName);
-		if(transferringFileD == -1) {
-			cerr << "Error opening input file named: " << fileName << endl;
-			result = "OpenError";
-		}
+	if(transferringFileD == -1) {
+		cerr << "Error opening input file named: " << fileName << endl;
+		result = "OpenError";
+	}
 
 	// ***** improve this member function *****
 
@@ -68,32 +68,48 @@ void ReceiverX::receiveFile()
 	//		sender can send the first block
 	sendByte(NCGbyte);
 
-	while(PE_NOT(myRead(mediumD, rcvBlk, 1), 1), (rcvBlk[0] == SOH))
+	while(PE_NOT(myRead(mediumD, rcvBlk, 1), 1), (rcvBlk[0] != CAN), (rcvBlk[0] != EOT))
 	{
-		getRestBlk();
-		sendByte(ACK);
-		writeChunk();
+		if (rcvBlk[0] == SOH) {
+			getRestBlk();
+			if (goodBlk1st)
+			{
+				sendByte(ACK);
+				writeChunk();
+			}
+			else
+				sendByte(NAK); // checksum or crc check failed
+		}
+		else
+			// TODO: Wait for medium to go quiet
+			sendByte(NAK);
 	};
 
 	char byteToReceive = rcvBlk[0];
 	if (byteToReceive == CAN)
 	{
-		can8();
+		// TODO: Implement CTRL+Z to cancel transfer in Part3
 		result = "SenderCancelled";
 	}
 	else if (byteToReceive == EOT)
 	{
-		// EOT was presumably just read in the condition for the while loop
 		sendByte(NAK); // NAK the first EOT
-		PE_NOT(myRead(mediumD, rcvBlk, 1), 1); // presumably read in another EOT
-		sendByte(ACK); // ACK the second EOT
+		PE_NOT(myRead(mediumD, rcvBlk, 1), 1);
 
-		result = "Done";
-
-		PE(close(transferringFileD));
+		byteToReceive = rcvBlk[0];
+		if (byteToReceive == EOT)
+		{
+			sendByte(ACK); // ACK the second EOT
+			result = "Done";
+		}
+		else
+		{
+			sendByte(NAK); // NAK the non existing EOT
+			result = "Done but only received 1 EOT";
+		}
 	}
-	else
-		sendByte(NAK);
+
+	PE(close(transferringFileD));
 }
 
 /* Only called after an SOH character has been received.
@@ -109,7 +125,30 @@ void ReceiverX::getRestBlk()
 {
 	// ********* this function must be improved ***********
 	PE_NOT(myReadcond(mediumD, &rcvBlk[1], REST_BLK_SZ_CRC, REST_BLK_SZ_CRC, 0, 0), REST_BLK_SZ_CRC);
+
+	if (Crcflg)
+		crc(rcvBlk);
+	else
+		checksum(rcvBlk);
+
 	goodBlk1st = goodBlk = true;
+}
+
+void ReceiverX::checksum(blkT blkBuf)
+{
+	uint8_t recievedCheckSum = rcvBlk[PAST_CHUNK]; // The checksum calculated by the sender
+	uint8_t sum = 0;
+	for(int i=DATA_POS + 1; i < (BLK_SZ_CRC - 1); i++ )
+		sum += blkBuf[i];
+	goodBlk = (sum == recievedCheckSum);
+}
+
+void ReceiverX::crc(blkT blkBuf)
+{
+	/* calculate and add CRC in network byte order */
+	uint16_t crcCheck;
+	crc16ns(&crcCheck, &blkBuf[DATA_POS]);
+	goodBlk = ((uint8_t)(crcCheck >> 8) == blkBuf[BLK_SZ_CRC - 2]) && ((uint8_t)(crcCheck) == blkBuf[BLK_SZ_CRC - 1]);
 }
 
 //Write chunk (data) in a received block to disk

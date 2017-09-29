@@ -13,7 +13,7 @@ public:
 	void writeChunk();
 	void can8();		// send 8 CAN characters
 
-	bool goodBlk; 		//indicates whether or not the last block received had problems.
+	bool goodBlk; 		// indicates whether or not the last block received had problems.
 	bool goodBlk1st;	// a particular block was received in good condition for the first time
 
 	uint8_t NCGbyte;	// Either a 'C' or a NAK sent by receiver to initiate the file transfer
@@ -30,7 +30,9 @@ private:
 
 	uint8_t numLastGoodBlk; // the number of the last good block
 
-	// void checksum(uint8_t* sumP, blkT blkBuf);
+	void checksum(blkT blkBuf);
+
+	void crc(blkT blkBuf);
 };
 
 #endif

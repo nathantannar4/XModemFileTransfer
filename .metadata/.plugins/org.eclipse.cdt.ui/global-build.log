@@ -1,8 +1,18 @@
-18:19:11 **** Incremental Build of configuration Debug for project Ensc351 ****
+19:54:01 **** Incremental Build of configuration Debug for project Ensc351 ****
 make all 
 make: Nothing to be done for 'all'.
-18:19:12 **** Incremental Build of configuration Debug for project Ensc351Part2 ****
+19:54:01 **** Incremental Build of configuration Debug for project Ensc351Part2 ****
 make all 
+Building file: ../src/Ensc351Part2.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++1y -I"/media/sf_U_ensc251/workspace-cpp-Neon3/Ensc351" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Ensc351Part2.d" -MT"src/Ensc351Part2.o" -o "src/Ensc351Part2.o" "../src/Ensc351Part2.cpp"
+Finished building: ../src/Ensc351Part2.cpp
+ 
+Building file: ../src/ReceiverX.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++1y -I"/media/sf_U_ensc251/workspace-cpp-Neon3/Ensc351" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/ReceiverX.d" -MT"src/ReceiverX.o" -o "src/ReceiverX.o" "../src/ReceiverX.cpp"
+Finished building: ../src/ReceiverX.cpp
+ 
 Building file: ../src/SenderX.cpp
 Invoking: GCC C++ Compiler
 g++ -std=c++1y -I"/media/sf_U_ensc251/workspace-cpp-Neon3/Ensc351" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/SenderX.d" -MT"src/SenderX.o" -o "src/SenderX.o" "../src/SenderX.cpp"
@@ -13,15 +23,9 @@ Invoking: GCC C++ Linker
 g++ -L"/media/sf_U_ensc251/workspace-cpp-Neon3/Ensc351/Debug" -o "Ensc351Part2"  ./src/Ensc351Part2.o ./src/Medium.o ./src/PeerX.o ./src/ReceiverX.o ./src/SenderX.o ./src/myIO.o   -lEnsc351 -lpthread
 Finished building target: Ensc351Part2
  
-18:19:15 **** Incremental Build of configuration Debug for project Ensc351 ****
+19:54:07 **** Incremental Build of configuration Debug for project Ensc351 ****
 make all 
 make: Nothing to be done for 'all'.
-18:19:15 **** Incremental Build of configuration Debug for project Ensc351Part2 ****
-make all 
-make: Nothing to be done for 'all'.
-18:19:24 **** Incremental Build of configuration Debug for project Ensc351 ****
-make all 
-make: Nothing to be done for 'all'.
-18:19:24 **** Incremental Build of configuration Debug for project Ensc351Part2 ****
+19:54:07 **** Incremental Build of configuration Debug for project Ensc351Part2 ****
 make all 
 make: Nothing to be done for 'all'.

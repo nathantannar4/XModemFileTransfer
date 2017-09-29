@@ -204,7 +204,6 @@ void SenderX::can8()
 	}
 
 	dumpGlitches();
-	PE(myClose(transferringFileD));
 }
 
 void SenderX::sendFile()
@@ -243,7 +242,12 @@ void SenderX::sendFile()
 			if (byteToReceive == NAK)
 				resendBlk();
 			else if (byteToReceive == CAN)
+			{
 				can8();
+				PE(myClose(transferringFileD));
+				result = "RcvCancelled";
+				return;
+			}
 			else if (byteToReceive == ACK)
 				errCnt = 0;
 			else
