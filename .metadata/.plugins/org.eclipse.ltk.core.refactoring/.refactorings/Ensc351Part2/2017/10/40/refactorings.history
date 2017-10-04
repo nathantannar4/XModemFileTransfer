@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Ensc351Part2/original&apos; to &apos;mailcapHEX&apos;" description="Rename resource &apos;original&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="original" name="mailcapHEX" stamp="1507078990407" updateReferences="true"/>
+</session>
