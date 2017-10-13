@@ -18,7 +18,7 @@
 
 struct ThreadLocker {
 
-	int counter = 0;
+	ssize_t counter = 0;
 	int pairDes = -1;
 	std::mutex mtx;
 	std::condition_variable condition;
@@ -29,8 +29,6 @@ static ThreadLocker threadLockers [(NUMBER_OF_PAIRS * 2) + OTHER_SOCKETS];
 int mySocketpair( int domain, int type, int protocol, int des[2] )
 {
 	int returnVal = socketpair(domain, type, protocol, des);
-
-	// std::cout << des[0] << " " << des[1] << std::endl;
 
 	// Set thread locker pairs
 	threadLockers[des[0]].pairDes = des[1];
@@ -52,53 +50,54 @@ int myCreat(const char *pathname, mode_t mode)
 ssize_t myRead( int fildes, void* buf, size_t nbyte )
 {
 	// #1: Lock
-	std::cout << "READ LOCKING: " << fildes << std::endl;
+	std::cout << "- READ LOCKING: " << fildes << std::endl;
 
-	std::lock_guard<std::mutex> lk(threadLockers[fildes].mtx);
+	std::unique_lock<std::mutex> lk(threadLockers[fildes].mtx);
 
 	// #2: Write Changes
 	ssize_t bytesRead = read(fildes, buf, nbyte );
 
 	// #3: Decrement buffer counter from socket pair
 	int pairDes = threadLockers[fildes].pairDes;
-	threadLockers[pairDes].counter -= 1;
-	std::cout << fildes << " COUNT AT " << threadLockers[fildes].counter << std::endl;
+	threadLockers[pairDes].counter -= bytesRead;
+	std::cout << "--" << fildes << " COUNT AT " << threadLockers[fildes].counter << std::endl;
 
 	if (threadLockers[pairDes].counter == 0) {
 		// Notify (one of these may not be needed)
 		std::cout << "NOTIFYING: " << fildes << ", " << pairDes << std::endl;
-		threadLockers[fildes].condition.notify_all();
+		//threadLockers[fildes].condition.notify_all();
 		threadLockers[pairDes].condition.notify_all();
 	}
 
-	// #4: Return the number of bytes written
+	// #4: Unlock mutex
+	std::cout << "---- READ UNLOCKING: " << fildes << std::endl;
+	lk.unlock();
 
-	std::cout << "READ UNLOCKING: " << fildes << std::endl;
+	// #5: Return the number of bytes written
 	return bytesRead;
-
-	// #5: Unlock mutex (done when function exits automatically because we used lock_guard)
 }
 
 ssize_t myWrite( int fildes, const void* buf, size_t nbyte )
 {
 	// #1: Lock
-	std::cout << "WRITE LOCKING: " << fildes << std::endl;
+	std::cout << "- WRITE LOCKING: " << fildes << std::endl;
 
-	std::lock_guard<std::mutex> lk(threadLockers[fildes].mtx);
+	std::unique_lock<std::mutex> lk(threadLockers[fildes].mtx);
 
 	// #2: Write Changes
 	ssize_t bytesWritten = write(fildes, buf, nbyte );
 
 	// #3: Increment buffer counter
-	threadLockers[fildes].counter += 1;
-	std::cout << fildes << " COUNT AT " << threadLockers[fildes].counter << std::endl;
+	threadLockers[fildes].counter += bytesWritten;
+	std::cout << "--" << fildes << " COUNT AT " << threadLockers[fildes].counter << std::endl;
 
-	// #4: Return the number of bytes written
+	// #4: Unlock mutex
+	std::cout << "---- WRITE UNLOCKING: " << fildes << std::endl;
+	lk.unlock();
 
-	std::cout << "WRITE UNLOCKING: " << fildes << std::endl;
+	// #5: Return the number of bytes written
+
 	return bytesWritten;
-
-	// #5: Unlock mutex (done when function exits automatically because we used lock_guard)
 }
 
 int myClose( int fd )
@@ -117,9 +116,11 @@ int myTcdrain(int des)
 
 	if (threadLockers[des].counter > 0)
 		threadLockers[des].condition.wait(lk, [des]() { return threadLockers[des].counter == 0; });
+	else
+		std::cout << "THIS SHOULD NOT HAPPEN";
 
 	// #3: Unlock mutex
-	std::cout << "UNLOCKING: " << des << std::endl;
+	std::cout << "-- UNLOCKING: " << des << std::endl;
 
 	lk.unlock();
 

@@ -146,3 +146,598 @@ make: Nothing to be done for 'all'.
 18:45:38 **** Incremental Build of configuration Debug for project Ensc351Part2 ****
 make all 
 make: Nothing to be done for 'all'.
+18:46:32 **** Incremental Build of configuration Debug for project Ensc351 ****
+make all 
+make: Nothing to be done for 'all'.
+18:46:32 **** Incremental Build of configuration Debug for project Ensc351Part2 ****
+make all 
+make: Nothing to be done for 'all'.
+18:47:06 **** Incremental Build of configuration Debug for project Ensc351 ****
+make all 
+make: Nothing to be done for 'all'.
+18:47:06 **** Incremental Build of configuration Debug for project Ensc351Part2 ****
+make all 
+Building file: ../src/myIO.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++1y -I"/media/sf_U_ensc251/workspace-cpp-Neon3/Ensc351" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/myIO.d" -MT"src/myIO.o" -o "src/myIO.o" "../src/myIO.cpp"
+Finished building: ../src/myIO.cpp
+ 
+Building target: Ensc351Part2
+Invoking: GCC C++ Linker
+g++ -L"/media/sf_U_ensc251/workspace-cpp-Neon3/Ensc351/Debug" -o "Ensc351Part2"  ./src/Ensc351Part2.o ./src/Medium.o ./src/PeerX.o ./src/ReceiverX.o ./src/SenderX.o ./src/myIO.o   -lEnsc351 -lpthread
+Finished building target: Ensc351Part2
+ 
+18:49:26 **** Incremental Build of configuration Debug for project Ensc351 ****
+make all 
+make: Nothing to be done for 'all'.
+18:49:26 **** Incremental Build of configuration Debug for project Ensc351Part2 ****
+make all 
+Building file: ../src/myIO.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++1y -I"/media/sf_U_ensc251/workspace-cpp-Neon3/Ensc351" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/myIO.d" -MT"src/myIO.o" -o "src/myIO.o" "../src/myIO.cpp"
+Finished building: ../src/myIO.cpp
+ 
+Building target: Ensc351Part2
+Invoking: GCC C++ Linker
+g++ -L"/media/sf_U_ensc251/workspace-cpp-Neon3/Ensc351/Debug" -o "Ensc351Part2"  ./src/Ensc351Part2.o ./src/Medium.o ./src/PeerX.o ./src/ReceiverX.o ./src/SenderX.o ./src/myIO.o   -lEnsc351 -lpthread
+Finished building target: Ensc351Part2
+ 
+18:57:42 **** Incremental Build of configuration Debug for project Ensc351 ****
+make all 
+make: Nothing to be done for 'all'.
+18:57:42 **** Incremental Build of configuration Debug for project Ensc351Part2 ****
+make all 
+Building file: ../src/myIO.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++1y -I"/media/sf_U_ensc251/workspace-cpp-Neon3/Ensc351" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/myIO.d" -MT"src/myIO.o" -o "src/myIO.o" "../src/myIO.cpp"
+Finished building: ../src/myIO.cpp
+ 
+Building target: Ensc351Part2
+Invoking: GCC C++ Linker
+g++ -L"/media/sf_U_ensc251/workspace-cpp-Neon3/Ensc351/Debug" -o "Ensc351Part2"  ./src/Ensc351Part2.o ./src/Medium.o ./src/PeerX.o ./src/ReceiverX.o ./src/SenderX.o ./src/myIO.o   -lEnsc351 -lpthread
+Finished building target: Ensc351Part2
+ 
+18:58:14 **** Incremental Build of configuration Debug for project Ensc351 ****
+make all 
+make: Nothing to be done for 'all'.
+18:58:14 **** Incremental Build of configuration Debug for project Ensc351Part2 ****
+make all 
+Building file: ../src/myIO.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++1y -I"/media/sf_U_ensc251/workspace-cpp-Neon3/Ensc351" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/myIO.d" -MT"src/myIO.o" -o "src/myIO.o" "../src/myIO.cpp"
+Finished building: ../src/myIO.cpp
+ 
+Building target: Ensc351Part2
+Invoking: GCC C++ Linker
+g++ -L"/media/sf_U_ensc251/workspace-cpp-Neon3/Ensc351/Debug" -o "Ensc351Part2"  ./src/Ensc351Part2.o ./src/Medium.o ./src/PeerX.o ./src/ReceiverX.o ./src/SenderX.o ./src/myIO.o   -lEnsc351 -lpthread
+Finished building target: Ensc351Part2
+ 
+18:59:45 **** Incremental Build of configuration Debug for project Ensc351 ****
+make all 
+make: Nothing to be done for 'all'.
+18:59:46 **** Incremental Build of configuration Debug for project Ensc351Part2 ****
+make all 
+Building file: ../src/myIO.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++1y -I"/media/sf_U_ensc251/workspace-cpp-Neon3/Ensc351" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/myIO.d" -MT"src/myIO.o" -o "src/myIO.o" "../src/myIO.cpp"
+Finished building: ../src/myIO.cpp
+ 
+Building target: Ensc351Part2
+Invoking: GCC C++ Linker
+g++ -L"/media/sf_U_ensc251/workspace-cpp-Neon3/Ensc351/Debug" -o "Ensc351Part2"  ./src/Ensc351Part2.o ./src/Medium.o ./src/PeerX.o ./src/ReceiverX.o ./src/SenderX.o ./src/myIO.o   -lEnsc351 -lpthread
+Finished building target: Ensc351Part2
+ 
+19:00:26 **** Incremental Build of configuration Debug for project Ensc351 ****
+make all 
+make: Nothing to be done for 'all'.
+19:00:26 **** Incremental Build of configuration Debug for project Ensc351Part2 ****
+make all 
+Building file: ../src/myIO.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++1y -I"/media/sf_U_ensc251/workspace-cpp-Neon3/Ensc351" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/myIO.d" -MT"src/myIO.o" -o "src/myIO.o" "../src/myIO.cpp"
+Finished building: ../src/myIO.cpp
+ 
+Building target: Ensc351Part2
+Invoking: GCC C++ Linker
+g++ -L"/media/sf_U_ensc251/workspace-cpp-Neon3/Ensc351/Debug" -o "Ensc351Part2"  ./src/Ensc351Part2.o ./src/Medium.o ./src/PeerX.o ./src/ReceiverX.o ./src/SenderX.o ./src/myIO.o   -lEnsc351 -lpthread
+Finished building target: Ensc351Part2
+ 
+19:00:46 **** Incremental Build of configuration Debug for project Ensc351 ****
+make all 
+make: Nothing to be done for 'all'.
+19:00:46 **** Incremental Build of configuration Debug for project Ensc351Part2 ****
+make all 
+Building file: ../src/myIO.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++1y -I"/media/sf_U_ensc251/workspace-cpp-Neon3/Ensc351" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/myIO.d" -MT"src/myIO.o" -o "src/myIO.o" "../src/myIO.cpp"
+Finished building: ../src/myIO.cpp
+ 
+Building target: Ensc351Part2
+Invoking: GCC C++ Linker
+g++ -L"/media/sf_U_ensc251/workspace-cpp-Neon3/Ensc351/Debug" -o "Ensc351Part2"  ./src/Ensc351Part2.o ./src/Medium.o ./src/PeerX.o ./src/ReceiverX.o ./src/SenderX.o ./src/myIO.o   -lEnsc351 -lpthread
+Finished building target: Ensc351Part2
+ 
+19:00:51 **** Incremental Build of configuration Debug for project Ensc351 ****
+make all 
+make: Nothing to be done for 'all'.
+19:00:51 **** Incremental Build of configuration Debug for project Ensc351Part2 ****
+make all 
+make: Nothing to be done for 'all'.
+19:00:54 **** Incremental Build of configuration Debug for project Ensc351 ****
+make all 
+make: Nothing to be done for 'all'.
+19:00:54 **** Incremental Build of configuration Debug for project Ensc351Part2 ****
+make all 
+make: Nothing to be done for 'all'.
+19:00:56 **** Incremental Build of configuration Debug for project Ensc351 ****
+make all 
+make: Nothing to be done for 'all'.
+19:00:56 **** Incremental Build of configuration Debug for project Ensc351Part2 ****
+make all 
+make: Nothing to be done for 'all'.
+19:00:58 **** Incremental Build of configuration Debug for project Ensc351 ****
+make all 
+make: Nothing to be done for 'all'.
+19:00:58 **** Incremental Build of configuration Debug for project Ensc351Part2 ****
+make all 
+make: Nothing to be done for 'all'.
+19:01:12 **** Incremental Build of configuration Debug for project Ensc351 ****
+make all 
+make: Nothing to be done for 'all'.
+19:01:12 **** Incremental Build of configuration Debug for project Ensc351Part2 ****
+make all 
+Building file: ../src/myIO.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++1y -I"/media/sf_U_ensc251/workspace-cpp-Neon3/Ensc351" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/myIO.d" -MT"src/myIO.o" -o "src/myIO.o" "../src/myIO.cpp"
+Finished building: ../src/myIO.cpp
+ 
+Building target: Ensc351Part2
+Invoking: GCC C++ Linker
+g++ -L"/media/sf_U_ensc251/workspace-cpp-Neon3/Ensc351/Debug" -o "Ensc351Part2"  ./src/Ensc351Part2.o ./src/Medium.o ./src/PeerX.o ./src/ReceiverX.o ./src/SenderX.o ./src/myIO.o   -lEnsc351 -lpthread
+Finished building target: Ensc351Part2
+ 
+19:01:15 **** Incremental Build of configuration Debug for project Ensc351 ****
+make all 
+make: Nothing to be done for 'all'.
+19:01:15 **** Incremental Build of configuration Debug for project Ensc351Part2 ****
+make all 
+make: Nothing to be done for 'all'.
+19:01:17 **** Incremental Build of configuration Debug for project Ensc351 ****
+make all 
+make: Nothing to be done for 'all'.
+19:01:18 **** Incremental Build of configuration Debug for project Ensc351Part2 ****
+make all 
+make: Nothing to be done for 'all'.
+19:01:20 **** Incremental Build of configuration Debug for project Ensc351 ****
+make all 
+make: Nothing to be done for 'all'.
+19:01:20 **** Incremental Build of configuration Debug for project Ensc351Part2 ****
+make all 
+make: Nothing to be done for 'all'.
+19:01:35 **** Incremental Build of configuration Debug for project Ensc351 ****
+make all 
+make: Nothing to be done for 'all'.
+19:01:35 **** Incremental Build of configuration Debug for project Ensc351Part2 ****
+make all 
+make: Nothing to be done for 'all'.
+19:01:38 **** Incremental Build of configuration Debug for project Ensc351 ****
+make all 
+make: Nothing to be done for 'all'.
+19:01:38 **** Incremental Build of configuration Debug for project Ensc351Part2 ****
+make all 
+make: Nothing to be done for 'all'.
+19:01:41 **** Incremental Build of configuration Debug for project Ensc351 ****
+make all 
+make: Nothing to be done for 'all'.
+19:01:41 **** Incremental Build of configuration Debug for project Ensc351Part2 ****
+make all 
+make: Nothing to be done for 'all'.
+19:01:43 **** Incremental Build of configuration Debug for project Ensc351 ****
+make all 
+make: Nothing to be done for 'all'.
+19:01:44 **** Incremental Build of configuration Debug for project Ensc351Part2 ****
+make all 
+make: Nothing to be done for 'all'.
+19:01:48 **** Incremental Build of configuration Debug for project Ensc351 ****
+make all 
+make: Nothing to be done for 'all'.
+19:01:48 **** Incremental Build of configuration Debug for project Ensc351Part2 ****
+make all 
+make: Nothing to be done for 'all'.
+19:01:51 **** Incremental Build of configuration Debug for project Ensc351 ****
+make all 
+make: Nothing to be done for 'all'.
+19:01:51 **** Incremental Build of configuration Debug for project Ensc351Part2 ****
+make all 
+make: Nothing to be done for 'all'.
+19:01:55 **** Incremental Build of configuration Debug for project Ensc351 ****
+make all 
+make: Nothing to be done for 'all'.
+19:01:55 **** Incremental Build of configuration Debug for project Ensc351Part2 ****
+make all 
+make: Nothing to be done for 'all'.
+19:01:57 **** Incremental Build of configuration Debug for project Ensc351 ****
+make all 
+make: Nothing to be done for 'all'.
+19:01:57 **** Incremental Build of configuration Debug for project Ensc351Part2 ****
+make all 
+make: Nothing to be done for 'all'.
+19:02:00 **** Incremental Build of configuration Debug for project Ensc351 ****
+make all 
+make: Nothing to be done for 'all'.
+19:02:00 **** Incremental Build of configuration Debug for project Ensc351Part2 ****
+make all 
+make: Nothing to be done for 'all'.
+19:02:38 **** Incremental Build of configuration Debug for project Ensc351 ****
+make all 
+make: Nothing to be done for 'all'.
+19:02:38 **** Incremental Build of configuration Debug for project Ensc351Part2 ****
+make all 
+Building file: ../src/myIO.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++1y -I"/media/sf_U_ensc251/workspace-cpp-Neon3/Ensc351" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/myIO.d" -MT"src/myIO.o" -o "src/myIO.o" "../src/myIO.cpp"
+../src/myIO.cpp: In function ‘int myTcdrain(int)’:
+../src/myIO.cpp:123:2: error: expected ‘;’ before ‘std’
+  std::cout << "-- UNLOCKING: " << des << std::endl;
+  ^
+src/subdir.mk:33: recipe for target 'src/myIO.o' failed
+make: *** [src/myIO.o] Error 1
+19:02:42 **** Incremental Build of configuration Debug for project Ensc351 ****
+make all 
+make: Nothing to be done for 'all'.
+19:02:42 **** Incremental Build of configuration Debug for project Ensc351Part2 ****
+make all 
+Building file: ../src/myIO.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++1y -I"/media/sf_U_ensc251/workspace-cpp-Neon3/Ensc351" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/myIO.d" -MT"src/myIO.o" -o "src/myIO.o" "../src/myIO.cpp"
+Finished building: ../src/myIO.cpp
+ 
+Building target: Ensc351Part2
+Invoking: GCC C++ Linker
+g++ -L"/media/sf_U_ensc251/workspace-cpp-Neon3/Ensc351/Debug" -o "Ensc351Part2"  ./src/Ensc351Part2.o ./src/Medium.o ./src/PeerX.o ./src/ReceiverX.o ./src/SenderX.o ./src/myIO.o   -lEnsc351 -lpthread
+Finished building target: Ensc351Part2
+ 
+19:02:49 **** Incremental Build of configuration Debug for project Ensc351 ****
+make all 
+make: Nothing to be done for 'all'.
+19:02:49 **** Incremental Build of configuration Debug for project Ensc351Part2 ****
+make all 
+make: Nothing to be done for 'all'.
+19:03:26 **** Incremental Build of configuration Debug for project Ensc351 ****
+make all 
+make: Nothing to be done for 'all'.
+19:03:26 **** Incremental Build of configuration Debug for project Ensc351Part2 ****
+make all 
+Building file: ../src/myIO.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++1y -I"/media/sf_U_ensc251/workspace-cpp-Neon3/Ensc351" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/myIO.d" -MT"src/myIO.o" -o "src/myIO.o" "../src/myIO.cpp"
+Finished building: ../src/myIO.cpp
+ 
+Building target: Ensc351Part2
+Invoking: GCC C++ Linker
+g++ -L"/media/sf_U_ensc251/workspace-cpp-Neon3/Ensc351/Debug" -o "Ensc351Part2"  ./src/Ensc351Part2.o ./src/Medium.o ./src/PeerX.o ./src/ReceiverX.o ./src/SenderX.o ./src/myIO.o   -lEnsc351 -lpthread
+Finished building target: Ensc351Part2
+ 
+19:03:33 **** Incremental Build of configuration Debug for project Ensc351 ****
+make all 
+make: Nothing to be done for 'all'.
+19:03:33 **** Incremental Build of configuration Debug for project Ensc351Part2 ****
+make all 
+make: Nothing to be done for 'all'.
+19:03:35 **** Incremental Build of configuration Debug for project Ensc351 ****
+make all 
+make: Nothing to be done for 'all'.
+19:03:35 **** Incremental Build of configuration Debug for project Ensc351Part2 ****
+make all 
+make: Nothing to be done for 'all'.
+19:03:36 **** Incremental Build of configuration Debug for project Ensc351 ****
+make all 
+make: Nothing to be done for 'all'.
+19:03:36 **** Incremental Build of configuration Debug for project Ensc351Part2 ****
+make all 
+make: Nothing to be done for 'all'.
+19:03:38 **** Incremental Build of configuration Debug for project Ensc351 ****
+make all 
+make: Nothing to be done for 'all'.
+19:03:38 **** Incremental Build of configuration Debug for project Ensc351Part2 ****
+make all 
+make: Nothing to be done for 'all'.
+19:03:41 **** Incremental Build of configuration Debug for project Ensc351 ****
+make all 
+make: Nothing to be done for 'all'.
+19:03:41 **** Incremental Build of configuration Debug for project Ensc351Part2 ****
+make all 
+make: Nothing to be done for 'all'.
+19:03:43 **** Incremental Build of configuration Debug for project Ensc351 ****
+make all 
+make: Nothing to be done for 'all'.
+19:03:43 **** Incremental Build of configuration Debug for project Ensc351Part2 ****
+make all 
+make: Nothing to be done for 'all'.
+19:03:45 **** Incremental Build of configuration Debug for project Ensc351 ****
+make all 
+make: Nothing to be done for 'all'.
+19:03:45 **** Incremental Build of configuration Debug for project Ensc351Part2 ****
+make all 
+make: Nothing to be done for 'all'.
+19:03:48 **** Incremental Build of configuration Debug for project Ensc351 ****
+make all 
+make: Nothing to be done for 'all'.
+19:03:48 **** Incremental Build of configuration Debug for project Ensc351Part2 ****
+make all 
+make: Nothing to be done for 'all'.
+19:03:51 **** Incremental Build of configuration Debug for project Ensc351 ****
+make all 
+make: Nothing to be done for 'all'.
+19:03:51 **** Incremental Build of configuration Debug for project Ensc351Part2 ****
+make all 
+make: Nothing to be done for 'all'.
+19:07:38 **** Incremental Build of configuration Debug for project Ensc351 ****
+make all 
+make: Nothing to be done for 'all'.
+19:07:38 **** Incremental Build of configuration Debug for project Ensc351Part2 ****
+make all 
+Building file: ../src/myIO.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++1y -I"/media/sf_U_ensc251/workspace-cpp-Neon3/Ensc351" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/myIO.d" -MT"src/myIO.o" -o "src/myIO.o" "../src/myIO.cpp"
+../src/myIO.cpp: In function ‘ssize_t myRead(int, void*, size_t)’:
+../src/myIO.cpp:62:25: error: ‘struct ThreadLocker’ has no member named ‘counter’
+  threadLockers[pairDes].counter -= bytesRead;
+                         ^
+../src/myIO.cpp:63:71: error: ‘struct ThreadLocker’ has no member named ‘counter’
+  std::cout << "--" << fildes << " COUNT AT " << threadLockers[fildes].counter << std::endl;
+                                                                       ^
+../src/myIO.cpp:65:29: error: ‘struct ThreadLocker’ has no member named ‘counter’
+  if (threadLockers[pairDes].counter == 0) {
+                             ^
+../src/myIO.cpp: In function ‘ssize_t myWrite(int, const void*, size_t)’:
+../src/myIO.cpp:91:24: error: ‘struct ThreadLocker’ has no member named ‘counter’
+  threadLockers[fildes].counter += bytesWritten;
+                        ^
+../src/myIO.cpp:92:71: error: ‘struct ThreadLocker’ has no member named ‘counter’
+  std::cout << "--" << fildes << " COUNT AT " << threadLockers[fildes].counter << std::endl;
+                                                                       ^
+../src/myIO.cpp: In function ‘int myTcdrain(int)’:
+../src/myIO.cpp:117:25: error: ‘struct ThreadLocker’ has no member named ‘counter’
+  if (threadLockers[des].counter > 0)
+                         ^
+../src/myIO.cpp: In lambda function:
+../src/myIO.cpp:118:77: error: ‘struct ThreadLocker’ has no member named ‘counter’
+   threadLockers[des].condition.wait(lk, [des]() { return threadLockers[des].counter == 0; });
+                                                                             ^
+In file included from ../src/myIO.cpp:13:0:
+/usr/include/c++/5/condition_variable: In instantiation of ‘void std::condition_variable::wait(std::unique_lock<std::mutex>&, _Predicate) [with _Predicate = myTcdrain(int)::<lambda()>]’:
+../src/myIO.cpp:118:92:   required from here
+/usr/include/c++/5/condition_variable:97:13: error: could not convert ‘__p.myTcdrain(int)::<lambda()>()’ from ‘void’ to ‘bool’
+  while (!__p())
+             ^
+/usr/include/c++/5/condition_variable:97:9: error: in argument to unary !
+  while (!__p())
+         ^
+make: *** [src/myIO.o] Error 1
+src/subdir.mk:33: recipe for target 'src/myIO.o' failed
+19:08:01 **** Incremental Build of configuration Debug for project Ensc351 ****
+make all 
+make: Nothing to be done for 'all'.
+19:08:01 **** Incremental Build of configuration Debug for project Ensc351Part2 ****
+make all 
+Building file: ../src/myIO.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++1y -I"/media/sf_U_ensc251/workspace-cpp-Neon3/Ensc351" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/myIO.d" -MT"src/myIO.o" -o "src/myIO.o" "../src/myIO.cpp"
+Finished building: ../src/myIO.cpp
+ 
+Building target: Ensc351Part2
+Invoking: GCC C++ Linker
+g++ -L"/media/sf_U_ensc251/workspace-cpp-Neon3/Ensc351/Debug" -o "Ensc351Part2"  ./src/Ensc351Part2.o ./src/Medium.o ./src/PeerX.o ./src/ReceiverX.o ./src/SenderX.o ./src/myIO.o   -lEnsc351 -lpthread
+Finished building target: Ensc351Part2
+ 
+19:08:05 **** Incremental Build of configuration Debug for project Ensc351 ****
+make all 
+make: Nothing to be done for 'all'.
+19:08:05 **** Incremental Build of configuration Debug for project Ensc351Part2 ****
+make all 
+make: Nothing to be done for 'all'.
+19:08:07 **** Incremental Build of configuration Debug for project Ensc351 ****
+make all 
+make: Nothing to be done for 'all'.
+19:08:07 **** Incremental Build of configuration Debug for project Ensc351Part2 ****
+make all 
+make: Nothing to be done for 'all'.
+19:08:10 **** Incremental Build of configuration Debug for project Ensc351 ****
+make all 
+make: Nothing to be done for 'all'.
+19:08:10 **** Incremental Build of configuration Debug for project Ensc351Part2 ****
+make all 
+make: Nothing to be done for 'all'.
+19:08:12 **** Incremental Build of configuration Debug for project Ensc351 ****
+make all 
+make: Nothing to be done for 'all'.
+19:08:12 **** Incremental Build of configuration Debug for project Ensc351Part2 ****
+make all 
+make: Nothing to be done for 'all'.
+19:08:14 **** Incremental Build of configuration Debug for project Ensc351 ****
+make all 
+make: Nothing to be done for 'all'.
+19:08:14 **** Incremental Build of configuration Debug for project Ensc351Part2 ****
+make all 
+make: Nothing to be done for 'all'.
+19:08:18 **** Incremental Build of configuration Debug for project Ensc351 ****
+make all 
+make: Nothing to be done for 'all'.
+19:08:18 **** Incremental Build of configuration Debug for project Ensc351Part2 ****
+make all 
+make: Nothing to be done for 'all'.
+19:08:19 **** Incremental Build of configuration Debug for project Ensc351 ****
+make all 
+make: Nothing to be done for 'all'.
+19:08:19 **** Incremental Build of configuration Debug for project Ensc351Part2 ****
+make all 
+make: Nothing to be done for 'all'.
+19:08:21 **** Incremental Build of configuration Debug for project Ensc351 ****
+make all 
+make: Nothing to be done for 'all'.
+19:08:21 **** Incremental Build of configuration Debug for project Ensc351Part2 ****
+make all 
+make: Nothing to be done for 'all'.
+19:08:23 **** Incremental Build of configuration Debug for project Ensc351 ****
+make all 
+make: Nothing to be done for 'all'.
+19:08:23 **** Incremental Build of configuration Debug for project Ensc351Part2 ****
+make all 
+make: Nothing to be done for 'all'.
+19:08:24 **** Incremental Build of configuration Debug for project Ensc351 ****
+make all 
+make: Nothing to be done for 'all'.
+19:08:24 **** Incremental Build of configuration Debug for project Ensc351Part2 ****
+make all 
+make: Nothing to be done for 'all'.
+19:08:26 **** Incremental Build of configuration Debug for project Ensc351 ****
+make all 
+make: Nothing to be done for 'all'.
+19:08:26 **** Incremental Build of configuration Debug for project Ensc351Part2 ****
+make all 
+make: Nothing to be done for 'all'.
+19:08:27 **** Incremental Build of configuration Debug for project Ensc351 ****
+make all 
+make: Nothing to be done for 'all'.
+19:08:27 **** Incremental Build of configuration Debug for project Ensc351Part2 ****
+make all 
+make: Nothing to be done for 'all'.
+19:08:29 **** Incremental Build of configuration Debug for project Ensc351 ****
+make all 
+make: Nothing to be done for 'all'.
+19:08:29 **** Incremental Build of configuration Debug for project Ensc351Part2 ****
+make all 
+make: Nothing to be done for 'all'.
+19:08:30 **** Incremental Build of configuration Debug for project Ensc351 ****
+make all 
+make: Nothing to be done for 'all'.
+19:08:31 **** Incremental Build of configuration Debug for project Ensc351Part2 ****
+make all 
+make: Nothing to be done for 'all'.
+19:08:37 **** Incremental Build of configuration Debug for project Ensc351 ****
+make all 
+make: Nothing to be done for 'all'.
+19:08:37 **** Incremental Build of configuration Debug for project Ensc351Part2 ****
+make all 
+make: Nothing to be done for 'all'.
+19:08:39 **** Incremental Build of configuration Debug for project Ensc351 ****
+make all 
+make: Nothing to be done for 'all'.
+19:08:39 **** Incremental Build of configuration Debug for project Ensc351Part2 ****
+make all 
+make: Nothing to be done for 'all'.
+19:08:40 **** Incremental Build of configuration Debug for project Ensc351 ****
+make all 
+make: Nothing to be done for 'all'.
+19:08:41 **** Incremental Build of configuration Debug for project Ensc351Part2 ****
+make all 
+make: Nothing to be done for 'all'.
+19:08:49 **** Incremental Build of configuration Debug for project Ensc351 ****
+make all 
+make: Nothing to be done for 'all'.
+19:08:49 **** Incremental Build of configuration Debug for project Ensc351Part2 ****
+make all 
+Building file: ../src/Medium.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++1y -I"/media/sf_U_ensc251/workspace-cpp-Neon3/Ensc351" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Medium.d" -MT"src/Medium.o" -o "src/Medium.o" "../src/Medium.cpp"
+Finished building: ../src/Medium.cpp
+ 
+Building target: Ensc351Part2
+Invoking: GCC C++ Linker
+g++ -L"/media/sf_U_ensc251/workspace-cpp-Neon3/Ensc351/Debug" -o "Ensc351Part2"  ./src/Ensc351Part2.o ./src/Medium.o ./src/PeerX.o ./src/ReceiverX.o ./src/SenderX.o ./src/myIO.o   -lEnsc351 -lpthread
+Finished building target: Ensc351Part2
+ 
+19:08:53 **** Incremental Build of configuration Debug for project Ensc351 ****
+make all 
+make: Nothing to be done for 'all'.
+19:08:53 **** Incremental Build of configuration Debug for project Ensc351Part2 ****
+make all 
+make: Nothing to be done for 'all'.
+19:08:59 **** Incremental Build of configuration Debug for project Ensc351 ****
+make all 
+make: Nothing to be done for 'all'.
+19:08:59 **** Incremental Build of configuration Debug for project Ensc351Part2 ****
+make all 
+make: Nothing to be done for 'all'.
+19:09:01 **** Incremental Build of configuration Debug for project Ensc351 ****
+make all 
+make: Nothing to be done for 'all'.
+19:09:01 **** Incremental Build of configuration Debug for project Ensc351Part2 ****
+make all 
+make: Nothing to be done for 'all'.
+19:09:04 **** Incremental Build of configuration Debug for project Ensc351 ****
+make all 
+make: Nothing to be done for 'all'.
+19:09:04 **** Incremental Build of configuration Debug for project Ensc351Part2 ****
+make all 
+make: Nothing to be done for 'all'.
+19:09:06 **** Incremental Build of configuration Debug for project Ensc351 ****
+make all 
+make: Nothing to be done for 'all'.
+19:09:06 **** Incremental Build of configuration Debug for project Ensc351Part2 ****
+make all 
+make: Nothing to be done for 'all'.
+19:09:10 **** Incremental Build of configuration Debug for project Ensc351 ****
+make all 
+make: Nothing to be done for 'all'.
+19:09:10 **** Incremental Build of configuration Debug for project Ensc351Part2 ****
+make all 
+make: Nothing to be done for 'all'.
+19:09:15 **** Incremental Build of configuration Debug for project Ensc351 ****
+make all 
+make: Nothing to be done for 'all'.
+19:09:15 **** Incremental Build of configuration Debug for project Ensc351Part2 ****
+make all 
+make: Nothing to be done for 'all'.
+19:09:23 **** Incremental Build of configuration Debug for project Ensc351 ****
+make all 
+make: Nothing to be done for 'all'.
+19:09:24 **** Incremental Build of configuration Debug for project Ensc351Part2 ****
+make all 
+Building file: ../src/Medium.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++1y -I"/media/sf_U_ensc251/workspace-cpp-Neon3/Ensc351" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Medium.d" -MT"src/Medium.o" -o "src/Medium.o" "../src/Medium.cpp"
+Finished building: ../src/Medium.cpp
+ 
+Building target: Ensc351Part2
+Invoking: GCC C++ Linker
+g++ -L"/media/sf_U_ensc251/workspace-cpp-Neon3/Ensc351/Debug" -o "Ensc351Part2"  ./src/Ensc351Part2.o ./src/Medium.o ./src/PeerX.o ./src/ReceiverX.o ./src/SenderX.o ./src/myIO.o   -lEnsc351 -lpthread
+Finished building target: Ensc351Part2
+ 
+19:09:31 **** Incremental Build of configuration Debug for project Ensc351 ****
+make all 
+make: Nothing to be done for 'all'.
+19:09:31 **** Incremental Build of configuration Debug for project Ensc351Part2 ****
+make all 
+make: Nothing to be done for 'all'.
+19:09:56 **** Incremental Build of configuration Debug for project Ensc351 ****
+make all 
+make: Nothing to be done for 'all'.
+19:09:56 **** Incremental Build of configuration Debug for project Ensc351Part2 ****
+make all 
+Building file: ../src/Medium.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++1y -I"/media/sf_U_ensc251/workspace-cpp-Neon3/Ensc351" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Medium.d" -MT"src/Medium.o" -o "src/Medium.o" "../src/Medium.cpp"
+Finished building: ../src/Medium.cpp
+ 
+Building target: Ensc351Part2
+Invoking: GCC C++ Linker
+g++ -L"/media/sf_U_ensc251/workspace-cpp-Neon3/Ensc351/Debug" -o "Ensc351Part2"  ./src/Ensc351Part2.o ./src/Medium.o ./src/PeerX.o ./src/ReceiverX.o ./src/SenderX.o ./src/myIO.o   -lEnsc351 -lpthread
+Finished building target: Ensc351Part2
+ 
+19:15:39 **** Incremental Build of configuration Debug for project Ensc351 ****
+make all 
+make: Nothing to be done for 'all'.
+19:15:39 **** Incremental Build of configuration Debug for project Ensc351Part2 ****
+make all 
+Building file: ../src/Medium.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++1y -I"/media/sf_U_ensc251/workspace-cpp-Neon3/Ensc351" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Medium.d" -MT"src/Medium.o" -o "src/Medium.o" "../src/Medium.cpp"
+Finished building: ../src/Medium.cpp
+ 
+Building target: Ensc351Part2
+Invoking: GCC C++ Linker
+g++ -L"/media/sf_U_ensc251/workspace-cpp-Neon3/Ensc351/Debug" -o "Ensc351Part2"  ./src/Ensc351Part2.o ./src/Medium.o ./src/PeerX.o ./src/ReceiverX.o ./src/SenderX.o ./src/myIO.o   -lEnsc351 -lpthread
+Finished building target: Ensc351Part2
+ 

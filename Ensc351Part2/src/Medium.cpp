@@ -21,7 +21,7 @@
 // Uncomment the line below to turn on debugging output from the medium
 // #define REPORT_INFO
 
-//#define SEND_EXTRA_ACKS
+// #define SEND_EXTRA_ACKS
 
 //This is the kind medium.
 
