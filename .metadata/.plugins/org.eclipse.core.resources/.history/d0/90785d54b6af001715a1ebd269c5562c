@@ -1,0 +1,120 @@
+/* Wrapper functions for ENSC-351, Simon Fraser University, By
+ *  - Craig Scratchley
+ * 
+ * These functions may be re-implemented later in the course.
+ */
+
+#include <unistd.h>			// for read/write/close
+#include <fcntl.h>			// for open/creat
+#include <sys/socket.h> 		// for socketpair
+#include "SocketReadcond.h"
+#include <mutex>
+#include <thread>
+#include <condition_variable>
+#include <iostream>
+
+#define NUMBER_OF_PAIRS 2
+#define OTHER_SOCKETS 3 //cout, cin, cerr
+
+struct ThreadLocker {
+
+	int counter = 0;
+	int pairDes = -1;
+	std::mutex mtx;
+	std::condition_variable condition;
+};
+
+static ThreadLocker threadLockers [(NUMBER_OF_PAIRS * 2) + OTHER_SOCKETS];
+
+int mySocketpair( int domain, int type, int protocol, int des[2] )
+{
+	int returnVal = socketpair(domain, type, protocol, des);
+
+	// std::cout << des[0] << " " << des[1] << std::endl;
+
+	// Set thread locker pairs
+	threadLockers[des[0]].pairDes = des[1];
+	threadLockers[des[1]].pairDes = des[0];
+
+	return returnVal;
+}
+
+int myOpen(const char *pathname, int flags, mode_t mode)
+{
+	return open(pathname, flags, mode);
+}
+
+int myCreat(const char *pathname, mode_t mode)
+{
+	return creat(pathname, mode);
+}
+
+ssize_t myRead( int fildes, void* buf, size_t nbyte )
+{
+	// #1: Lock
+	std::lock_guard<std::mutex> lk(threadLockers[fildes].mtx);
+
+	// #2: Write Changes
+	ssize_t bytesRead = read(fildes, buf, nbyte );
+
+	// #3: Decrement buffer counter from socket pair
+	int pairDes = threadLockers[fildes].pairDes;
+	threadLockers[pairDes].counter--;
+
+	if (threadLockers[pairDes].counter == 0) {
+		// Notify (one of these may not be needed)
+		threadLockers[fildes].condition.notify_all();
+		threadLockers[pairDes].condition.notify_all();
+	}
+
+	// #4: Return the number of bytes written
+
+	return bytesRead;
+
+	// #5: Unlock mutex (done when function exits automatically because we used lock_guard)
+}
+
+ssize_t myWrite( int fildes, const void* buf, size_t nbyte )
+{
+	// #1: Lock
+	std::lock_guard<std::mutex> lk(threadLockers[fildes].mtx);
+
+	// #2: Write Changes
+	ssize_t bytesWritten = write(fildes, buf, nbyte );
+
+	// #3: Increment buffer counter
+	threadLockers[fildes].counter++;
+
+	// #4: Return the number of bytes written
+
+	return bytesWritten;
+
+	// #5: Unlock mutex (done when function exits automatically because we used lock_guard)
+}
+
+int myClose( int fd )
+{
+	return close(fd);
+}
+
+int myTcdrain(int des)
+{
+	// #1: Lock
+	std::unique_lock<std::mutex> lk(threadLockers[des].mtx);
+
+	// #2: Wait until buffer count == 0
+	threadLockers[des].condition.wait(lk, [des]() {
+		return threadLockers[des].counter == 0;
+	});
+
+	// #3: Unlock mutex
+	lk.unlock();
+
+	return 0;
+}
+
+int myReadcond(int des, void * buf, int n, int min, int time, int timeout)
+{
+	return wcsReadcond(des, buf, n, min, time, timeout );
+}
+

@@ -19,7 +19,7 @@
 #include "PeerX.h"
 
 // Uncomment the line below to turn on debugging output from the medium
-//#define REPORT_INFO
+// #define REPORT_INFO
 
 //#define SEND_EXTRA_ACKS
 
@@ -62,7 +62,7 @@ bool Medium::MsgFromTerm2()
 		byteToCorrupt = numOfByteReceived - byteCount - 1;
 		bytesReceived[byteToCorrupt] = (255 - bytesReceived[byteToCorrupt]);
 #ifdef REPORT_INFO
-		COUT << "<" << byteToCorrupt << "x>" << flush;
+		COUT << "<" << byteToCorrupt << "x>" << flush << endl;
 #endif
 	}
 

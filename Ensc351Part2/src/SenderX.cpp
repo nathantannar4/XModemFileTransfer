@@ -177,7 +177,7 @@ void SenderX::resendBlk()
 		return;
 	}
 
-	cout << "DETECTED ERROR (" << errCnt << "): RESENDING BLK" << endl;
+	// cout << "DETECTED ERROR (" << errCnt << "): RESENDING BLK" << endl;
 	uint8_t lastByte = sendMostBlk(blkBufs[(blkNum - 1) % 2]);
 	sendLastByte(lastByte);
 }
