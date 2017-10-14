@@ -132,7 +132,10 @@ void ReceiverX::getRestBlk()
 	else
 		checksum(rcvBlk);
 
-	goodBlk1st = goodBlk = true;
+	//goodBlk1st = goodBlk = true;
+	
+	if (goodBlk && !goodBlk1st) //first time block is good
+		goodBlk1st = true;
 }
 
 void ReceiverX::checksum(blkT blkBuf)
