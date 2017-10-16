@@ -16,4 +16,9 @@
 #define PE_NOT(function, desiredRv) function
 
 #define PE_0(function) function
+
+#ifdef EOK
+#define PE_EOK(function) function
+#endif
+
 #define PE_EOK(function) function

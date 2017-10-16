@@ -35,83 +35,48 @@
 #include <string.h> // for memset()
 #include <fcntl.h>
 #include <stdint.h>
-#include <iostream>
 #include "myIO.h"
 #include "ReceiverX.h"
+#include "ReceiverSS.h"
 #include "VNPE.h"
+#include "AtomicCOUT.h"
 
 using namespace std;
+using namespace Receiver_SS;
 
 ReceiverX::
 ReceiverX(int d, const char *fname, bool useCrc)
-:PeerX(d, fname, useCrc), goodBlk(false), goodBlk1st(false), numLastGoodBlk(0)
+:PeerX(d, fname, useCrc), 
+NCGbyte(useCrc ? 'C' : NAK),
+goodBlk(false), 
+goodBlk1st(false), 
+syncLoss(true),
+numLastGoodBlk(0),
+firstBlock(true)
 {
-	NCGbyte = useCrc ? 'C' : NAK;
 }
 
 void ReceiverX::receiveFile()
 {
 	mode_t mode = S_IRUSR | S_IWUSR | S_IRGRP | S_IROTH;
-
+	// should we test for error and set result to "OpenError" if necessary?
 	transferringFileD = PE2(creat(fileName, mode), fileName);
-	if(transferringFileD == -1) {
-		cerr << "Error opening input file named: " << fileName << endl;
-		result = "OpenError";
+
+	ReceiverSS *myReceiverSM = new ReceiverSS(this);
+	myReceiverSM->setDebugLog(NULL);
+
+	char byteToReceive;
+	while(myReceiverSM->isRunning()) {
+		PE(myRead(mediumD, &byteToReceive, 1));
+		myReceiverSM->postEvent(SER, byteToReceive);
 	}
 
-	// ***** improve this member function *****
-
-	// below is just an example template.  You can follow a
-	// 	different structure if you want.
-
-	// inform sender that the receiver is ready and that the
-	//		sender can send the first block
-	sendByte(NCGbyte);
-
-	while(PE_NOT(myRead(mediumD, rcvBlk, 1), 1), (rcvBlk[0] != CAN), (rcvBlk[0] != EOT))
-	{
-		if (rcvBlk[0] == SOH) {
-			getRestBlk();
-			if (goodBlk1st)
-			{
-				sendByte(ACK);
-				writeChunk();
-			}
-			else
-				sendByte(NAK); // checksum or crc check failed
-		}
-		else
-			// TODO: Wait for medium to go quiet
-			sendByte(NAK);
-	}
-
-	char byteToReceive = rcvBlk[0];
-
-	if (byteToReceive == CAN)
-	{
-		// TODO: Implement CTRL+Z to cancel transfer in Part3
-		result = "SenderCancelled";
-	}
-	else if (byteToReceive == EOT)
-	{
-		sendByte(NAK); // NAK the first EOT
-		PE_NOT(myRead(mediumD, rcvBlk, 1), 1);
-
-		byteToReceive = rcvBlk[0];
-		if (byteToReceive == EOT)
-		{
-			sendByte(ACK); // ACK the second EOT
-			result = "Done";
-		}
-		else
-		{
-			sendByte(NAK); // NAK the non existing EOT
-			result = "Done but only received 1 EOT";
-		}
-	}
-
+	COUT << "\n"; // insert new line.
 	PE(close(transferringFileD));
 }
+
+// use an enumeration to handle result of block: ?
+// goodBlk1st, syncLoss, goodBlkRpt, badblock
 
 /* Only called after an SOH character has been received.
 The function tries
@@ -124,35 +89,56 @@ time that the block was received in "good" condition.
 */
 void ReceiverX::getRestBlk()
 {
-	// ********* this function must be improved ***********
-	PE_NOT(myReadcond(mediumD, &rcvBlk[1], REST_BLK_SZ_CRC, REST_BLK_SZ_CRC, 0, 0), REST_BLK_SZ_CRC);
+	//PE_NOT(myRead(mediumD, &rcvBlk[1], REST_BLK_SZ), REST_BLK_SZ);
+	const int restBlkSz = Crcflg ? REST_BLK_SZ_CRC : REST_BLK_SZ_CS;
+	PE_NOT(myReadcond(mediumD, &rcvBlk[1], restBlkSz, restBlkSz, 0, 0), restBlkSz);
+	// consider only calculating local checksum if block and complement are okay.
+	// consider receiving checksum after calculating local checksum
 
-	if (Crcflg)
-		crc(rcvBlk);
-	else
-		checksum(rcvBlk);
-
-	//goodBlk1st = goodBlk = true;
-	
-	if (goodBlk && !goodBlk1st) //first time block is good
-		goodBlk1st = true;
-}
-
-void ReceiverX::checksum(blkT blkBuf)
-{
-	uint8_t recievedCheckSum = rcvBlk[PAST_CHUNK]; // The checksum calculated by the sender
-	uint8_t sum = 0;
-	for(int i=DATA_POS + 1; i < (BLK_SZ_CRC - 1); i++ )
-		sum += blkBuf[i];
-	goodBlk = (sum == recievedCheckSum);
-}
-
-void ReceiverX::crc(blkT blkBuf)
-{
-	/* calculate and add CRC in network byte order */
-	uint16_t crcCheck;
-	crc16ns(&crcCheck, &blkBuf[DATA_POS]);
-	goodBlk = ((uint8_t)(crcCheck >> 8) == blkBuf[BLK_SZ_CRC - 2]) && ((uint8_t)(crcCheck) == blkBuf[BLK_SZ_CRC - 1]);
+	//(blkNumsOk) = ( block # and its complement are matched );
+	bool blkNumsOk = (rcvBlk[2] == (255 - rcvBlk[1]));
+	if (!blkNumsOk) {
+		goodBlk = goodBlk1st = syncLoss = false;
+	}
+	else {
+		bool newExpectedBlk = (rcvBlk[1] == (uint8_t) (numLastGoodBlk + 1)); // ++numLastGoodBlk
+		if (!newExpectedBlk) {
+			goodBlk1st = false; // use in place of newExpectedBlk?
+			// determine fatal loss of synchronization
+			if (firstBlock || (rcvBlk[1] != numLastGoodBlk)) {
+				syncLoss = true;
+				goodBlk = false;
+				COUT << "(s" << (unsigned) rcvBlk[1] << ")" << flush;
+			}
+			else {
+				syncLoss = false;
+				goodBlk = true; // deemed good block
+				COUT << "(d" << (unsigned) rcvBlk[1] << ")" << flush;
+			}
+		}
+		else {
+			// detect data error in chunk
+			// consider receiving checksum after calculating local checksum
+			syncLoss = false;
+			if (Crcflg) {
+				uint16_t CRCbytes;
+				crc16ns(&CRCbytes, &rcvBlk[DATA_POS]);
+				goodBlk = goodBlk1st = (*((uint16_t*) &rcvBlk[PAST_CHUNK]) == CRCbytes);
+			}
+			else {
+				uint8_t sum;
+				checksum(&sum, rcvBlk);
+				goodBlk = goodBlk1st = (rcvBlk[PAST_CHUNK] == sum);
+			}
+			if (goodBlk1st) {
+				numLastGoodBlk = rcvBlk[1];
+				firstBlock = false;
+				COUT << "(f" << (unsigned) rcvBlk[1] << ")" << endl;
+			}
+			else
+				COUT << "(b" << (unsigned) rcvBlk[1]<< ":" << (unsigned) numLastGoodBlk << ")" << flush;
+		}
+	}
 }
 
 //Write chunk (data) in a received block to disk
@@ -166,9 +152,8 @@ void ReceiverX::writeChunk()
 void ReceiverX::can8()
 {
 	// no need to space CAN chars coming from receiver
-	const int canLen=8; // move to defines.h
+	const int canLen=8; // move to PeerX.h
     char buffer[canLen];
     memset( buffer, CAN, canLen);
     PE_NOT(myWrite(mediumD, buffer, canLen), canLen);
 }
-

@@ -74,8 +74,10 @@ int wcsReadcond( int fd,
 				errnoHold = errno;
 				break;
 			}
-			else
+			else if (bytesRead)
 				bytesSoFar += bytesRead;
+			else
+				break;
 	    }
 	    while (bytesSoFar < min);
 	    if (bytesRead != -1)

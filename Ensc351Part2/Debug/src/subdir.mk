@@ -7,7 +7,9 @@ CPP_SRCS += \
 ../src/Ensc351Part2.cpp \
 ../src/Medium.cpp \
 ../src/PeerX.cpp \
+../src/ReceiverSS.cpp \
 ../src/ReceiverX.cpp \
+../src/SenderSS.cpp \
 ../src/SenderX.cpp \
 ../src/myIO.cpp 
 
@@ -15,7 +17,9 @@ OBJS += \
 ./src/Ensc351Part2.o \
 ./src/Medium.o \
 ./src/PeerX.o \
+./src/ReceiverSS.o \
 ./src/ReceiverX.o \
+./src/SenderSS.o \
 ./src/SenderX.o \
 ./src/myIO.o 
 
@@ -23,7 +27,9 @@ CPP_DEPS += \
 ./src/Ensc351Part2.d \
 ./src/Medium.d \
 ./src/PeerX.d \
+./src/ReceiverSS.d \
 ./src/ReceiverX.d \
+./src/SenderSS.d \
 ./src/SenderX.d \
 ./src/myIO.d 
 

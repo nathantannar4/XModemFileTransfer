@@ -32,26 +32,29 @@
 // Original portions Copyright (c) 2017 Craig Scratchley  (wcs AT sfu DOT ca)
 //============================================================================
 
-#include <iostream>
+//#include <iostream>
 #include <stdint.h> // for uint8_t
 #include <string.h> // for memset()
-#include <fcntl.h>	// for O_RDWR
+#include <fcntl.h>	// for open(), O_RDWR
 
+#include "AtomicCOUT.h"
 #include "myIO.h"
 #include "SenderX.h"
 #include "VNPE.h"
+#include "SenderSS.h"
+
+// comment out the line below to get rid of Sender logging information.
+#define REPORT_INFO
 
 using namespace std;
+using namespace Sender_SS;
 
 SenderX::SenderX(const char *fname, int d)
 :PeerX(d, fname),
- bytesRd(-1),
+ bytesRd(-2), // initialize with unique value.
  firstCrcBlk(true),
- blkNum(1)
+ blkNum(0)  	// but first block sent will be block #1, not #0
 {
-	Crcflg = true;
-	errCnt = 0;
-	firstCrcBlk = true;
 }
 
 //-----------------------------------------------------------------------------
@@ -71,7 +74,7 @@ void SenderX::dumpGlitches()
 //uint8_t SenderX::sendMostBlk(blkT blkBuf)
 uint8_t SenderX::sendMostBlk(uint8_t blkBuf[BLK_SZ_CRC])
 {
-	int mostBlockSize = (this->Crcflg ? BLK_SZ_CRC : BLK_SZ_CS) - 1;
+	const int mostBlockSize = (this->Crcflg ? BLK_SZ_CRC : BLK_SZ_CS) - 1;
 	PE_NOT(myWrite(mediumD, blkBuf, mostBlockSize), mostBlockSize);
 	return *(blkBuf + mostBlockSize);
 }
@@ -81,7 +84,7 @@ void
 SenderX::
 sendLastByte(uint8_t lastByte)
 {
-	PE(myTcdrain(mediumD)); // wait for previous part of block to be transmitted to receiver
+	PE(myTcdrain(mediumD)); // wait for previous part of block to be completely read by some thread
 	dumpGlitches();			// dump any received glitches
 
 	PE_NOT(myWrite(mediumD, &lastByte, sizeof(lastByte)), sizeof(lastByte));
@@ -99,9 +102,9 @@ void SenderX::genBlk(uint8_t blkBuf[BLK_SZ_CRC])
 {
 	//read data and store it directly at the data portion of the buffer
 	bytesRd = PE(read(transferringFileD, &blkBuf[DATA_POS], CHUNK_SZ ));
-	if(bytesRd>0)
-	{
-		blkBuf[0] = SOH;
+	if (bytesRd>0) {
+		blkBuf[0] = SOH; // can be pre-initialized for efficiency
+		//block number and its complement
 		uint8_t nextBlkNum = blkNum + 1;
 		blkBuf[SOH_OH] = nextBlkNum;
 		blkBuf[SOH_OH + 1] = ~nextBlkNum;
@@ -132,6 +135,9 @@ void SenderX::genBlk(uint8_t blkBuf[BLK_SZ_CRC])
 			}
 		}
 	}
+	// else if (bytesRead < 0)
+	//	// report problem
+	//  ;
 }
 
 /* tries to prepare the first block.
@@ -139,16 +145,19 @@ void SenderX::genBlk(uint8_t blkBuf[BLK_SZ_CRC])
 void SenderX::prep1stBlk()
 {
 	// **** this function will need to be modified ****
-	Crcflg = true;
-	genBlk(blkBufs[blkNum % 2]);
+	// maybe better to use something derived from variable blkNum instead of 1 below
+	genBlk(blkBufs[1]);
 }
 
-
-void SenderX::cs1stBlk()
+/* refit the 1st block with a checksum
+*/
+void
+SenderX::
+cs1stBlk()
 {
-	// **** this function will need to be modified ****
-	Crcflg = false;
-	genBlk(blkBufs[blkNum % 2]);
+	// *** fill in ***
+	// maybe better to use something derived from variable blkNum instead of 1 below
+	checksum (&blkBufs[1][PAST_CHUNK], blkBufs[1]);
 }
 
 /* while sending the now current block for the first time, prepare the next block if possible.
@@ -156,146 +165,60 @@ void SenderX::cs1stBlk()
 void SenderX::sendBlkPrepNext()
 {
 	// **** this function will need to be modified ****
-	uint8_t lastByte = sendMostBlk(blkBufs[blkNum % 2]);
 	blkNum ++; // 1st block about to be sent or previous block ACK'd
-	genBlk(blkBufs[blkNum % 2]); // prepare next block
+#ifdef REPORT_INFO
+	// block will be "w"ritten to mediumD
+	COUT << "\n[w" << (int)blkNum << "]" << flush;
+#endif
+	uint8_t lastByte = sendMostBlk(blkBufs[blkNum%2]);
+	genBlk(blkBufs[(blkNum+1)%2]); // prepare next block
 	sendLastByte(lastByte);
 }
 
 // Resends the block that had been sent previously to the xmodem receiver
 void SenderX::resendBlk()
 {
-	// resend the block including the checksum
+	// resend the block including the checksum or crc16
 	//  ***** You will have to write this simple function *****
-	errCnt++;
-
-	if (errCnt >= errB)
-	{
-		result = "ExcessiveNAKs";
-		can8();
-		PE(myClose(transferringFileD));
-		return;
-	}
-
-	// cout << "DETECTED ERROR (" << errCnt << "): RESENDING BLK" << endl;
-	uint8_t lastByte = sendMostBlk(blkBufs[(blkNum - 1) % 2]);
-	sendLastByte(lastByte);
+#ifdef REPORT_INFO
+	// block will be "r"ewritten
+	COUT << "[r" << (int)(blkNum) << "]" << flush;
+#endif
+	sendLastByte(sendMostBlk(blkBufs[blkNum%2]));
 }
 
 //Send 8 CAN characters in a row (in pairs spaced in time) to the
 //  XMODEM receiver, to inform it of the canceling of a file transfer
 void SenderX::can8()
 {
-
 	const int canLen=2;
     char buffer[canLen];
     memset( buffer, CAN, canLen);
 
-	const int canPairs=4;
-	/*
-	for (int x=0; x<canPairs; x++) {
-		PE_NOT(myWrite(mediumD, buffer, canLen), canLen);
-		usleep((TM_2CHAR + TM_CHAR)*1000*mSECS_PER_UNIT/2); // is this needed for the last time through loop?
-	};
-	*/
+	const int canPairs=4; // derive from #define
 	int x = 1;
-	while (PE_NOT(myWrite(mediumD, buffer, canLen), canLen), x<canPairs) {
+	while (PE_NOT(myWrite(mediumD, buffer, canLen), canLen),
+			x<canPairs) {
 		++x;
-		if (x < canPairs)
-			// As long as CAN's need to sent through the medium add a time delay
-			usleep((TM_2CHAR + TM_CHAR)*1000*mSECS_PER_UNIT/2);
+		usleep((TM_2CHAR + TM_CHAR)*1000*mSECS_PER_UNIT/2);
 	}
-
-	dumpGlitches();
 }
 
 void SenderX::sendFile()
 {
-
 	transferringFileD = myOpen(fileName, O_RDONLY, 0);
-	if(transferringFileD == -1) {
-		cerr << "Error opening input file named: " << fileName << endl;
+	if(transferringFileD == -1 /* should be -1 */) {
+		COUT /* CERR */ << "Error opening input file named: " << fileName << endl;
 		result = "OpenError";
 	}
-	else {
-		blkNum = 1;
+	else {	
+		SenderSS *mySenderSM = new SenderSS(this);
+		mySenderSM->setDebugLog(NULL);
 
-		// ***** modify the below code according to the protocol *****
-		// below is just a starting point.  You can follow a
-		// 	different structure if you want.
-		char byteToReceive;
-
-		PE_NOT(myRead(mediumD, &byteToReceive, 1), 1);
-
-		if (byteToReceive == 'C')
-			prep1stBlk();
-		else if (byteToReceive == NAK)
-			cs1stBlk();
-		else
-		{
-			cerr << "Sender received totally unexpected char #" << byteToReceive << ": " << (char)byteToReceive << endl;
-			PE(myClose(transferringFileD));
-			exit(EXIT_FAILURE);
-		}
-
-
-		while (bytesRd) {
-
-			sendBlkPrepNext();
-
+		while(mySenderSM->isRunning()) {
+			char byteToReceive;
 			PE_NOT(myRead(mediumD, &byteToReceive, 1), 1);
-
-			if (byteToReceive == NAK)
-				resendBlk();
-			else if (byteToReceive == CAN)
-			{
-				can8();
-				result = "RcvCancelled";
-				return;
-			}
-			else if (byteToReceive == ACK)
-				errCnt = 0;
-			else
-			{
-				cerr << "Sender received totally unexpected char #" << byteToReceive << ": " << (char)byteToReceive << endl;
-				PE(myClose(transferringFileD));
-				exit(EXIT_FAILURE);
-			}
-		}
-
-		sendByte(EOT); // send the first EOT
-		PE_NOT(myRead(mediumD, &byteToReceive, 1), 1); // assuming get a NAK
-
-		if (byteToReceive == NAK) {
-
-			sendByte(EOT); // send the second EOT
-			PE_NOT(myRead(mediumD, &byteToReceive, 1), 1); // assuming get an ACK
-
-			if (byteToReceive == ACK)
-				result = "Done";
-			else if (byteToReceive == CAN)
-			{
-				result = "RcvCancelled";
-				can8();
-			}
-			else
-			{
-				cerr << "Sender received totally unexpected char #" << byteToReceive << ": " << (char)byteToReceive << endl;
-				PE(myClose(transferringFileD));
-				exit(EXIT_FAILURE);
-			}
-
-		}
-		else if (byteToReceive == ACK)
-		{
-			sendByte(EOT);
-			result = "1st EOT ACK'd";
-		}
-		else
-		{
-			cerr << "Sender received totally unexpected char #" << byteToReceive << ": " << (char)byteToReceive << endl;
-			PE(myClose(transferringFileD));
-			exit(EXIT_FAILURE);
+			mySenderSM->postEvent(SER, byteToReceive);
 		}
 
 		PE(myClose(transferringFileD));
@@ -305,4 +228,3 @@ void SenderX::sendFile()
 		*/
 	}
 }
-

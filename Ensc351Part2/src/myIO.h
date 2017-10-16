@@ -1,15 +1,8 @@
 #ifndef MYSOCKET_H_
 #define MYSOCKET_H_
 
-#include <unistd.h>
-#include <sys/stat.h>
-
-/*
-int myCreat(const char *pathname, mode_t mode);
-ssize_t myRead( int fildes, void* buf, size_t nbyte );
-ssize_t myWrite( int fildes, const void* buf, size_t nbyte );
-int myClose(int fd);
-*/
+#include <unistd.h> 	// for size_t
+#include <sys/stat.h>	// for mode_t
 
 /* int myOpen( const char * path,
           int oflag,

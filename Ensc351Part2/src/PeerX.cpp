@@ -73,11 +73,8 @@ crc16ns (uint16_t* crc16nsP, uint8_t* buf)
 	 //if (Crcflg) {
 		 oldcrc=updcrc(0,updcrc(0,oldcrc));
 
-		 //uint16_t crc16 = oldcrc;
-		 //*crc16nsP = (crc16 >> 8) + (crc16 << 8);
-
-		 *crc16nsP = my_htons((uint16_t) oldcrc); // new
-		 /* *crc16nsP = htons((uint16_t) oldcrc); // new */
+		 *crc16nsP = my_htons((uint16_t) oldcrc); 
+		 /* *crc16nsP = htons((uint16_t) oldcrc); */
 
 		 //sendline((int)oldcrc>>8);
 		 //sendline((int)oldcrc);
@@ -86,9 +83,22 @@ crc16ns (uint16_t* crc16nsP, uint8_t* buf)
 		 //sendline(checksum);
 }
 
+void
+checksum(uint8_t* sumP, blkT blkBuf)
+{
+	*sumP = blkBuf[DATA_POS];
+	for( int ii=DATA_POS + 1; ii<PAST_CHUNK; ii++ )
+		*sumP += blkBuf[ii];
+}
+
 PeerX::
 PeerX(int d, const char *fname, bool useCrc)
-:result("ResultNotSet"), errCnt(0), mediumD(d), fileName(fname), transferringFileD(-1), Crcflg(useCrc)
+:result("ResultNotSet"),
+ errCnt(0),
+ Crcflg(useCrc),
+ mediumD(d),
+ fileName(fname),
+ transferringFileD(-1)
 {
 }
 

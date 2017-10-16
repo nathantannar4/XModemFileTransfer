@@ -1,0 +1,151 @@
+//============================================================================
+//
+//% Student Name 1: student1
+//% Student 1 #: 123456781
+//% Student 1 userid (email): stu1 (stu1@sfu.ca)
+//
+//% Student Name 2: student2
+//% Student 2 #: 123456782
+//% Student 2 userid (email): stu2 (stu2@sfu.ca)
+//
+//% Below, edit to list any people who helped you with the code in this file,
+//%      or put 'None' if nobody helped (the two of) you.
+//
+// Helpers: _everybody helped us/me with the assignment (list names or put 'None')__
+//
+// Also, list any resources beyond the course textbooks and the course pages on Piazza
+// that you used in making your submission.
+//
+// Resources:  ___________
+//
+//%% Instructions:
+//% * Put your name(s), student number(s), userid(s) in the above section.
+//% * Also enter the above information in other files to submit.
+//% * Edit the "Helpers" line and, if necessary, the "Resources" line.
+//% * Your group name should be "P2_<userid1>_<userid2>" (eg. P1_stu1_stu2)
+//% * Form groups as described at:  https://courses.cs.sfu.ca/docs/students
+//% * Submit files to courses.cs.sfu.ca
+//
+// File Name   : myIO.cpp
+// Version     : October, 2017
+// Description : Wrapper functions for ENSC-351 -- Starting point for ENSC 351 Project Part 3
+// Original portions Copyright (c) 2017 Craig Scratchley  (wcs AT sfu DOT ca)
+//============================================================================
+
+#include <unistd.h>			// for read/write/close
+#include <fcntl.h>			// for open/creat
+#include <sys/socket.h> 		// for socketpair
+#include "SocketReadcond.h"
+
+#include <mutex>
+#include <thread>
+#include <condition_variable>
+#include <iostream>
+#include <vector>
+
+#define NUMBER_OF_PAIRS 2
+#define OTHER_SOCKETS 3 //cout, cin, cerr
+
+struct ThreadLocker {
+
+	ssize_t counter = 0;
+	int pairDes = -1;
+	std::mutex mtx;
+	std::condition_variable condition;
+};
+
+static ThreadLocker threadLockers [(NUMBER_OF_PAIRS * 2) + OTHER_SOCKETS + 10];
+
+int mySocketpair( int domain, int type, int protocol, int des[2] )
+{
+	int returnVal = socketpair(domain, type, protocol, des);
+
+	// Set thread locker pairs
+	threadLockers[des[0]].pairDes = des[1];
+	threadLockers[des[1]].counter = 0;
+	threadLockers[des[1]].pairDes = des[0];
+	threadLockers[des[1]].counter = 0;
+
+	return returnVal;
+}
+
+int myOpen(const char *pathname, int flags, mode_t mode)
+{
+	return open(pathname, flags, mode);
+}
+
+int myCreat(const char *pathname, mode_t mode)
+{
+	return creat(pathname, mode);
+}
+
+ssize_t myRead( int fildes, void* buf, size_t nbyte )
+{
+	int des = threadLockers[fildes].pairDes;
+	// #1: Read Changes
+	ssize_t bytesRead = read(fildes, buf, nbyte );
+
+	// #2: Lock
+	std::lock_guard<std::mutex> lk(threadLockers[des].mtx);
+
+	std::cerr << fildes << " Read: " << threadLockers[des].counter << " -> " << threadLockers[des].counter - bytesRead << std::endl;
+
+	// #3: Decrement buffer counter from socket pair
+	threadLockers[des].counter -= bytesRead;
+
+	if (threadLockers[des].counter == 0) {
+		std::cerr << "NOTIFYING: " << des << std::endl;
+		threadLockers[des].condition.notify_all();
+	}
+
+	// #4: Unlock mutex on exit
+	// #5: Return the number of bytes written
+	return bytesRead;
+}
+
+ssize_t myWrite( int fildes, const void* buf, size_t nbyte )
+{
+	int des = fildes;
+	// #1: Lock
+	std::lock_guard<std::mutex> lk(threadLockers[des].mtx);
+
+	// #2: Write Changes
+	ssize_t bytesWritten = write(fildes, buf, nbyte );
+
+	std::cerr << fildes << " Wrote: " << threadLockers[des].counter << " -> " << bytesWritten + threadLockers[des].counter << std::endl;
+
+	// #3: Increment buffer counter
+	threadLockers[des].counter += bytesWritten;
+
+	// #4: Unlock mutex on exit
+	// #5: Return the number of bytes written
+	return bytesWritten;
+}
+
+int myClose( int fd )
+{
+	return close(fd);
+}
+
+int myTcdrain(int des)
+{
+	// #1: Lock
+	std::cerr << "LOCK " << des << std::endl;
+	std::unique_lock<std::mutex> lk(threadLockers[des].mtx);
+
+	// #2: Wait until buffer count == 0
+	threadLockers[des].condition.wait(lk, [des]() {
+		return threadLockers[des].counter == 0;
+	});
+	std::cerr << "UN-LOCK " << des << std::endl;
+
+	// #3: Unlock mutex
+	lk.unlock();
+
+	return 0;
+}
+
+int myReadcond(int des, void * buf, int n, int min, int time, int timeout)
+{
+	return wcsReadcond(des, buf, n, min, time, timeout );
+}

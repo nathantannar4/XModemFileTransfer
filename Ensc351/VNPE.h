@@ -3,12 +3,12 @@
 #define REINITIALIZE_ERRNO
 
 // definitions used for ENSC 351
-#define HAVE_TLS	// QNX has TLS
+#define HAVE_TLS	// QNX and Linux have TLS
 
 /*
 VNS_PE.h is part of the VectorNav Support Library http://vnsupport.sourceforge.net/
 
-		Copyright (c) 2009 - 2015 Craig Scratchley (craig_scratchley@alumni.sfu.ca),
+		Copyright (c) 2009 - 2017 Craig Scratchley (craig_scratchley@alumni.sfu.ca),
  	 	 	 	 	 	 	 Mark Marszal (mark@cocoanut.org)
 
  The VectorNav Support Library is free software: you can redistribute it and/or modify
@@ -179,8 +179,6 @@ char* VNS_retStr (int returnValue, int desiredRv);
 #define VNPE_64_LC VNPE_CAST
 #else
 
-
-
 /*
  * We are on a 32 bit system
  * We need a blank define when using pthread_setspecific (VNPE_64_LC).
@@ -193,18 +191,11 @@ char* VNS_retStr (int returnValue, int desiredRv);
 	PE_FINAL(function, info, check_value, (pthread_setspecific( ReturnValue_key, set_cast_modifier (function))), get_cast_modifer pthread_getspecific(ReturnValue_key), errno, INIT_ERRNO)
 
 #define PE_PTR(function, info, check_value) PE_ERRNO_USED(function, info, check_value, VNPE_NO_CAST, VNPE_NO_CAST)
-
 #define PE_NON_PTR(function, info, check_value) PE_ERRNO_USED(function, info, check_value, (void *) VNPE_64_LC, VNPE_CAST)
+#define PE_RETVAL_USED(function, info, check_value) PE_FINAL(function, info, check_value, (pthread_setspecific( ReturnValue_key, (void*) VNPE_64_LC (function))), VNPE_CAST pthread_getspecific(ReturnValue_key), VNPE_CAST pthread_getspecific(ReturnValue_key), 0)
 
 #define PE_NOT_P(function, desiredRv) PE_NOT_PENULTIMATE(function, desiredRv, pthread_setspecific( ReturnValue_key, (void*) VNPE_64_LC (function)), \
 		VNPE_CAST pthread_getspecific(ReturnValue_key), INIT_ERRNO)
-
-#define PE_0_P(function) PE_FINAL(function, NULL, != 0, (pthread_setspecific( ReturnValue_key, (void*) VNPE_64_LC (function))), VNPE_CAST pthread_getspecific(ReturnValue_key), VNPE_CAST pthread_getspecific(ReturnValue_key), 0)
-
-// On Linux/Mac OS X systems, EOK may not exist
-#ifdef EOK
-#define PE_EOK_P(function) PE_FINAL(function, NULL, != EOK, (pthread_setspecific( ReturnValue_key, (void*) VNPE_64_LC (function))), VNPE_CAST pthread_getspecific(ReturnValue_key), VNPE_CAST pthread_getspecific(ReturnValue_key), 0)
-#endif
 
 #endif // HAVE_TLS
 
@@ -226,67 +217,69 @@ char* VNS_retStr (int returnValue, int desiredRv);
 
 // PE_PTR is for macros for functions that return a pointer, like malloc()
 // PE_NON_PTR is for macros for functions that return something other than a pointer, perhaps a ssize_t
+// PE_RETVAL_USED is for macros for functions that can return an error code
 	// function is the function being called.
 	// info is either NULL or a c string with more info
 	// check_value is the test to check for an error indication in the returned value, which may be a pointer or not depending on the macro.  Eg. == (-1)
 #define PE_PTR(function, info, check_value) PE_ERRNO_USED(function, info, check_value, VNPE_ptr)
 #define PE_NON_PTR(function, info, check_value) PE_ERRNO_USED(function, info, check_value, VNPE_non_ptr)
+#define PE_RETVAL_USED(function, info, check_value) PE_INTERMEDIATE(function, info, check_value, VNPE_non_ptr, VNPE_non_ptr, errno = errno)
 
 // "Preformed" macros (ending in "_P").  See VNPE_disable.h and VNPE_reenable.h
 
-// The PE_NOT macro is like PE but is intended for situations where a
+// The PE_NOT_P macro is like PE but is intended for situations where a
 // specific (desired) return value is required.
 #define PE_NOT_P(function, desiredRv) PE_NOT_PENULTIMATE(function, desiredRv, VNPE_non_ptr = (function), VNPE_non_ptr, INIT_ERRNO)
-
-// The PE_EOK macro is for wrapping functions to detect whether a function call
-//	did not return 0, indicating an error.  If EOK is not returned, an error reporting
-//  function is called.
-#define PE_0_P(function) PE_INTERMEDIATE(function, NULL, != 0, VNPE_non_ptr, VNPE_non_ptr, errno = errno)
-
-// On Linux/Mac OS X systems, EOK may not exist
-#ifdef EOK
-// The PE_EOK macro is for wrapping functions to detect whether a function call
-//	did not return EOK, indicating an error.  If EOK is not returned, an error reporting
-//  function is called.
-#define PE_EOK_P(function) PE_INTERMEDIATE(function, NULL, != EOK, VNPE_non_ptr, VNPE_non_ptr, errno = errno)
-#endif
 
 #endif // defined(HAVE_TLS) || defined(__GNUC__)
 
 /*
- The PE_NULL macro is for wrapping functions to detect whether a function call
+ The PE_NULL_P macro is for wrapping functions to detect whether a function call
  returns NULL to indicate an error.  If NULL is returned, an error reporting
  function is called.
  */
 #define PE_NULL_P(function) PE_PTR(function, NULL, == NULL)
 
-// The PE2_NULL macro is as above but also reports an additional piece of information
+// The PE2_NULL_P macro is as above but also reports an additional piece of information
 #define PE2_NULL_P(function, info) PE_PTR(function, info, == NULL)
 
 /*
- The PE macro is for wrapping functions to detect whether a function call
+ The PE_P macro is for wrapping functions to detect whether a function call
  returns -1 to indicate an error.  If -1 is returned, an error reporting
  function is called.
 */
 #define PE_P(function) PE_NON_PTR(function, NULL, == (-1))
 
-// The PE2 macro is as above but also reports an additional piece of information
+// The PE2_P macro is as above but also reports an additional piece of information
 #define PE2_P(function, info) PE_NON_PTR(function, info, == (-1))
 
 /*
- The PE_EOF macro is for wrapping functions to detect whether a function call
+ The PE_EOF_P macro is for wrapping functions to detect whether a function call
  returns EOF to indicate an error.  If EOF is returned, an error reporting
  function is called.
 */
-// NOTE -- EOF is often -1 so PE is often the same as PE_EOF
+// NOTE -- EOF is often -1 so PE_P is often the same as PE_EOF_P
 #define PE_EOF_P(function) PE_NON_PTR(function, NULL, == EOF)
 
 /*
- The PE_NEG macro is for wrapping functions to detect whether a function call
+ The PE_NEG_P macro is for wrapping functions to detect whether a function call
  returns a negative number to indicate an error.  If a negative number is returned, an error reporting
  function is called.
 */
 #define PE_NEG_P(function) PE_NON_PTR(function, NULL, < 0)
+
+// The PE_0_P macro is for wrapping functions to detect whether a function call
+//	did not return 0, indicating an error.  If 0 is not returned, an error reporting
+//  function is called.
+#define PE_0_P(function) PE_RETVAL_USED(function, NULL, != 0)
+
+// On Linux/Mac OS X systems, EOK may not exist
+#ifdef EOK
+// The PE_EOK_P macro is for wrapping functions to detect whether a function call
+//	did not return EOK, indicating an error.  If EOK is not returned, an error reporting
+//  function is called.
+#define PE_EOK_P(function) PE_RETVAL_USED(function, NULL, != EOK)
+#endif
 
 #include "VNPE_reenable.h"
 
