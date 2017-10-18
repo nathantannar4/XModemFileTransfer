@@ -1,12 +1,12 @@
 //============================================================================
 //
-//% Student Name 1: student1
-//% Student 1 #: 123456781
-//% Student 1 userid (email): stu1 (stu1@sfu.ca)
+//% Student Name 1: Nathan Tannar
+//% Student 1 #: 301258264
+//% Student 1 userid (email): ntannar@sfu.ca
 //
-//% Student Name 2: student2
-//% Student 2 #: 123456782
-//% Student 2 userid (email): stu2 (stu2@sfu.ca)
+//% Student Name 2: Shahira A Azhar
+//% Student 2 #: 301236985
+//% Student 2 userid (email): shahiraa@sfu.ca
 //
 //% Below, edit to list any people who helped you with the code in this file,
 //%      or put 'None' if nobody helped (the two of) you.
@@ -43,27 +43,42 @@
 #include <iostream>
 #include <vector>
 
-#define NUMBER_OF_PAIRS 2
-#define OTHER_SOCKETS 3 //cout, cin, cerr
+#define SOCKET_OFFSET 3 // cout, cerr, cin
 
-struct ThreadLocker {
-
+struct ThreadLocker
+{
 	ssize_t counter = 0;
 	int pairDes = -1;
 	std::mutex mtx;
 	std::condition_variable condition;
 };
 
-static ThreadLocker threadLockers [(NUMBER_OF_PAIRS * 2) + OTHER_SOCKETS + 10];
+static std::vector<ThreadLocker*> threadLockers;
+std::mutex vectorMutex;
+
+int myReadcond(int des, void * buf, int n, int min, int time, int timeout);
 
 int mySocketpair( int domain, int type, int protocol, int des[2] )
 {
 	int returnVal = socketpair(domain, type, protocol, des);
 
-	// Set thread locker pairs
-	threadLockers[des[0]].pairDes = des[1];
-	threadLockers[des[1]].pairDes = des[0];
+	// #1: Lock
+	std::lock_guard<std::mutex> vlk(vectorMutex);
 
+	std::cerr << "Opening Socket " << des[0] << std::endl;
+	std::cerr << "Opening Socket " << des[1] << std::endl;
+
+	// #2 Create a new ThreadLocker pair and push their pointers into a vector which can
+	// be referenced by the des - SOCKET_OFFSET
+	ThreadLocker* a = new ThreadLocker;
+	a->pairDes = des[1];
+	threadLockers.push_back(a);
+
+	ThreadLocker* b = new ThreadLocker;
+	b->pairDes = des[0];
+	threadLockers.push_back(b);
+
+	// #3 Unlock and return
 	return returnVal;
 }
 
@@ -79,41 +94,19 @@ int myCreat(const char *pathname, mode_t mode)
 
 ssize_t myRead( int fildes, void* buf, size_t nbyte )
 {
-	int des = fildes;
-	// #1: Read Changes
-	ssize_t bytesRead = read(fildes, buf, nbyte );
-
-	// #2: Lock
-	std::lock_guard<std::mutex> lk(threadLockers[des].mtx);
-
-	std::cerr << des << " Read: " << threadLockers[des].counter << " -> " << threadLockers[des].counter - bytesRead << std::endl;
-
-	// #3: Decrement buffer counter from socket pair
-	threadLockers[des].counter -= bytesRead;
-
-	if (threadLockers[des].counter == 0) {
-		std::cerr << "NOTIFYING: " << des << std::endl;
-		threadLockers[des].condition.notify_all();
-	}
-
-	// #4: Unlock mutex on exit
-	// #5: Return the number of bytes written
-	return bytesRead;
+	return myReadcond(fildes, buf, nbyte, 1, 0, 0);
 }
 
 ssize_t myWrite( int fildes, const void* buf, size_t nbyte )
 {
-	int des = threadLockers[fildes].pairDes;
 	// #1: Lock
-	std::lock_guard<std::mutex> lk(threadLockers[des].mtx);
+	std::lock_guard<std::mutex> lk(threadLockers.at(fildes - SOCKET_OFFSET)->mtx);
 
 	// #2: Write Changes
 	ssize_t bytesWritten = write(fildes, buf, nbyte );
 
-	std::cerr << des << " Wrote: " << threadLockers[des].counter << " -> " << bytesWritten + threadLockers[des].counter << std::endl;
-
 	// #3: Increment buffer counter
-	threadLockers[des].counter += bytesWritten;
+	threadLockers.at(fildes - SOCKET_OFFSET)->counter += bytesWritten;
 
 	// #4: Unlock mutex on exit
 	// #5: Return the number of bytes written
@@ -122,28 +115,53 @@ ssize_t myWrite( int fildes, const void* buf, size_t nbyte )
 
 int myClose( int fd )
 {
+	// #1: Lock
+	std::lock_guard<std::mutex> vlk(vectorMutex);
+
+	// #2: Check if ThreadLocker exists
+	if (fd >= (threadLockers.size() + SOCKET_OFFSET - 1))
+		return close(fd);
+
+	// #3: Delete
+//	std::cerr << "Closing Socket " << fd << std::endl;
+//	delete threadLockers.at(fd - SOCKET_OFFSET);
+//	threadLockers.at(fd - SOCKET_OFFSET) = NULL;
+
+	// #4: Unlock mutex
 	return close(fd);
 }
 
 int myTcdrain(int des)
 {
 	// #1: Lock
-	std::cerr << "LOCK " << des << std::endl;
-	std::unique_lock<std::mutex> lk(threadLockers[des].mtx);
+	std::unique_lock<std::mutex> lk(threadLockers.at(des - SOCKET_OFFSET)->mtx);
 
 	// #2: Wait until buffer count == 0
-	threadLockers[des].condition.wait(lk, [des]() {
-		return threadLockers[des].counter == 0;
+	threadLockers.at(des - SOCKET_OFFSET)->condition.wait(lk, [des]() {
+		return threadLockers.at(des - SOCKET_OFFSET)->counter == 0;
 	});
-	std::cerr << "UN-LOCK " << des << std::endl;
 
 	// #3: Unlock mutex
-	lk.unlock();
-
 	return 0;
 }
 
 int myReadcond(int des, void * buf, int n, int min, int time, int timeout)
 {
-	return wcsReadcond(des, buf, n, min, time, timeout );
+	int pair = threadLockers.at(des - SOCKET_OFFSET)->pairDes;
+	// #1: Read Changes
+	ssize_t bytesRead = wcsReadcond(des, buf, n, min, time, timeout);
+
+	// #2: Lock
+	std::lock_guard<std::mutex> lk(threadLockers.at(pair - SOCKET_OFFSET)->mtx);
+
+	// #3: Decrement buffer counter from socket pair
+	threadLockers.at(pair - SOCKET_OFFSET)->counter -= bytesRead;
+
+	// #4: Check condition var
+	if (threadLockers.at(pair - SOCKET_OFFSET)->counter == 0)
+		threadLockers.at(pair - SOCKET_OFFSET)->condition.notify_all();
+
+	// #5: Unlock mutex on exit
+	// #6: Return the number of bytes written
+	return bytesRead;
 }

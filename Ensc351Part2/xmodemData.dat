@@ -6,7 +6,7 @@ C˛############################################################################
 #  Please see the "update-mime" man ù¸page for more information.
 #
 #  Users can add their own rules if they wish by creating a ".mailcap"
-#  file in their home õirectÅ¸page for more information.
+#  file in their homeﬂdirectÅ¸page for more information.
 #
 #  Users can add their own rules if they wish by creating a ".mailcap"
 #  file in their home directÅ˚ory.  Entries included there will take
@@ -16,19 +16,18 @@ C˛############################################################################
 
 
 ###############################################################################
-#
-‹  User secti¢˚˙##############################
+#ı#  User secti¢˚˙##############################
 
 
 ###############################################################################
 #
 #  User secti¢˚˘on follows:  Any entries included in this section will take
-#  precedence over those created by "update-mime".  DO NOT CHANGE th‡Ä¯e
+#  precedence over those created by "update-mime".  DO NOT CHANGE th‡Ä¯e
 #  "User Section Begins" and "User Section Ends" lines, or anything outside
 #  of this section!
 #
 
-# -----ﬂUser Section Begins˝±¯e
+# ----“ User Section Begins˝±¯e
 #  "User Section Begins" and "User Section Ends" lines, or anything outside
 #  of this section!
 #
@@ -38,208 +37,208 @@ C˛############################################################################
 
 ###############################################################################
 
-a`n	ˆpplication/vnd.oasis.opendocument.chart; soffice --nologo --calc '%s'; edit=soffice --nologo --calc '⁄s'; print=soffice --nologo ë	ˆpplication/vnd.oasis.opendocument.chart; soffice --nologo --calc '%s'; edit=soffice --nologo --calc '%s'; print=soffice --nologo ë
+a`n	ˆpplication/vnd.oasis.opendocument.chart; soffice --nologo --calc '%s'; edit=soffice --nologo --calc ÿ%s'; print=soffice --nologo ë	ˆpplication/vnd.oasis.opendocument.chart; soffice --nologo --calc '%s'; edit=soffice --nologo --calc '%s'; print=soffice --nologo ë
 ı --calc -p '%s'; test=test -n "$DISPLAY"; description="OpenDocument Chart"; nametemplate=%s.odc
 application/vnd.oasis.opendocume~X
-ı --calc -p '%s'; test=test -n "$DISPLAY"; description="OpenDocument Chart"; nametemplate=%s.odú
+ı --calc -p '%s'; test=test -n "$DISPLAY"; description="OpenDocument Chart"; nametemplate=%s.oõc
 application/vnd.oasis.opendocume~XÙnt.spreadsheet; soffice --nologo --calc '%s'; edit=soffice --nologo --calc '%s'; print=soffice --nologo --calc -p '%s'; test=tes‘ZÛt -n "$DISPLAY"; description="OpenDocument Spreadsheet"; nametemplate=%s.ods
-application/vnd.oasis.opendocument.spreadsheet-tempÆUÚlate; soffice --nologo --calc '%s'; edit=soffice --nologo --calc '%s'; print=soffice --ëologo --calc -p '%s'; test=test -n "$DISI Úlate; soffice --nologo --calc '%s'; edit=soffice --nologo --calc '%s'; print=soffice --nologo --calc -p '%s'; test=test -n "$DISI ÒPLAY"; description="OpenDocument Spreadsheet Template"; nametemplate=%s.ots
-application/vnd.oasis.opendocument.formula; soffice ö--nologo --math '%s'; edit=soffice --nologo --math '%s'; print=soffice --nologo “-math -p '%s'; test=test -n "$DISPLAY"; descrip;G--nologo --math '%s'; edit=soffice --nologo --math '%s'; print=soffice --nologo --math -p '%s'; test=test -n "$DISPLAY"; descrip;GÔtion="OpenDocument Formula"; nametemplate=%s.odf
-application/vnd.oasis.opendocument.text; soffice --nologo --writer '%s'; edit=s;Óoffice --nologo --writer '%s'; print=soffice --nologo --writer -p '%s'; töst=test -n "$DISPLAY"; description="OpenDocument Text §ÔÓoffice --nologo --writer '%s'; print=soffice --nologo --writer -p '%s'; test=test -n "$DISPLAY"; description="OpenDocument Text §ÔÌDocument"; nametemplate=%s.odt
-application/vnd.oasis.opendocument.text-master; soffice --nologo --global '%s'; edit=soffice --no ,Ïlogo --writer '%s'; print=soffice --nologo --writer -p '%s'; test=ãest -n "$DISPLAY"; description="OpenDocument Master Document"¡Ïlogo --writer '%s'; print=soffice --nologo --writer -p '%s'; test=test -n "$DISPLAY"; description="OpenDocument Master Document"¡Ïlogo --writer '%s'; print=soffice --nologo --writer -p '%s'; test=test -n "$DISPLAY"; description="OpenDocument Master Document"¡Î; nametemplate=%s.odm
-application/vnd.oasis.opendocument.teát-template; soffice --nologo --writer '%s'; edit=soffice --nologo --EVÎ; nametemplate=%s.odm
+application/vnd.oasis.opendocument.spreadsheet-tempÆUÚlate; soffice --nologo --calc '%s'; edit=soffice --nologo --calc '%s'; print=soffice -“nologo --calc -p '%s'; test=test -n "$DISI Úlate; soffice --nologo --calc '%s'; edit=soffice --nologo --calc '%s'; print=soffice --nologo --calc -p '%s'; test=test -n "$DISI ÒPLAY"; description="OpenDocument Spreadsheet Template"; nametemplate=%s.ots
+application/vnd.oasis.opendocument.formula; soffice ö--nologo --math '%s'; edit=soffice --nologo --math '%s'; print=soffice --nologoﬂ--math -p '%s'; test=test -n "$DISPLAY"; descrip;G--nologo --math '%s'; edit=soffice --nologo --math '%s'; print=soffice --nologo --math -p '%s'; test=test -n "$DISPLAY"; descrip;GÔtion="OpenDocument Formula"; nametemplate=%s.odf
+application/vnd.oasis.opendocument.text; soffice --nologo --writer '%s'; edit=s;Óoffice --nologo --writer '%s'; print=soffice --nologo --writer -p '%s'; ãest=test -n "$DISPLAY"; description="OpenDocument Text §ÔÓoffice --nologo --writer '%s'; print=soffice --nologo --writer -p '%s'; test=test -n "$DISPLAY"; description="OpenDocument Text §ÔÌDocument"; nametemplate=%s.odt
+application/vnd.oasis.opendocument.text-master; soffice --nologo --global '%s'; edit=soffice --no ,Ïlogo --writer '%s'; print=soffice --nologo --writer -p '%s'; test¬test -n "$DISPLAY"; description="OpenDocument Master Document"¡Ïlogo --writer '%s'; print=soffice --nologo --writer -p '%s'; test=test -n "$DISPLAY"; description="OpenDocument Master Document"¡Ïlogo --writer '%s'; print=soffice --nologo --writer -p '%s'; test=test -n "$DISPLAY"; description="OpenDocument Master Document"¡Î; nametemplate=%s.odm
+application/vnd.oasis.opendocument.töxt-template; soffice --nologo --writer '%s'; edit=soffice --nologo --EVÎ; nametemplate=%s.odm
 application/vnd.oasis.opendocument.text-template; soffice --nologo --writer '%s'; edit=soffice --nologo --EVÍwriter '%s'; print=soffice --nologo --writer -p '%s'; test=test -n "$DISPLAY"; description="OpenDocument Text Document Template"ÛÈ; nametemplate=%s.ott
-application/vnd.oasis.opendocuíent.text-web; soffice --nologo --web '%s'; edit=soffice --nologo --web '%s'S‰È; nametemplate=%s.ott
+application/vnd.oasis.opendocäment.text-web; soffice --nologo --web '%s'; edit=soffice --nologo --web '%s'S‰È; nametemplate=%s.ott
 application/vnd.oasis.opendocument.text-web; soffice --nologo --web '%s'; edit=soffice --nologo --web '%s'S‰Ë; print=soffice --nologo --web -p '%s'; test=test -n "$DISPLAY"; description="OpenDocument HTML Document Template"; nametemplateˇpÁ=%s.oth
+text/plain; less '%s'; needsterminalıapplication/vnd.sun.xml.calc; soffice --nologo --calc '%s'; edit=soffice --nologo -‡3Á=%s.oth
 text/plain; less '%s'; needsterminal
-ûpplication/vnd.sun.xml.calc; soffice --nologo --calc '%s'; edit=soffice --nologo -‡3Á=%s.oth
-text/plain; less '%s'; needsterminal
-application/vnd.sun.xml.calc; soffice --nologo --calc '%s'; edit=soffice --nologo -‡3Ê-calc '%s'; test=test -n "$DISPLAY"; description="OpenOffice.org Spreadsheet"; nametemplate=%s.sxc
-application/vnd.sun.xml.calc.ÇÂtemplate; soffice --nologo --calc '%s'ƒ edit=soffice --nologo --calc '%s'; test=test -n "$DISPLAY"; description="OpenOffice.org QÂtemplate; soffice --nologo --calc '%s'; edit=soffice --nologo --calc '%s'; test=test -n "$DISPLAY"; description="OpenOffice.org Q‰Spreadsheet Template"; nametemplate=%s.stc
-application/vnd.sun.xml.math; soffice --nologo --math '%s'; edit=soffice --nologo --mæî„ath '%s'; test=test -n "$DISPLA¶"; description="OpenOffice.org Formula"; nametemplate=%s.sxm
+application/vnd.sun.xml.calc; soffice --nologo --calc '%s'; edit=soffice --nologo -‡3Ê-calc '%s'; test=test -n "$DISPLAY"; description="OpenOffice.org Spreadsheet"; nametemplate=%s.sxc
+application/vnd.sun.xml.calc.ÇÂtemplate; soffice --nologo --calc '%sÿ; edit=soffice --nologo --calc '%s'; test=test -n "$DISPLAY"; description="OpenOffice.org QÂtemplate; soffice --nologo --calc '%s'; edit=soffice --nologo --calc '%s'; test=test -n "$DISPLAY"; description="OpenOffice.org Q‰Spreadsheet Template"; nametemplate=%s.stc
+application/vnd.sun.xml.math; soffice --nologo --math '%s'; edit=soffice --nologo --mæî„ath '%s'; test=test -n "$DISPLæY"; description="OpenOffice.org Formula"; nametemplate=%s.sxm
 application/vnd.sun.xml.writer; sofHû„ath '%s'; test=test -n "$DISPLAY"; description="OpenOffice.org Formula"; nametemplate=%s.sxm
 application/vnd.sun.xml.writer; sofHû„ath '%s'; test=test -n "$DISPLAY"; description="OpenOffice.org Formula"; nametemplate=%s.sxm
-application/vnd.sun.xml.writer; sofHû‚fice --nologo --writer '⁄s'; edit=soffice --nologo --writer '%s'; description="OpenOffice.org Text Document"; nametemplate=%s.sx/l‚fice --nologo --writer '%s'; edit=soffice --nologo --writer '%s'; description="OpenOffice.org Text Document"; nametemplate=%s.sx/l·w
-application/vnd.sun.xml.writer.global; soffice --nologo --global '%s'; edit=soffice --nologo --writer '%s'; description="OpenO®‡ffice.org Master ªocument"; nametemplate=%s.sxg
+application/vnd.sun.xml.writer; sofHû‚fice --nologo --writer ÿ%s'; edit=soffice --nologo --writer '%s'; description="OpenOffice.org Text Document"; nametemplate=%s.sx/l‚fice --nologo --writer '%s'; edit=soffice --nologo --writer '%s'; description="OpenOffice.org Text Document"; nametemplate=%s.sx/l·w
+application/vnd.sun.xml.writer.global; soffice --nologo --global '%s'; edit=soffice --nologo --writer '%s'; description="OpenO®‡ffice.org MasterﬂDocument"; nametemplate=%s.sxg
 application/vnd.sun.xml.writer.template; soffice --nologo --writer '%s'; edit=so÷‡ffice.org Master Document"; nametemplate=%s.sxg
 application/vnd.sun.xml.writer.template; soffice --nologo --writer '%s'; edit=so÷ ﬂffice --nologo --writer '%s'; description="OpenOffice.org Text Document Template"; nametemplate=%s.stw
-application/x-troff-man; ≥?!ﬁ/usr/bin/mûn -X100 -l '%s'; test=test -n "$DISPLAY" -a -e /usr/bin/gxditview; description=Man page
+application/x-troff-man; ≥?!ﬁ/usr/bin/ían -X100 -l '%s'; test=test -n "$DISPLAY" -a -e /usr/bin/gxditview; description=Man page
 text/troff; /usr/bin/man -X10y !ﬁ/usr/bin/man -X100 -l '%s'; test=test -n "$DISPLAY" -a -e /usr/bin/gxditview; description=Man page
 text/troff; /usr/bin/man -X10y "›0 -l '%s'; test=test -n "$DISPLAY" -a -e /usr/bin/gxditview; description=Man page
-application/x-troff-man; /usr/bin/man -l '%s';ò#‹ neödsterminal; description=Man page
+application/x-troff-man; /usr/bin/man -l '%s';ò#‹ nöedsterminal; description=Man page
 text/troff; /usr/bin/man -l '%s'; needsterminal; description=Man page
 text/html; /usr/bin/s]ˆ#‹ needsterminal; description=Man page
 text/troff; /usr/bin/man -l '%s'; needsterminal; description=Man page
 text/html; /usr/bin/s]ˆ$€ensible-browser %s; description=HTML Text; nametemplate=%s.html
-application/pdf; evince %s; test=test -n "$DISPLAY"; nametemplatÀœ$€ensible-browser %s; description=HTML Text; nametemplate=%s.html
-application/pdf; evince %s; test=test -n "$DISPLAY"; nametemplatÀ0%⁄e=%s.pdf
+application/pdf; evince %s; test=test -n "$DISPLAY"; nametemplat40$€ensible-browser %s; description=HTML Text; nametemplate=%s.html
+application/pdf; evince %s; test=test -n "$DISPLAY"; nametemplatÀ0%⁄e=%s.pdf
 application/x-troff-man; /usr/bin/nroff -mandoc -Tutf8; copiousoutput; print=/usr/bin/nroff -mandoc -Tutf8 | print textk!%⁄e=%s.pdf
-application/x-troff-man; /usr/bin/nroff -mandoc -Tutf8; copiousoutput; print=/usr/bin/nroff -mandoc -Tutf8 | prinã textk!&Ÿ/plain:-
+application/x-troff-man; /usr/bin/nroff -mandoc -Tutf8; copiousoutput; print=/usr/bin/nroff -mandoc -Tutf8 | priët textk!&Ÿ/plain:-
 text/troff; /usr/bin/nroff -mandoc -Tutf8; copiousoutput; print=/usr/bin/nroff -mandoc -Tutf8 | print text/plain:-
 applQ'ÿication/x-info; /usr/bin/info -f '%s'; needsterminal; description=GNU Info document
 application/x-bittorrent; transmission-gtk %P†(◊s; description="GTK-based BitTorrent client"; test=test -n "$DISPLAY"
 text/plain; more %s; needsterminal
-text/x-appêrt; /usr/sha4'(◊s; description="GTK-based BitTorrent client"; test=test -n "$DISPLAY"
+text/x-apèort; /usr/sha4'(◊s; description="GTK-based BitTorrent client"; test=test -n "$DISPLAY"
 text/plain; more %s; needsterminal
 text/x-apport; /usr/sha4')÷re/apport/apport-gtk -c %s; test=test -n "$DISPLAY"
 image/avs; /usr/bin/display-im6 %s; test=test -n "$DISPLAY"
 image/bie; /usr/Eè*’bin/display-im6 %s; test=test -n "$DISPLAY"
-image/x-ms-bmp; /usr/bin/display-im6 %s; test=test -n "$DISPLAY"ıimage/cmyk; /usr/bipØ*’bin/display-im6 %s; test=test -n "$DISPLAY"
+image/x-ms-bmp; /usr/bin/display-im6 %s; test=test -n "$DISPLAY›
+image/cmyk; /usr/bipØ*’bin/display-im6 %s; test=test -n "$DISPLAY"
 image/x-ms-bmp; /usr/bin/display-im6 %s; test=test -n "$DISPLAY"
-image/cmyk; /usr/bipØ+‘n/display-im6 %s; test=test -n "$DISPLAY"
+image/cmyk; /usr/bipØ+‘n/display-im6 %s; test=test -n "$DISPLAY"
 image/dcx; /usr/bin/display-im6 %s; test=test -n "$DISPLAY"
 image/eps; /usr/bin/displa@x,”y-im6 %s; test=test -n "$DISPLAY"
 image/fax; /usr/bin/display-im6 %s; test=test -n "$DISPLAY"
-image/fñts; /usr/bin/display-im6 %%1,”y-im6 %s; test=test -n "$DISPLAY"
+image/ôits; /usr/bin/display-im6 %%1,”y-im6 %s; test=test -n "$DISPLAY"
 image/fax; /usr/bin/display-im6 %s; test=test -n "$DISPLAY"
 image/fits; /usr/bin/display-im6 %%1-“s; test=test -n "$DISPLAY"
 image/gif; /usr/bin/display-im6 %s; test=test -n "$DISPLAY"
 image/gray; /usr/bin/display-im6 %s; test™U.—=test -n "$DISPLAY"
 image/jpeg; /usr/bin/display-im6 %s; test=test -n "$DISPLAY"
-image/pjpeg; –usr/bin/display-im6 %s; test=test8·.—=test -n "$DISPLAY"
+image/pjpeg;ﬂ/usr/bin/display-im6 %s; test=test8·.—=test -n "$DISPLAY"
 image/jpeg; /usr/bin/display-im6 %s; test=test -n "$DISPLAY"
 image/pjpeg; /usr/bin/display-im6 %s; test=test8·.—=test -n "$DISPLAY"
 image/jpeg; /usr/bin/display-im6 %s; test=test -n "$DISPLAY"
 image/pjpeg; /usr/bin/display-im6 %s; test=test8·/– -n "$DISPLAY"
 image/miff; /usr/bin/display-im6 %s; test=test -n "$DISPLAY"
-image/mono;ﬂ/usr/bin/display-im6 %s; test=test -n "$ÔÆ/– -n "$DISPLAY"
+image/monoƒ /usr/bin/display-im6 %s; test=test -n "$ÔÆ/– -n "$DISPLAY"
 image/miff; /usr/bin/display-im6 %s; test=test -n "$DISPLAY"
 image/mono; /usr/bin/display-im6 %s; test=test -n "$ÔÆ0œDISPLAY"
 image/mtv; /usr/bin/display-im6 %s; test=test -n "$DISPLAY"
-image/x-portable-bitmap; /usr/bin/display-im6 %s; test=testô∆1Œ -n "$DISPLAY"
+image/x-portable-bitmap; /usr/bin/display-im6 %s; test=testô∆1Œ -n "$DISPLAY"
 image/pcd; /usr/bin/display-im6 %s; test=test -n "$DISPLAY"
-image–pcx; /usr/bin/display-im6 %s; test=test -n "$DI°¸1Œ -n "$DISPLAY"
+imagö/pcx; /usr/bin/display-im6 %s; test=test -n "$DI°¸1Œ -n "$DISPLAY"
 image/pcd; /usr/bin/display-im6 %s; test=test -n "$DISPLAY"
 image/pcx; /usr/bin/display-im6 %s; test=test -n "$DI°¸2ÕSPLAY"
 image/pdf; /usr/bin/display-im6 %s; test=test -n "$DISPLAY"
 image/x-portable-graymap; /usr/bin/display-im6 %s; test=test LÏ3Ã-n "$DISPLAY"
-image/pict; /usr/bin/display-im6 %s; test=test -n "$DISPLAY›
+image/pict; /usr/bin/display-im6 %s; test=test -n "$DISPLA¶"
 image/png; /usr/bin/display-im6 %s; test=test -n "$DI⁄{3Ã-n "$DISPLAY"
 image/pict; /usr/bin/display-im6 %s; test=test -n "$DISPLAY"
 image/png; /usr/bin/display-im6 %s; test=test -n "$DI⁄{4ÀSPLAY"
 image/x-portable-anymap; /usr/bin/display-im6 %s; test=test -n "$DISPLAY"
 image/x-portable-pixmap; /usr/bin/display-im6 %Å5 s; test=test -n "$DISPLAY"
-image/ps; /usr/bin/display-im6 %s; test¬test -n "$DISPLAY"
+image/ps; /usr/bin/display-im6 %s; tesã=test -n "$DISPLAY"
 image/rad; /usr/bin/display-im6 %s; test=tîZ5 s; test=test -n "$DISPLAY"
 image/ps; /usr/bin/display-im6 %s; test=test -n "$DISPLAY"
 image/rad; /usr/bin/display-im6 %s; test=tîZ6…est -n "$DISPLAY"
 image/x-rgb; /usr/bin/display-im6 %s; test=test -n "$DISPLAY"
-image/rgba; /usr/bin/display-im6 %s; test=test -êπ7»n "$DISPLAY"
-image/rla; /usr/bin/display-im6 %s; test=test “n "$DISPLAY"
+image/rgba; /usr/bin/display-im6 %s; test=test -êπ7»n "$DISPLAY"
+image/rla; /usr/bin/display-im6 %s; test=testﬂ-n "$DISPLAY"
 image/rle; /usr/bin/display-im6 %s; test=test -n "$DISPµ7»n "$DISPLAY"
 image/rla; /usr/bin/display-im6 %s; test=test -n "$DISPLAY"
 image/rle; /usr/bin/display-im6 %s; test=test -n "$DISPµ7»n "$DISPLAY"
 image/rla; /usr/bin/display-im6 %s; test=test -n "$DISPLAY"
 image/rle; /usr/bin/display-im6 %s; test=test -n "$DISPµ8«LAY"
-image/sgi; /usr/bin/display-im6 %s; test=test -ë "$DISPLAY"
+image/sgi; /usr/bin/display-im6 %s; test=test “n "$DISPLAY"
 image/sun-raster; /usr/bin/display-im6 %s; test=test -n "$DISPLGñ8«LAY"
 image/sgi; /usr/bin/display-im6 %s; test=test -n "$DISPLAY"
 image/sun-raster; /usr/bin/display-im6 %s; test=test -n "$DISPLGñ9∆AY"
 image/targa; /usr/bin/display-im6 %s; test=test -n "$DISPLAY"
 image/tiff; /usr/bin/display-im6 %s; test=test -n "$DISPLAY"
-i™µ:≈mage/uyvy; /usr/bin/display-im6 %s; test=testﬂ-n "$DISPLAY"
+i™µ:≈mage/uyvy; /usr/bin/display-im6 %s; test=tesã -n "$DISPLAY"
 image/vid; /usr/bin/display-im6 %s; test=test -n "$DISPLAY"
 image/vi.å:≈mage/uyvy; /usr/bin/display-im6 %s; test=test -n "$DISPLAY"
 image/vid; /usr/bin/display-im6 %s; test=test -n "$DISPLAY"
 image/vi.å;ƒff; /usr/bin/display-im6 %s; test=test -n "$DISPLAY"
 image/x-xbitmap; /usr/bin/display-im6 %s; test=test -n "$DISPLAY"
-image/x-xÕ¯<√pixmap; /usr/bin/display-im6 %s; test=ãest -n "$DISPLAY"
+image/x-xÕ¯<√pixmap; /usr/bin/display-im6 %s; test¬test -n "$DISPLAY"
 image/x-xwindowdump; /usr/bin/display-im6 %s; test=test -n "$DISPLAY"
 iŸ≥<√pixmap; /usr/bin/display-im6 %s; test=test -n "$DISPLAY"
 image/x-xwindowdump; /usr/bin/display-im6 %s; test=test -n "$DISPLAY"
-iŸ≥=¬mage/x-icon; /usr/bin/display-im6 %s; test=test -n "$DISPLAY"
+iŸ≥=¬mage/x-icon; /usr/bin/display-im6 %s; test=test -n "$DISPLAY"
 image/yuv; /usr/bin/display-im6 %s; test=test -n "$DISPLAY"
-image/AÅ>¡avs; /usr/lib/x86_64-linux-gnu/∂mageMagick-6.8.9/bin-Q16/display %s; test=test -n "$DISPLAY"
+image/AÅ>¡avs; /usr/lib/x86_64-linux-gnu–ImageMagick-6.8.9/bin-Q16/display %s; test=test -n "$DISPLAY"
 image/bie; /usr/lib/x86_64-linux-gn¢π>¡avs; /usr/lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/display %s; test=test -n "$DISPLAY"
 image/bie; /usr/lib/x86_64-linux-gn¢π?¿u/ImageMagick-6.8.9/bin-Q16/display %s; test=test -n "$DISPLAY"
-image/x-ms-bmp; /usr/lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Ì†@øQ16/display %s; test=tesã -n "$DISPLAY"
+image/x-ms-bmp; /usr/lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Ì†@øQ16/display %s; test=teåt -n "$DISPLAY"
 image/cmyk; /usr/lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/display %s; test=test -nm@øQ16/display %s; test=test -n "$DISPLAY"
 image/cmyk; /usr/lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/display %s; test=test -nm@øQ16/display %s; test=test -n "$DISPLAY"
 image/cmyk; /usr/lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/display %s; test=test -nmAæ "$DISPLAY"
-image–dcx; /usr/lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/display %s; test=test -n "$DISPLAY"
+imagö/dcx; /usr/lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/display %s; test=test -n "$DISPLAY"
 image/eps; /usr/lÜÚAæ "$DISPLAY"
 image/dcx; /usr/lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/display %s; test=test -n "$DISPLAY"
 image/eps; /usr/lÜÚBΩib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/display %s; test=test -n "$DISPLAY"
-image/fax; /usr/lib/x86_64-linux-gnu/ImageMagi»Cºck-6.8.9/bñn-Q16/display %s; test=test -n "$DISPLAY"
+image/fax; /usr/lib/x86_64-linux-gnu/ImageMagi»Cºck-6.8.9/ùin-Q16/display %s; test=test -n "$DISPLAY"
 image/fits; /usr/lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/display %s;èCºck-6.8.9/bin-Q16/display %s; test=test -n "$DISPLAY"
 image/fits; /usr/lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/display %s;èDª test=test -n "$DISPLAY"
 image/gif; /usr/lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/display %s; test=test -n "$DISPLAY"
-imagXVE∫e/gçay; /usr/lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/display %s; test=test -n "$DISPLAY"
+imagXVE∫e/òray; /usr/lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/display %s; test=test -n "$DISPLAY"
 image/jpeg; /usr/lib/x86_64-linuóJE∫e/gray; /usr/lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/display %s; test=test -n "$DISPLAY"
 image/jpeg; /usr/lib/x86_64-linuóJFπx-gnu/ImageMagick-6.8.9/bin-Q16/display %s; test=test -n "$DISPLAY"
-image/pjpeg; /usr/lib/x86_64-linux-gnu/ImageMagick-6.8.9/binR˝Fπx-gnu/ImageMagick-6.8.9/bin-Q16/display %s; test=test -n "$DISPLAY"
+image/pjpeg; /usr/lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin≠Fπx-gnu/ImageMagick-6.8.9/bin-Q16/display %s; test=test -n "$DISPLAY"
 image/pjpeg; /usr/lib/x86_64-linux-gnu/ImageMagick-6.8.9/binRG∏-Q16/display %s; test=test -n "$DISPLAY"
 image/miff; /usr/lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/display %s; test=test -ÿãH∑n "$DISPLAY"
 image/mono; /usr/lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/display %s; test=test -n "$DISPLAY"
-image/mtvƒ /usrI±H∑n "$DISPLAY"
+image/mtâ; /usrI±H∑n "$DISPLAY"
 image/mono; /usr/lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/display %s; test=test -n "$DISPLAY"
-image/mtv; /usrI±I∂/lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/display %s; test=test -n "$DISPLAY"
+image/mtv; /usrI±I∂/lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/display %s; test=test -n "$DISPLAY"
 image/x-portable-bitmap; /usr/lib/x86_64-linaãI∂/lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/display %s; test=test -n "$DISPLAY"
-image/x-portable-bitmap; /usr/lñb/x86_64-linaãJµux-gnu/ImageMagick-6.8.9/bin-Q16/display %s; test=test -n "$DISPLAY"
+image/x-portable-bitmap; /usr/ìib/x86_64-linaãJµux-gnu/ImageMagick-6.8.9/bin-Q16/display %s; test=test -n "$DISPLAY"
 image/pcd; /usr/lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-⁄K¥Q16/display %s; test=test -n "$DISPLAY"
 image/pcx; /usr/lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/display %s; test=test -n ∫–L≥"$DISPLAY"
-image/pdf; /usr/lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/display %s; test=test -n "$DISPLAY›
+image/pdf; /usr/lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/display %s; test=test -n "$DISPLA¶"
 image/x-portable-g:L≥"$DISPLAY"
 image/pdf; /usr/lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/display %s; test=test -n "$DISPLAY"
 image/x-portable-g:M≤raymap; /usr/lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/display %s; test=test -n "$DISPLAY"
 image/pict; /usr/lib/x86_64-linuzEN±x-gnu/ImageMagick-6.8.9/bin-Q16/display %s; test=test -n "$DISPLAY"
-image/png; /usr/lib/x86_64-linux-ònu/ImageMagick-6.8.9/bin-QsN±x-gnu/ImageMagick-6.8.9/bin-Q16/display %s; test=test -n "$DISPLAY"
-image/png; /usr/lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-QsO∞16/display %s; test=test -n "$DISPLAY"
+image/png; /usr/lib/x86_64-linux“gnu/ImageMagick-6.8.9/bin-QsN±x-gnu/ImageMagick-6.8.9/bin-Q16/display %s; test=test -n "$DISPLAY"
+image/png; /usr/lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-QsO∞16/display %s; test=test -n "$DISPLAY"
 image/x-portable-anymap; /usr/lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/display %s; ûçPØtest=test -n "$DISPLAY"
-image/x-portable-pixmap; /usr/lib/x86_64-linux-gnu/ImageMagick-6.8.9/bñn-Q16/display %s; test=test -n "$Ü€PØtest=test -n "$DISPLAY"
+image/x-portable-pixmap; /usr/lib/x86_64-linux-gnu/ImageMagick-6.8.9/ùin-Q16/display %s; test=test -n "$Ü€PØtest=test -n "$DISPLAY"
 image/x-portable-pixmap; /usr/lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/display %s; test=test -n "$Ü€QÆDISPLAY"
 image/ps; /usr/lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/display %s; test=test -n "$DISPLAY"
 image/rad; /usr/lib/xMˆR≠86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/display %s; test=test -n "$DISPLAY"
-image/x-ròb; /usr/lib/x86_64-linux-gnu/ImageMagickräR≠86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/display %s; test=test -n "$DISPLAY"
+image/x-çgb; /usr/lib/x86_64-linux-gnu/ImageMagickräR≠86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/display %s; test=test -n "$DISPLAY"
 image/x-rgb; /usr/lib/x86_64-linux-gnu/ImageMagickräR≠86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/display %s; test=test -n "$DISPLAY"
 image/x-rgb; /usr/lib/x86_64-linux-gnu/ImageMagickräS¨-6.8.9/bin-Q16/display %s; test=test -n "$DISPLAY"
-image/rgba; /usr/lib/x86_64-lñnux-gnu/ImageMagick-6.8.9/bin-Q16/display %s; t∞S¨-6.8.9/bin-Q16/display %s; test=test -n "$DISPLAY"
+image/rgba; /usr/lib/x86_64-ìinux-gnu/ImageMagick-6.8.9/bin-Q16/display %s; t∞S¨-6.8.9/bin-Q16/display %s; test=test -n "$DISPLAY"
 image/rgba; /usr/lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/display %s; t∞T´est=test -n "$DISPLAY"
 image/rla; /usr/lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/display %s; test=test -n "$DISPLAY"
-image/™)U™rle; /usr/lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/display %s; test¬test -n "$DISPLAY"
+image/™)U™rle; /usr/lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/display %s; tesã=test -n "$DISPLAY"
 image/sgi; /usr/lib/x86_64-linux-gn‚çU™rle; /usr/lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/display %s; test=test -n "$DISPLAY"
 image/sgi; /usr/lib/x86_64-linux-gn‚çV©u/ImageMagick-6.8.9/bin-Q16/display %s; test=test -n "$DISPLAY"
 image/sun-raster; /usr/lib/x86_64-linux-gnu/ImageMagick-6.8.9/bi‚âW®n-Q16/display %s; test=test -n "$DISPLAY"
-image/targa; /usr/lib/x8…_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/display %s; test=testT«W®n-Q16/display %s; test=test -n "$DISPLAY"
+image/targa; /usr/lib/x«6_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/display %s; test=testT«W®n-Q16/display %s; test=test -n "$DISPLAY"
 image/targa; /usr/lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/display %s; test=testT«Xß -n "$DISPLAY"
 image/tiff; /usr/lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/display %s; test=test -n "$DISPLAY"
-image/uyvy; //ÊY¶usr/lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/display ⁄s; test=test -n "$DISPLAY"
+image/uyvy; //ÊY¶usr/lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/displayﬂ%s; test=test -n "$DISPLAY"
 image/vid; /usr/lib/x86_64-linux-gnu/ImagtøY¶usr/lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/display %s; test=test -n "$DISPLAY"
 image/vid; /usr/lib/x86_64-linux-gnu/ImagtøZ•eMagick-6.8.9/bin-Q16/display %s; test=test -n "$DISPLAY"
-image/viff; /usr/lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/displaÍ™[§y %s; test=test -n "$DISPLAY"
-image/x-xbitmap; /usr/ìib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/display %s; test=test -n "$DIZX[§y %s; test=test -n "$DISPLAY"
+image/viff; /usr/lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/displaÍ™[§y %s; test=test -n "$DISPLAY"
+image/x-xbitmap; /usr–lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/display %s; test=test -n "$DIZX[§y %s; test=test -n "$DISPLAY"
 image/x-xbitmap; /usr/lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/display %s; test=test -n "$DIZX[§y %s; test=test -n "$DISPLAY"
 image/x-xbitmap; /usr/lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/display %s; test=test -n "$DIZX\£SPLAY"
-image/x-xpixmap; /usr/lib/x86_64-linux“gnu/ImageMagick-6.8.9/bin-Q16/display %s; test=test -n "$DISPLAY"
+image/x-xpixmap; /usr/lib/x86_64-linuá-gnu/ImageMagick-6.8.9/bin-Q16/display %s; test=test -n "$DISPLAY"
 image/x-xwindowdU(\£SPLAY"
 image/x-xpixmap; /usr/lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/display %s; test=test -n "$DISPLAY"
 image/x-xwindowdU(]¢ump; /usr/lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/display %s; test=test -n "$DISPLAY"
-image/x-icon; /usr/lib/x86_64-linux7ﬂ^°-gnu/ImageMagick-6.8.9/bin-Q16/displayﬂ%s; test=test -n "$DISPLAY"
+image/x-icon; /usr/lib/x86_64-linux7ﬂ^°-gnu/ImageMagick-6.8.9/bin-Q16/displaÜ %s; test=test -n "$DISPLAY"
 image/yuv; /usr/lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q1?i^°-gnu/ImageMagick-6.8.9/bin-Q16/display %s; test=test -n "$DISPLAY"
 image/yuv; /usr/lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q1?i_†6/display %s; test=test -n "$DISPLAY"
 text/english; /usr/bin/emacs24 -nw %s; needsterminal
 text/plain; /usr/bin/emacs24 -nw %s; .e`üneedsterminal
-text/x-makefile; –usr/bin/emacs24 -nw %s; needsterminal
+text/x-makefile;ﬂ/usr/bin/emacs24 -nw %s; needsterminal
 text/x-c++hdr; /usr/bin/emacs24 -nw %s; needsterminal
 textíA`üneedsterminal
 text/x-makefile; /usr/bin/emacs24 -nw %s; needsterminal
 text/x-c++hdr; /usr/bin/emacs24 -nw %s; needsterminal
-textíAaû/x-c++src; /usr/bin/emacs24 -nw %s; needsterminal
+textíAaû/x-c++src; /usr/bin/emacs24 -nw %s; needsterminal
 text/x-chdr; /usr/bin/emacs24 -nw %s; needsterminal
-text/x-csrc; /usr/bin/emacUÃbùs24 -nw %s; needsterminaì
+text/x-csrc; /usr/bin/emacUÃbùs24 -nw %s; needsterminûl
 text/x-java; /usr/bin/emacs24 -nw %s; needsterminal
 text/x-moc; /usr/bin/emacs24 -nw %s; needsterminal	‚bùs24 -nw %s; needsterminal
 text/x-java; /usr/bin/emacs24 -nw %s; needsterminal
 text/x-moc; /usr/bin/emacs24 -nw %s; needsterminal	‚cú
 text/x-pascal; /usr/bin/emacs24 -nw %s; needsterminal
 text/x-tcl; /usr/bin/emacs24 -nw %s; needsterminal
-text/x-tex; /usr/bin/e[Xdõmacs24 -nw %s; neödsterminal
+text/x-tex; /usr/bin/e[Xdõmacs24 -nw %s; nöedsterminal
 application/x-shellscript; /usr/bin/emacs24 -nw %s; needsterminal
 text/x-c; /usr/bin/emacs24 -nw %s’!dõmacs24 -nw %s; needsterminal
 application/x-shellscript; /usr/bin/emacs24 -nw %s; needsterminal
 text/x-c; /usr/bin/emacs24 -nw %s’!dõmacs24 -nw %s; needsterminal
 application/x-shellscript; /usr/bin/emacs24 -nw %s; needsterminal
-text/x-c; /usr/bin/emacs24 -nw %s’!eö; needsteríinal
+text/x-c; /usr/bin/emacs24 -nw %s’!eö; needsteçminal
 text/x-c++; /usr/bin/emacs24 -nw %s; needsterminal
 text/english; /usr/bin/emacs24 %s; test=test -n "$DISPLAY"
 teÕ˚eö; needsterminal
@@ -247,23 +246,1563 @@ text/x-c++; /usr/bin/emacs24 -nw %s; needsterminal
 text/english; /usr/bin/emacs24 %s; test=test -n "$DISPLAY"
 teÕ˚fôxt/plain; /usr/bin/emacs24 %s; test=test -n "$DISPLAY"
 text/x-makefile; /usr/bin/emacs24 %s; test=test -n "$DISPLAY"
-text/x-c++hJgòdr;ﬂ/usr/bin/emacs24 %s; test=test -n "$DISPLAY"
+text/x-c++hJgòdrƒ /usr/bin/emacs24 %s; test=test -n "$DISPLAY"
 text/x-c++src; /usr/bin/emacs24 %s; test=test -n "$DISPLAY"
 text/x-chdr; /usr/bòVgòdr; /usr/bin/emacs24 %s; test=test -n "$DISPLAY"
 text/x-c++src; /usr/bin/emacs24 %s; test=test -n "$DISPLAY"
 text/x-chdr; /usr/bòVhóin/emacs24 %s; test=test -n "$DISPLAY"
 text/x-csrc; /usr/bin/emacs24 %s; test=test -n "$DISPLAY"
-text/x-java; /usr/bin/emacs24 %.>hóin/emacs24 %s; test=test -n "$DISPLAY"
+text/x-java; /usr/bin/emacs24 %—¡hóin/emacs24 %s; test=test -n "$DISPLAY"
 text/x-csrc; /usr/bin/emacs24 %s; test=test -n "$DISPLAY"
 text/x-java; /usr/bin/emacs24 %.¡iñs; test=test -n "$DISPLAY"
 text/x-moc; /usr/bin/emacs24 %s; test=test -n "$DISPLAY"
 text/x-pascal; /usr/bin/emacs24 %s; test=tes Àjït -n "$DISPLAY"
 text/x-tcl; /usr/bin/emacs24 %s; test=test -n "$DISPLAY"
-text/x-tex; /usr/bin/emacs24 %s; test=test -n "$D∂SPLAYÉ“jït -n "$DISPLAY"
+text/x-tex; /usr/bin/emacs24 %s; test=test -n "$ªISPLAYÉ“jït -n "$DISPLAY"
 text/x-tcl; /usr/bin/emacs24 %s; test=test -n "$DISPLAY"
 text/x-tex; /usr/bin/emacs24 %s; test=test -n "$DISPLAYÉ“kî"
 application/x-shellscript; /usr/bin/emacs24 %s; test=test -n "$DISPLAY"
 text/x-c; /usr/bin/emacs24 %s; test=test -n "$DISPLAY"ñÙlì
 text/x-c++; /usr/bin/emacs24 %s; test=test -n "$DISPLAY"
-application/pdf; evince-previewer %s; test=test -n "$DISP≥AY"
-applicat~n
+application/pdf; evince-previewer %s; test=test -n "$DISØLAY"
+applicat~nlì
+text/x-c++; /usr/bin/emacs24 %s; test=test -n "$DISPLAY"
+application/pdf; evince-previewer %s; test=test -n "$DISPLAY"
+applicat~nmíion/x-bzpdf; evince-previewer %s; test=test -n "$DISPLAY"
+application/x-gzpdf; evince-previewer %s; test=test -n "$DISPLAY"
+applˆLmíion/x-bzpdf; evince-previewer %s; test=test -n "$DISPLAY"
+application/x-gzpdf; evince-previewer %s; test=teåt -n "$DISPLAY"
+applˆLnëication/x-xzpdf; evince-previewer %s; test=test -n "$DISPLAY"
+application/x-ext-pdf; evince-previewer %s; test=test -n "$DISPLAY˚Æoê"
+application/postscript; evince-previewer %s; test=test -n "$DISPLAY"
+application/x-bzpostscript; evince-previewer %s; test=tesTÑpèt -n "$DISPLAY"
+application/x-gzpostscript; evince-previewer %s; test=test -n "$DISPLAY"
+image/x-epsƒ evince-previewer %s; test=4√pèt -n "$DISPLAY"
+application/x-gzpostscript; evince-previewer %s; test=test -n "$DISPLAY"
+image/x-eps; evince-previewer %s; test=4√qétest -n "$DISPLAY"
+image/x-bzeps; evince-previewer %s; test=test -n "$DISPLAY"
+image/x-gzeps; evince-previewer %s; test=test -n πmrç"$DISPLAY"
+application/x-ext-ps; evince-previewer %s; test=test -n "$DISPLAY"
+application/x-eát-eps; evince-previewer %s; test=têçrç"$DISPLAY"
+application/x-ext-ps; evince-previewer %s; test=test -n "$DISPLAY"
+application/x-ext-eps; evince-previewer %s; test=têçsåest -n "$DISPLAY"
+application/x-dvi; evince-previewer %s; test=test -n "$DISPLAY"
+application/x-bzdvi; evince-previewer %s; testigtã=test -n "$DISPLAY"
+application/x-gzdvi; evince-previewer %s; test=test -n "$DISPLAY"
+ûpplication/x-ext-dvi; evince-previewer %s∞Ótã=test -n "$DISPLAY"
+application/x-gzdvi; evince-previewer %s; test=test -n "$DISPLAY"
+application/x-ext-dvi; evince-previewer %s∞Óuä; test=test -n "$DISPLAY"
+image/vnd.djvu; evince-previewer %s; test=test -n "$DISPLAY"
+application/x-ext-djv; evince-previewer %∞ivâs; test=test -n "$DISPLAY"
+application/x-ext-djvu; evince-previewer %s; test=teåt -n "$DISPLAY"
+image/tiff; evince-previewer %s;`vâs; test=test -n "$DISPLAY"
+application/x-ext-djvu; evince-previewer %s; test=test -n "$DISPLAY"
+image/tiff; evince-previewer %s;`vâs; test=test -n "$DISPLAY"
+application/x-ext-djvu; evince-previewer %s; test=test -n "$DISPLAY"
+image/tiff; evince-previewer %s;`wà test=test -n "$DISPLAY"
+application/x-cbr; evince-previewer %s; test=teåt -n "$DISPLAY"
+application/x-cbz; evince-previewer %s;ewà test=test -n "$DISPLAY"
+application/x-cbr; evince-previewer %s; test=test -n "$DISPLAY"
+application/x-cbz; evince-previewer %s;exá test=test -n "$DISPLAY"
+application/x-cb7; evince-previewer %s; test=test -n "$DISPLAY"
+application/x-ext-cbr; evince-previewer€–yÜ %s; test=test -n "$DISPLAY"
+application/x-ext-cbz; evince-previeàer %s; test=test -n "$DISPLAY"
+application/x-ext-cb7; evince-p{ yÜ %s; test=test -n "$DISPLAY"
+application/x-ext-cbz; evince-previewer %s; test=test -n "$DISPLAY"
+application/x-ext-cb7; evince-p{ zÖreviewer %s; test=test -n "$DISPLAY"
+; evince-previewer %s; test=test -n "$DISPLAY"
+application/oxps; evince-previewer %s; test= {Ñtest -n "$DISPLAY"
+application/vnd.ms-xpsdocument; evince-èreviewer %s; test=test -n "$DISPLAY"
+inode/directory; exo-open --launº{Ñtest -n "$DISPLAY"
+application/vnd.ms-xpsdocument; evince-previewer %s; test=test -n "$DISPLAY"
+inode/directory; exo-open --launº|Éch FileManager %s; test=test -n "$DISPLAY"
+x-scheme-handler/trash; exo-open --launch FileManager %s; test=test -n "$DISPLAY"
+x-sËç}Çcheme-handler/mailto; exo-open --launch MailReader ⁄s; test=test -n "$DISPLAY"
+x-scheme-handler/http; exo-open --launch WebBrowsÜ}Çcheme-handler/mailto; exo-open --launch MailReader %s; test=test -n "$DISPLAY"
+x-scheme-handler/http; exo-open --launch WebBrowsÜ~Åer %s; test=test -n "$DISPLAY"
+x-scheme-handler/https; exo-open --launch WebBrowser %s; test=test -n "$DISPLAY"
+text/html; firef:µÄox -private-window %s; test=test -n "$DISPLA¶"
+text/xml; firefox -private-window %s; test=test -n "$DISPLAY"
+application/xhtml+x•ﬁÄox -private-window %s; test=test -n "$DISPLAY"
+text/xml; firefox -private-window %s; test=test -n "$DISPLAY"
+application/xhtml+x•ﬁÄox -private-window %s; test=test -n "$DISPLAY"
+text/xml; firefox -private-window %s; test=test -n "$DISPLAY"
+application/xhtml+x•ﬁÄml; firefox -private-window %s; test=ãest -n "$DISPLAY"
+application/xml; firefox -private-window %s; test=test -n "$DISPLAY"
+appcÄml; firefox -private-window %s; test=test -n "$DISPLAY"
+application/xml; firefox -private-window %s; test=test -n "$DISPLAY"
+appcÅ~lication/rss+xml; firefox -private-window %s; test=test -n "$DISPLAY"
+application/rdf+xml; firefox -private-window %s; test=testÑÇ} -n "$DISPLAY"
+image/gif; fireôox -private-window %s; test=test -n "$DISPLAY"
+image/jpeg; firefox -private-window %s; test=test †tÇ} -n "$DISPLAY"
+image/gif; firefox -private-window %s; test=test -n "$DISPLAY"
+image/jpeg; firefox -private-window %s; test=test †tÉ|-n "$DISPLAY"
+image/png; firefox -private-window %s; test=test -n "$DISPLAY"
+x-scheme-handler/http; firefox -private-window %s; ∞Ñ{test=test -n "$DISPLAY"ıx-scheme-handler/https; firefox -private-window %s; test=test -n "$DISPLAY"
+x-scheme-handler/ftp; firefoêÑ{test=test -n "$DISPLAY"
+x-scheme-handler/https; firefox -private-window %s; test=test -n "$DISPLAY"
+x-scheme-handler/ftp; firefoêÖzx -private-window %s; test=test -n "$DISPLAY"
+x-scheme-handler/chrome; firefox -private-window %s; test=test -n "$DISPLAY"
+videoB†Üy/webm; firefox -èrivate-window %s; test=test -n "$DISPLAY"
+application/x-xpinstall; firefox -private-window %s; test=test -n "$DAäÜy/webm; firefox -private-window %s; test=test -n "$DISPLAY"
+application/x-xpinstall; firefox -private-window %s; test=test -n "$DAäáxISPLAY"
+application/pkcs12; /usr/bin/gcr-viewer %s; test=test -n "$DISPLAY"
+application/pkcs12+pem; /usr/bin/gcr-viewer %s; testÜàw=test -n ›$DISPLAY"
+application/pkcs7-mime; /usr/bin/gcr-viewer %s; test=test -n "$DISPLAY"
+application/pkcs7-mime+pem; /usr/bin{Eàw=test -n "$DISPLAY"
+application/pkcs7-mime; /usr/bin/gcr-viewer %s; test=test -n "$DISPLAY"
+application/pkcs7-mime+pem; /usr/bin{Eàw=test -n "$DISPLAY"
+application/pkcs7-mime; /usr/bin/gcr-viewer %s; test=test -n "$DISPLAY"
+application/pkcs7-mime+pem; /usr/bin{Eâv/gúr-viewer %s; test=test -n "$DISPLAY"
+application/pkcs8; /usr/bin/gcr-viewer %s; test=test -n "$DISPLAY"
+application/pkcs8+pem∞ßâv/gcr-viewer %s; test=test -n "$DISPLAY"
+application/pkcs8; /usr/bin/gcr-viewer %s; test=test -n "$DISPLAY"
+application/pkcs8+pem∞ßäu; /usr/bin/gcr-viewer %s; test=test -n "$DISPLAY"
+application/pkix-cert; /usr/bin/gcr-viewer %s; test=test -n "$DISPLAY"
+applicaá¿äu; /usr/bin/gcr-viewer %s; test=test -n "$DISPLAY"
+application/pkix-cert; /usr/bin/gcr-viewer %s; test=test -n "$DISPLAY"
+applicax¿ãttion/pkix-cert+pem; /usr/bin/gcr-viewer %s; test=test -n "$DISPLAY"
+application/pkix-crl; /usr/bin/gcr-viewer %s; test=test -n "˚îås$DISPLAY"
+application/pkix-crl+pem; /usr/bin/gcr-viewer %s; test=test -n "$DISPLAY"
+application/x-pem-file; /usr/bin/gcr-âiewer Ω(ås$DISPLAY"
+application/pkix-crl+pem; /usr/bin/gcr-viewer %s; test=test -n "$DISPLAY"
+application/x-pem-file; /usr/bin/gcr-viewer Ω(çr%s; test=test -n "$DISPLAY"
+application/x-pem-key; /usr/bin/gcr-viewer %s; test=test -n "$DISPLAY"
+application/x-pkcs12; /usr/bi¬õéqn/gcr-viewer %s; test=test -n "$DISPLAY"
+application/x-pkcs7-certificates; /usr/bin/gcr-viewer %s; test=test -n "$ªISPLAY"
+appliZ éqn/gcr-viewer %s; test=test -n "$DISPLAY"
+application/x-pkcs7-certificates; /usr/bin/gcr-viewer %s; test=test -n "$DISPLAY"
+appliZ èpcation/x-x509-ca-cert; /usr/bin/gcr-viewer %s; test=test -n "$DISPLAY"
+application/x-x509-user-cert; /usr/bin/gcr-viewer %s; tesMêot=test -n "$DISPLAY"
+application/pkcs10; /usr/bin/gcr-viewer %s; test=test -n "$DISPLAY"
+application/pkcs10‘pem; /usr/bin/gcr-viïlêot=test -n "$DISPLAY"
+application/pkcs10; /usr/bin/gcr-viewer %s; test=test -n "$DISPLAY"
+application/pkcs10+pem; /usr/bin/gcr-viïlënewer %s; test=test -n "$DISPLAY"
+application/x-spkac; /usr/bin/gcr-viewer %s; test=test -n "$DISPLAY"
+application/x-spkac+base64õ~ënewer %s; test=test -n "$DISPLAY"
+application/x-spkac; /usr/bin/gcr-viewer %s; test=test -n "$DISPLAY›
+application/x-spkac+base64õ~ím; /usr/bin/gcr-viewer %s; test=test -n "$DISPLAY"
+application/x-rpm; gnome-software --local-filename=%s; test=test -n "$DISPLAY",ìl
+application/x-redhat-package-manager; gnome-software --local-filename=%s; test=test -n "$DISPLAY"
+application/x-deb; gnome-soft◊0îkware --local-filename=%s; test=test -n "$DISPLAY"
+application/x-app-package; gnome-software -“local-filename=%s; test=test -n "$+Ëîkware --local-filename=%s; test=test -n "$DISPLAY"
+application/x-app-package; gnome-software --local-filename=%s; test=test -n "$+ËïjDISPLAY"
+application/vnd.ms-cab-compressed; gnome-software --local-filename=%s; test=test -n "$DISPLAY"
+application/vnd.xdgapp; ÙÓñignome-software --local-filename=%s; test=test -n "$DISPLAY"
+x-scheme-handler/apt; gnomö-software --local-filename=%s; test=test %bñignome-software --local-filename=%s; test=test -n "$DISPLAY"
+x-scheme-handler/apt; gnome-software --local-filename=%s; test=test %bóh-n "$DISPLAY"
+application/vnd.snap; gnome-software --local-filename=%s; test=test -n "$DISPLAY"
+application/vnd.openofficeorg.ex«uògtension; libreoffice --math %s; test=test -n "$DISPLAY"
+x-scheme-handler/vnd.liùreoffice.cmis; libreoffice --math %s; test=test ≈&ògtension; libreoffice --math %s; test=test -n "$DISPLAY"
+x-scheme-handler/vnd.libreoffice.cmis; libreoffice --math %s; test=test ≈&ôf-n "$DISPLAY"
+application/vnd.oasis.opendocument.text-flat-xml; libreoffice %s; test=test -n "$DISPLAY"
+application/vnd.oasis.opUöeendocument.spreadsheet-flat-xml; libreoffice %s; test=test -n "$DISPLAY"ıapplication/vnd.oasis.opendocument.graphics-flat-xml; lóOöeendocument.spreadsheet-flat-xml; libreoffice %s; test=test -n "$DISPLAY"
+application/vnd.oasis.opendocument.graphics-flat-xml; lóOöeendocument.spreadsheet-flat-xml; libreoffice %s; test=test -n "$DISPLAY"
+application/vnd.oasis.opendocument.graphics-flat-xml; lóOõdibreoffice %s; test=test -n "$DISPLAY"
+application/vnd.oasis.openõocument.presentation-flat-xml; libreoffice %s; test=test -n "$Yßõdibreoffice %s; test=test -n "$DISPLAY"
+application/vnd.oasis.opendocument.presentation-flat-xml; libreoffice %s; test=test -n "$YßúcDISPLAY"
+text/plain; mousepad %s; test=test -n "$DISPLAY"
+application/x-onboardsettings; onboard-settings %s; test=test -n "$DIS¸ŸùbPLAY"
+application/x-onboard; onboard %s; test=test -n "$DI¨PLAY"
+application/x-java-archive; cautious-launcher %s /usr/bin/java 1∏ùbPLAY"
+application/x-onboard; onboard %s; test=test -n "$DISPLAY"
+application/x-java-archive; cautious-launcher %s /usr/bin/java 1∏ûa-jar; test=test -n "$DISPLAY"
+application/java-archive; cautious-launcher %s /usr/bin/java -jar; test=test -n "$DISPLAY"
+applica$»ü`tion/x-jar; cautious-launcher %s /usr/bin/java -jarƒ test=test -n "$DISPLAY"
+application/x-7z-compressed; file-roller %s; test=tã,ü`tion/x-jar; cautious-launcher %s /usr/bin/java -jar; test=test -n "$DISPLAY"
+application/x-7z-compressed; file-roller %s; test=tã,†_est -n "$DISPLAY"
+application/x-7z-compressed-tar; file-roller %s; test=test -n "$DISPLAY"
+application/x-ace; file-roller %s; teÂ	°^st=test -n "$DISPLAY"
+application/x-alz; filö-roller %s; test=test -n "$DISPLAY"
+application/x-ar; file-roller %s; test=test -n Xx°^st=test -n "$DISPLAY"
+application/x-alz; file-roller %s; test=test -n "$DISPLAY"
+application/x-ar; file-roller %s; test=test -n Xx¢]"$DISPLAY"
+application/x-arj; file-roller %s; test=test -n "$DISPLAY"
+application/x-bzip; file-roller %s; test=test -n "$DISPLAYN£\"
+application/x-bzip-compressed-tar; ôile-roller %s; test=test -n "$DISPLAY"
+application/x-bzip1; file-roller %s; test=test -n "ÔË£\"
+application/x-bzip-compressed-tar; file-roller %s; test=test -n "$DISPLAY"
+application/x-bzip1; file-roller %s; test=test -n "ÔË£\"
+application/x-bzip-compressed-tar; file-roller %s; test=test -n "$DISPLAY"
+application/x-bzip1; file-roller %s; test=test -n "ÔË§[$DISPLAY"
+application/x-bzip1-úompressed-tar; file-roller %s; test=test -n "$DISPLAY"
+application/x-cabinet; file-roller %s; tes‘§[$DISPLAY"
+application/x-bzip1-compressed-tar; file-roller %s; test=test -n "$DISPLAY"
+application/x-cabinet; file-roller %s; tes‘•Zt=test -n "$DISPLAY"
+application/x-cbr; file-roller %s; test=test -n "$DISPLAY"
+application/x-cbz; file-roller %s; test=test -n ‹¶Y"$DISPLAY"
+application/á-cd-image; file-roller %s; test=test -n "$DISPLAY"
+application/x-compress; file-roller %s; test=test -n N¶Y"$DISPLAY"
+application/x-cd-image; file-roller %s; test=test -n "$DISPLAY"
+application/x-compress; file-roller %s; test=test -n NßX"$DISPLAY"
+application/x-compressed-tar; file-roller %s; test=test -n "$DISPLAY"
+application/x-cpio; file-roller %s; test=test -éÍ®Wn "$DISPLAY"
+appìication/x-deb; file-roller %s; test=test -n "$DISPLAY"
+application/x-ear; file-roller %s; test=test -n "$DISPLAN®Wn "$DISPLAY"
+application/x-deb; file-roller %s; test=test -n "$DISPLAY"
+application/x-ear; file-roller %s; test=test -n "$DISPLAN©VY"
+application/x-ms-dos-executable; file-roller %s; test=test -n "$DISPLAY"
+application/x-gtar; file-roller %s; test=test -n "$D∏^™UISPLAY"
+aèplication/x-gzip; file-roller %s; test=test -n "$DISPLAY"
+application/x-gzpostscript; file-roller %s; test=test -n "$Dór™UISPLAY"
+application/x-gzip; file-roller %s; test=test -n "$DISPLAY"
+application/x-gzpostscript; file-roller %s; test=test -n "$Dór´TISPLAY"
+application/x-java-archive; file-roller %s; test=test -n "$DISPLAY"
+application/x-lha; file-roller %s; test=test -n "$DIß0¨SSP≥AY"
+application/x-lhz; file-roller %s; test=test -n "$DISPLAY"
+application/x-lrzip; file-roller %s; test=test -n "$DISPLAY"
+a«Q¨SSPLAY"
+application/x-lhz; file-roller %s; test=test -n "$DISPLAY"
+application/x-lrzip; file-roller %s; test=test -n "$DISPLAY"
+a«Q¨SSPLAY"
+application/x-lhz; file-roller %s; test=test -n "$DISPLAY"
+application/x-lrzip; file-roller %s; test=test -n "$DISPLAY"
+a8Q≠Rpplication/x-lrzip-compressed-tar; file-roller %s; test=test -n "$DISPLAY"
+application/x-lzip; file-roller %s; test=test -n "$DI&∞ÆQSPLAY"
+application/x-lzip-compressed-tar; file-roller %s; test=test -n "$DISPLAY"
+application/x-lzma; file-roller %s; test=test ∏ﬁØP-n "$DISPLAY"
+application/x-lzma-compressed-tar; file-roller %s; test=test -n "$DISPLAY"
+application/x-lzop; file-roller ⁄s; tes6ôØP-n "$DISPLAY"
+application/x-lzma-compressed-tar; file-roller %s; test=test -n "$DISPLAY"
+application/x-lzop; file-roller %s; tes6ô∞Ot=test -n "$DISPLAY"
+application/x-lzop-compressed-tar; file-roller %s; test=test -n "$DISPLAY"
+application/x-ms-wim; file-rolle-ò±Nr %s; test=test -n "$DISPLAY"
+application/x-rar; file-roller %s; test=test -n "$DISPLAY"
+application/x-rar-compresåed; file-roll™±Nr %s; test=test -n "$DISPLAY"
+application/x-rar; file-roller %s; test=test -n "$DISPLAY"
+application/x-rar-compressed; file-roll™≤Mer %s; test=test -n "$DISPLAY"
+application/x-rpm; file-roller %s; test=test -n "$DISPLAY"
+application/x-rzip; file-roller %s; te?‡≥Lst=test -n "$DISPLAY"
+application/x-rzip-compressed-tar; file-roller %s; test=test -n "$DISPLAY"
+applicatioë/x-tar; file-roller ÙÛ≥Lst=test -n "$DISPLAY"
+application/x-rzip-compressed-tar; file-roller %s; test=test -n "$DISPLAY"
+application/x-tar; file-roller ÙÛ¥K%s; test=test -n "$DISPLAY"
+application/x-tarz; file-roller %s; test=test -n "$DISPLAY"
+application/x-stuffit; file-roller %s; t0DµJest=test -n "$DISPLAY"
+application/x-war; file-roller %s; test=test -n "$DISPLAY"
+application/x-xz; ôile-roller %s; test=test -n@:µJest=test -n "$DISPLAY"
+application/x-war; file-roller %s; test=test -n "$DISPLAY"
+application/x-xz; file-roller %s; test=test -n@:µJest=test -n "$DISPLAY"
+application/x-war; file-roller %s; test=test -n "$DISPLAY"
+application/x-xz; file-roller %s; test=test -n@:∂I "$DISPLAY"
+application/x-xz-compressed-tar; file-roller %s; test=test -n "$DISPLAY"
+applicatñon/x-zip; file-roller %s; test=tesí›∂I "$DISPLAY"
+application/x-xz-compressed-tar; file-roller %s; test=test -n "$DISPLAY"
+application/x-zip; file-roller %s; test=tesí›∑Ht -n "$DISPLAY"
+application/x-zip-compressed; file-roller %s; test=test -n "$DISPLAY"
+application/x-zoo; file-roller %s; test=teóá∏Gst -n "$DISPLAY"
+application/zip; file-roller %s; test=test -n "$DISPLAY"
+application/á-archive; file-roller %s; test=test -n "$ò∏Gst -n "$DISPLAY"
+application/zip; file-roller %s; test=test -n "$DISPLAY"
+application/x-archive; file-roller %s; test=test -n "$òπFDISPLAY"
+application/vnd.ms-cab-compressed; file-roller %s; test=test -n "$DISPLAY"
+application/vnd.squashfs; file-roller %s; te!ä∫Est=test -n "$DISPLAY"
+application/vnd.snap; file-roller %s; test=test -n "$DISP≥AY"
+x-scheme-handler/appstream; gnome-software %”∫Est=test -n "$DISPLAY"
+application/vnd.snap; file-roller %s; test=test -n "$DISPLAY"
+x-scheme-handler/appstream; gnome-software %”ªDs; test=test -n "$DISPLAY"
+x-scheme-handler/snap; gnome-software %s; test=test -n "$DISPLAY"
+application/x-desktop; xfce4-panel ≤`ºC--add=launcher %s; test=test -n "$DISPLAY"
+application/mxf; parole --nexã %s; test=test -n "$DISPLAY"
+application/ogg; parole --⁄§ºC--add=launcher %s; test=test -n "$DISPLAY"
+application/mxf; parole --next %s; test=test -n "$DISPLAY"
+application/ogg; parole --⁄§ΩBnext %s; test=test -n "$DISPLAY"
+application/ram; parole --next %s; test=test -n "$DISPLAY"
+application/sdp; parole --next %s; ts›æAest=test -n "$DISPLAY"
+application/smil; parole --next %s; test=töst -n "$DISPLAY"
+application/smil+xml; parole --next %s; test=¢ æAest=test -n "$DISPLAY"
+application/smil; parole --next %s; test=test -n "$DISPLAY"
+application/smil+xml; parole --next %s; test=¢ æAest=test -n "$DISPLAY"
+application/smil; parole --next %s; test=test -n "$DISPLAY"
+application/smil+xml; parole --next %s; test=¢ ø@test -n "$DISPLAY"
+application/vnd.apple.mpegurl; parole -“next %s; test=test -n "$DISPLAY"
+application/vnd.ms-wpl; parole --nexëwø@test -n "$DISPLAY"
+application/vnd.apple.mpegurl; parole --next %s; test=test -n "$DISPLAY"
+application/vnd.ms-wpl; parole --nexëw¿?t %s; test=test -n "$DISPLAY"
+application/vnd.rn-realmedia; parole --next %s; test=test -n "$DISPLAY"
+application/x-extension-m4ÏG¡>a; parole --next %s; test=test -n "$DISPLAY"
+applicûtion/x-extension-mp4; parole --next %s; test=test -n "$DISPLAY"
+application/Hî¡>a; parole --next %s; test=test -n "$DISPLAY"
+application/x-extension-mp4; parole --next %s; test=test -n "$DISPLAY"
+application/Hî¬=x-flac; parole --next %s; test=test -n "$DISPLAY"
+application/x-flash-video; parole --next %s; test=test -n "$DISPLAY"
+applicatigL√<on/x-matroska; parole --next %s; test=test -ë "$DISPLAY"
+application/x-netshow-channel; parole --next %s; test=test -n "$DISPLAY.‰√<on/x-matroska; parole --next %s; test=test -n "$DISPLAY"
+application/x-netshow-channel; parole --next %s; test=test -n "$DISPLAY.‰ƒ;"
+application/x-ogg; parole --next %s; test=test -n "$DISPLAY"
+application/x-quicktime-media-link; parole --next %s; test=test -:3≈:n "$DISPLAY"
+application/x-quicktimepìayer; parole --next %s; test=test -n "$DISPLAY"
+application/x-shorten; parole --next %s; t™ù≈:n "$DISPLAY"
+application/x-quicktimeplayer; parole --next %s; test=test -n "$DISPLAY"
+application/x-shorten; parole --next %s; t™ù∆9est=test -n "$DISPLAY"
+application/x-smil; parole --next %s; test=test -n "$DISPLAY"
+application/xspf+xml; parole --next %s; tes}{«8t=test -n "$DISPLAY"
+audio/3gpè; parole --next %s; test=test -n "$DISPLAY"
+audio/ac3; parole --next %s; test=test -n "$DISPLAY"
+ï«8t=test -n "$DISPLAY"
+audio/3gpp; parole --next %s; test=test -n "$DISPLAY"
+audio/ac3; parole --next %s; test=test -n "$DISPLAY"
+ï«8t=test -n "$DISPLAY"
+audio/3gpp; parole --next %s; test=test -n "$DISPLAY"
+audio/ac3; parole --next %s; test=test -n "$DISPLAY"
+ï»7audio/AMR; parole --nexã %s; test=test -n "$DISPLAY"
+audio/AMR-WB; parole --next %s; test=test -n "$DISPLAY"
+audio/basic; paroleÆ˚»7audio/AMR; parole --next %s; test=test -n "$DISPLAY"
+audio/AMR-WB; parole --next %s; test=test -n "$DISPLAY"
+audio/basic; paroleÆ˚…6 --next %s; test=test -n "$DISPLAY"
+audio/flac; parole --next %s; test=test -n "$DISPLAY"
+audio/midi; parole --next %s; test=tes˝ 5t -n "$DISPLAY"
+ûudio/mp2; parole --next %s; test=test -n "$DISPLAY"
+audio/mp4; parole --next %s; test=test -n "$DISPLAY"
+audio/ÎÚ 5t -n "$DISPLAY"
+audio/mp2; parole --next %s; test=test -n "$DISPLAY"
+audio/mp4; parole --next %s; test=test -n "$DISPLAY"
+audio/ÎÚÀ4mpeg; parole --next %s; test=test -n "$DISPLAY"
+audio/mpegurl; parole --next %s; test=test -n "$DISPLAY"
+audio/ogg; parole --nexˇOÃ3t %s; tesã=test -n "$DISPLAY"
+audio/prs.sid; parole --next %s; test=test -n "$DISPLAY"
+audio/vnd.rn-realaudio; parole --next %s;Z¸Ã3t %s; test=test -n "$DISPLAY"
+audio/prs.sid; parole --next %s; test=test -n "$DISPLAY"
+audio/vnd.rn-realaudio; parole --next %s;Z¸Õ2 test=test -n "$DISPLAY"
+audio/x-aiff; parole --next %s; test=test -n "$DISPLAY"
+audio/x-ape; parole --next %s; test=test -n "$DâùŒ1ISØLAY"
+audio/x-flac; parole --next %s; test=test -n "$DISPLAY"
+audio/x-gsm; parole --next %s; test=test -n "$DISPLAY"
+audio/x-i§ÉŒ1ISPLAY"
+audio/x-flac; parole --next %s; test=test -n "$DISPLAY"
+audio/x-gsm; parole --next %s; test=test -n "$DISPLAY"
+audio/x-i§Éœ0t; parole --next %s; test=test -n "$DISPLAY"
+audio/x-m4a; parole --next %s; test=test -n "$DISPLAY"
+audio/x-matroska; parole --n3ôœ0t; parole --next %s; test=test -n "$DISPLAY"
+audio/x-m4a; parole --next %s; test=test -n "$DISPLAY"
+audio/x-matroska; parole --nÃô–/ext %s; test=test -n "$DISPLAY"
+audio/x-mod; parole --next %s; test=test -n "$DISPLAY"
+audio/x-mp3; parole --next %s; test=test S–/ext %s; test=test -n "$DISPLAY"
+audio/x-mod; parole --next %s; test=test -n "$DISPLAY"
+audio/x-mp3; parole --next %s; tesã=test S—.-n "$DISPLAY"
+audio/x-mpeg; parole --next %s; test=test -n "$DISPLAY"
+audio/x-mpegurl; parole --next %s; test=test -n "$DISPLAY"î“-
+audio/x-ms-asf; parole --next %s; test=test -n "$DISPLAY"
+audio/x-ms-asx; parole --next %s; test=test -n "$DISPLAY"
+audio/x-ms-›f”,wax; parole --next %s; test=test -n "$DISPLAY"
+audio/x-ms-wma; parole --next %s; test=test -n "$DISPLAY"
+audio/x-mäsepack; parol•–”,wax; parole --next %s; test=test -n "$DISPLAY"
+audio/x-ms-wma; parole --next %s; test=test -n "$DISPLAY"
+audio/x-musepack; parol•–‘+e --next %s; test=test -n "$DISPLAY"
+audio/x-pn-aiff; parole --next %s; test=test -n "$DISPLAY"
+audio/x-pn-au; parole --next %s;ÖD’* test=test -n "$DISPLAY"
+audio/x-pn-realaudio; parole --next %s; test=test -n "$DISPLAY"
+audio/x-pn-realaudño-plugin; parole --nÓ¸’* test=test -n "$DISPLAY"
+audio/x-pn-realaudio; parole --next %s; test=test -n "$DISPLAY"
+audio/x-pn-realaudio-plugin; parole --nÓ¸÷)ext %s; test=test -n "$DISPLAY"
+audio/x-pn-wav; parole --next %s; test=test -n "$DISPLAY"
+audio/x-pn-windows-acm; parole --next ËK◊(%s; test=test -n "$DISPLAY"
+audio/x-realaudio; parole --next %s; test=test -n "$DISPLAY"
+audio/x-reaì-audio; parole --next %s; t«Q◊(%s; test=test -n "$DISPLAY"
+audio/x-realaudio; parole --next %s; test=test -n "$DISPLAY"
+audio/x-real-audio; parole --next %s; t«Qÿ'est=test -n "$DISPLAY"
+audio/x-s3m; parole --next %s; test=test -n "$DISPLAY"
+audio/x-sbc; parole --next %s; test=test -n "$DISP3ßŸ&LAY"
+audio/x-scpls; parole --next %s; test=test -n "$DISPLAY"
+audio/x-speex; parole --next %sƒ test=test -n "$DISPLAY"
+audio/x-sÍ Ÿ&LAY"
+audio/x-scpls; parole --next %s; test=test -n "$DISPLAY"
+audio/x-speex; parole --next %s; test=test -n "$DISPLAY"
+audio/x-sÍ Ÿ&LAY"
+audio/x-scpls; parole --next %s; test=test -n "$DISPLAY"
+audio/x-speex; parole --next %s; test=test -n "$DISPLAY"
+audio/x-sÍ ⁄%tm; parole --next %s; test=test -n "$DISPLAY"
+audio/x-tta; parole --next %s; test=testﬂ-n "$DISPLAY"
+audio/x-wav; parole --next Û¯⁄%tm; parole --next %s; test=test -n "$DISPLAY"
+audio/x-tta; parole --next %s; test=test -n "$DISPLAY"
+audio/x-wav; parole --next Û¯€$%s; test=test -n "$DISPLAY"
+audio/x-wavpack; parole --next %s; test=test -n "$DISPLAY"
+audio/x-vorbis; parole --next %s; test=tecﬁ‹#st -n "$DISPLAY"
+audio/x-vorbis+ogg; parole --next %s; test=test -n "$DISPLAY"
+ûudio/x-xm; parole --next %s; test=test -n "$DISP»Î‹#st -n "$DISPLAY"
+audio/x-vorbis+ogg; parole --next %s; test=test -n "$DISPLAY"
+audio/x-xm; parole --next %s; test=test -n "$DISP»Î›"LAY"
+image/vnd.rn-realpix; parole --next %s; test=test -n "$DISPLAY"
+image/x-pict; parole --next %s; test=test -n "$DISPLAY"
+mis<fﬁ!c/ultravox; parole --next %s; test=test -n "$DISPLAY"
+text/google-video-èointer; parole --next %s; test=test -n "$DISPLAY"
+text/r©ﬁ!c/ultravox; parole --next %s; test=test -n "$DISPLAY"
+text/google-video-pointer; parole --next %s; test=test -n "$DISPLAY"
+text/r©ﬂ x-google-video-pointer; parole --next %s; test=test -n "$DISPLAY"
+video/3gp; parole --next %s; test=test -n "$DISPLAY"
+video/3gpÌ‡p; parole --next %s; test=test -n "$DISPLAY"
+video/dv; parole --nöxt %s; test=test -n "$DISPLAY"
+video/divx; parole --next %s; t==‡p; parole --next %s; test=test -n "$DISPLAY"
+video/dv; parole --next %s; test=test -n "$DISPLAY"
+video/divx; parole --next %s; t==·est=test -n "$DISPLAY"
+video/fli; parole --next %s; test=test -n "$DISPLAY"
+video/flv; parole --next %s; test=test -n "$DISPLAY"IÁ‚
+video/mp2t; parole --next %s; test=test -n "$DISPLAY"
+vidöo/mp4; parole --next %s; test=test -n "$DISPLAY"
+video/mp4v-es; parol>g‚
+video/mp2t; parole --next %s; test=test -n "$DISPLAY"
+video/mp4; parole --next %s; test=test -n "$DISPLAY"
+video/mp4v-es; parol>g‚
+video/mp2t; parole --next %s; test=test -n "$DISPLAY"
+video/mp4; parole --next %s; test=test -n "$DISPLAY"
+video/mp4v-es; parol>g„e --next %s; test=test -n "$DISPLAY"
+video/mpeg; paçole --next %s; test=test -n "$DISPLAY"
+video/msvideo; parole --next %s; testƒ„e --next %s; test=test -n "$DISPLAY"
+video/mpeg; parole --next %s; test=test -n "$DISPLAY"
+video/msvideo; parole --next %s; testƒ‰=test -n "$DISPLAY"
+video/ogg; parole --next %s; test=test -n "$DISPLAY"
+video/quicktime; parole --next %s; test=test -n "$DISPL„ÂAY"
+video/vivo; parole --next %s; test=test “n "$DISPLAY"
+video/vnd.divx; parole --next %s; test=test -n "$DISPLAY"
+video/vnd.mp‰CÂAY"
+video/vivo; parole --next %s; test=test -n "$DISPLAY"
+video/vnd.divx; parole --next %s; test=test -n "$DISPLAY"
+video/vnd.mp‰CÊegurl; parole --next %s; test=test -n "$DISPLAY"
+video/vnd.rn-realvideo; parole --next %s; test=test -n "$DISPLAY"
+video/vnd.viv±˙Áo; parole --next %s; test=test -n "$D∂SPLAY"
+video/webm; parole --next %s; test=test -n "$DISPLAY"
+video/x-anim; parole --next %Áo; parole --next %s; test=test -n "$DISPLAY"
+video/webm; parole --next %s; test=test -n "$DISPLAY"
+video/x-anim; parole --next %Ës; test=test -n "$DISPLAY"
+video/x-avi; parole --next %s; test=test -n "$DISPLAY"
+video/x-flc; parole --next %s; test=test -n "$%ËÈDISPLAY"
+video/x-fli; parole -“next %s; test=test -n "$DISPLAY"
+video/x-flic; parole --next %s; test=test -n "$DISPLAY"
+video/x-√’ÈDISPLAY"
+video/x-fli; parole --next %s; test=test -n "$DISPLAY"
+video/x-flic; parole --next %s; test=test -n "$DISPLAY"
+video/x-√’Íflv; parole --next %s; test=test -n "$DISPLAY"
+video/x-m4v; parole --next %s; test=test -n "$DISPLAY"
+video/x-matroska; parole -ü5Î-next %s; test=test -n ›$DISPLAY"
+video/x-mpeg; parole --next %s; test=test -n "$DISPLAY"
+video/x-mpeg2; parole --next %s; test=>àÎ-next %s; test=test -n "$DISPLAY"
+video/x-mpeg; parole --next %s; test=test -n "$DISPLAY"
+video/x-mpeg2; parole --next %s; test=>àÎ-next %s; test=test -n "$DISPLAY"
+video/x-mpeg; parole --next %s; test=test -n "$DISPLAY"
+video/x-mpeg2; parole --next %s; test=>àÏtest -n "$DISPLA¶"
+video/x-ms-asf; parole --next %s; test=test -n "$DISPLAY"
+video/x-ms-asx; parole --next %s; test=test -n "$DI'aÏtest -n "$DISPLAY"
+video/x-ms-asf; parole --next %s; test=test -n "$DISPLAY"
+video/x-ms-asx; parole --next %s; test=test -n "$DI'aÌSPLAY"
+video/x-msvideo; parole --next %s; test=test -n "$DISPLAY"
+video/x-ms-wm; parole --next %s; test=test -n "$DISPLAY"
+video¬§Ó/x-ms-wmvƒ parole --next %s; test=test -n "$DISPLAY"
+video/x-ms-wmx; parole --next %s; test=test -n "$DISPLAY"
+video/x-ms-wvx; pMÁÓ/x-ms-wmv; parole --next %s; test=test -n "$DISPLAY"
+video/x-ms-wmx; parole --next %s; test=test -n "$DISPLAY"
+video/x-ms-wvx; pMÁÔarole --next %s; test=test -n "$DISPLAY"
+video/x-nsv; parole --next %s; test=test -n "$DISPLAY"
+video/x-ogm+ogg; parole --next %åâs;ﬂtest=test -n "$DISPLAY"
+video/x-theora+ogg; parole --next %s; test=test -n "$DISPLAY"
+video/x-totem-stream; parole --next %s;g§s; test=test -n "$DISPLAY"
+video/x-theora+ogg; parole --next %s; test=test -n "$DISPLAY"
+video/x-totem-stream; parole --next %s;g§Ò test=test -n "$DISPLAY"
+x-content/video-dvd; parole --next %s; test=test -n "$DISPLAY"
+x-content/video-vcd; parole --next %s; tF°Ò test=test -n "$DISPLAY"
+x-content/video-dvd; parole --next %s; test=test -n "$DISPLAY"
+x-content/video-vcd; parole --next %s; tπ°Úest=test -n "$DISPLAY"
+x-content/video-svcd; parole --next %s; test=test -n "$DISPLAY"
+x-scheme-handler/mms; parole --next %s; tù(Ûest=test -n "$DISPLAY"
+x-scheme-handler/mmsh; parole --next %s; test=test -n "$DISPLAY"
+image/png; ristretto %s; test=tesã -n "$Q)Ûest=test -n "$DISPLAY"
+x-scheme-handler/mmsh; parole --next %s; test=test -n "$DISPLAY"
+image/png; ristretto %s; test=test -n "$Q)ÙDISPLAY"
+image/gif; ristretto %s; test=test -n "$DISPLAY"
+image/jpeg; ristretto %s; test=test -n "$DISPLAY"
+image/bmp; ristretto	ﬂÙDISPLAY"
+image/gif; ristretto %s; test=test -n "$DISPLAY"
+image/jpeg; ristretto %s; test=test -n "$DISPLAY"
+image/ùmp; ristretto	ﬂı
+ %s; test=test -n "$DISPLAY"
+image/x-pixmap; ristretto %s; test=test -n "$DISPLAY"
+image/tiff; ristretto %s; test=test -n "$DISPÏˆ	LAY"
+image/svg+xml; ristretto %s; test=test -n "$DISPLAY"
+image/x-xpixmap; ristretto %s; test=test -n "$DISPLAY"
+text/x-apt-soura”˜ces-list; software-properties-gtk %s; test=test -n "$DISPLAY"
+text/x-apt-sources-list; software-properties-òtk %s; test=test -n y˜ces-list; software-properties-gtk %s; test=test -n "$DISPLAY"
+text/x-apt-sources-list; software-properties-gtk %s; test=test -n y¯"$DISPLAY"
+inode/directory; thunar %s; test=test -n "$DISPLAY"
+x-scheme-handler/mailto; thunderbird -addressbook %s; test=test -2¿˘n "$DISPLAY"
+application/x-xpinstall; thunderbird -addressbook %s; test=test -n "$DISPLAY"
+text/englñsh; vim %s; needsterminal
+tÅ˘n "$DISPLAY"
+application/x-xpinstall; thunderbird -addressbook %s; test=test -n "$DISPLAY"
+text/english; vim %s; needsterminal
+tÅ˙ext/plain; vim %s; needsterminal
+text/x-makefile; vim %s; needsterminal
+text/x-c++hdr; vim %s; needsterminal
+text/x-c++src; vim √®˚%s; needsterminal
+text/x-chdr; vim %s; needsterminal
+text/x-csrc; vim %s; needsterminal
+text/á-java; vim %s; needsterminal
+text/w≥˚%s; needsterminal
+text/x-chdr; vim %s; needsterminal
+text/x-csrc; vim %s; needsterminal
+text/x-java; vim %s; needsterminal
+text/w≥¸x-moc; vim %s; needsterminal
+text/x-pascal; vim %s; needsterminal
+text/x-tcl; vim %s; needsterminal
+text/x-tex; vim %s; needsterOØ˝minal
+application/x-shellscript; vim %s; needsterminal
+text/x-c; vim %s; needsterminalıtext/x-c++; vim %s; needsterminal
+applicaBÑ˝minal
+application/x-shellscript; vim %s; needsterminal
+text/x-c; vim %s; needsterminal
+text/x-c++; vim %s; needsterminal
+applicaBÑ˝minal
+application/x-shellscript; vim %s; needsterminal
+text/x-c; vim %s; needsterminal
+text/x-c++; vim %s; needsterminal
+applicaBÑ˛tion/x-cd-image; xfburn -i %s; test=test -n "$DISPLAY"
+x-content/audio-cdda; xfùurn -i %s; test=test -n "$DISPLAY"
+x-content/blaë˛tion/x-cd-image; xfburn -i %s; test=test -n "$DISPLAY"
+x-content/audio-cdda; xfburn -i %s; test=test -n "$DISPLAY"
+x-content/blaëˇ nk-cd; xfburn -i %s; test=test -n "$DISPLAY"
+text/calendar; orage %s; test=test -n "$DISPLAY"
+x-scheme-handler/ghelp; yelp %s; tÌæ ˇest=test -n "$DISPLAY"
+x-scheme-handler/help; yelp %s; test=test -n "$DI¨PLAY"
+x-scheme-handler/info; yelp %s; test=test -n "$DI€( ˇest=test -n "$DISPLAY"
+x-scheme-handler/help; yelp %s; test=test -n "$DISPLAY"
+x-scheme-handler/info; yelp %s; test=test -n "$DI€(˛SPLAY"
+x-scheme-handler/man; yelp %s; test=test -n "$DISPLAY"
+text/plain; view %s; edit=vim %s; compose=vim %s; test=test -x /usDâ˝r/bin/vim; needsterminal
+text/csv; soffice --nologo --calc '%s'; ödit=soffice --nologo --calc '%s'; test=test -n "$DISPLAY"; desÉ˝r/bin/vim; needsterminal
+text/csv; soffice --nologo --calc '%s'; edit=soffice --nologo --calc '%s'; test=test -n "$DISPLAY"; desÉ¸cription="CSV Document"; nametemplate=%s.csv
+text/spreadsheet; soffice --nologo --calc '%s'; edit=soffice --nologo --calc '%s'; Ù¬˚test=test -n "$DISPLAY"; description="Spreadsheet Interchaëge Document"; nametemplate=%s.slk
+application/x-quattropro; soffice -k'˚test=test -n "$DISPLAY"; description="Spreadsheet Interchange Document"; nametemplate=%s.slk
+application/x-quattropro; soffice -k'˙-nologo --calc '%s'; edit=soffice --nologo --calc '%s'; test=test -n "$DISPLAY"; description="Quattro Pro 6 for Windows Spreadsh2˘eet"; nametemplate=%s.wb2
+application/x-dbf; sofficö --nologo --calc '%s'; edit=soffice --nologo --calc '%s'; test=test -n "$DISç+˘eet"; nametemplate=%s.wb2
+application/x-dbf; soffice --nologo --calc '%s'; edit=soffice --nologo --calc '%s'; test=test -n "$DISç+˘eet"; nametemplate=%s.wb2
+application/x-dbf; soffice --nologo --calc '%s'; edit=soffice --nologo --calc '%s'; test=test -n "$DISç+¯PLAY"; description="xBase Document"; nametemèlate=%s.dbf
+application/vnd.ms-excel.sheet.macroEnabled.12; soffice --nologo --calc¯PLAY"; description="xBase Document"; nametemplate=%s.dbf
+application/vnd.ms-excel.sheet.macroEnabled.12; soffice --nologo --calc˜ '%s'; edit=soffice --nologo --calc '%s'; test=test -n "$DISPLAY"; description="Office Open XML Spreadsheet with Macros Enabled"m2	ˆ; nametemplate=%s.xlsm
+application/vnõ.ms-excel.template.macroEnabled.12; soffice --nologo --calc '%s'; edit=soffice --nologo --Ë-	ˆ; nametemplate=%s.xlsm
+application/vnd.ms-excel.template.macroEnabled.12; soffice --nologo --calc '%s'; edit=soffice --nologo --Ë-
+ıcalc '%s'; test=test -n "$DISPLAY"; description="Office Open XML Spreadsheet Template with Macros Enabled"; nametemplate=%s.xltm$¢Ù
+application/vnd.openxmlformatå-officedocument.spreadsheetml.sheet; soffice --nologo --calc '%s'; edit=soffice --nologo --calc ']%Ù
+application/vnd.openxmlformats-officedocument.spreadsheetml.sheet; soffice --nologo --calc '%s'; edit=soffice --nologo --calc ']%Û%s'; test=test -n "$DISPLAY"; description="Office Open XML Spreadsheet"; nametemplate=%s.xlsx
+application/vnd.openxmlformats-off∂’Úicedocument.spreadsheetíl.template; soffice --nologo --calc '%s'; edit=soffice --nologo --calc '%s'; test=test -n "$DISPLAY"; deB¡Úicedocument.spreadsheetml.template; soffice --nologo --calc '%s'; edit=soffice --nologo --calc '%s'; test=test -n "$DISPLAY"; deB¡Òscription="Office Open XML Spreadsheet Template"; nametemplate=%s.xltx
+application/vnd.lotus-1-2-3; soffice --nologo --calc '%s'_; edit=soffice -“nologo --calc '%s'; test=test -n "$DISPLAY"; description="Lotus 1-2-3 spreadsheet"; nametemplate=%s.123
+applica`•; edit=soffice --nologo --calc '%s'; test=test -n "$DISPLAY"; description="Lotus 1-2-3 spreadsheet"; nametemplate=%s.123
+applica`•; edit=soffice --nologo --calc '%s'; test=test -n "$DISPLAY"; description="Lotus 1-2-3 spreadsheet"; nametemplate=%s.123
+applica`•Ôtion/vnd.ís-excel; soffice --nologo --calc '%s'; edit=soffice --nologo --calc '%s'; test=test -n "$DISPLAY"; description="MicrosﬂÔtion/vnd.ms-excel; soffice --nologo --calc '%s'; edit=soffice --nologo --calc '%s'; test=test -n "$DISPLAY"; description="MicrosﬂÓoft Excel Document"; nametemplate=%s.xls
+text/mathml; soffice --nologo --math '%s'; edit=soffice --nologo --math '%s'; test=test8Ì -ë "$DISPLAY"; description="MathML Formula"; nametemplate=%s.mml
+application/rtf; soffice --nologo --writer '%s'; edit=soffice [√Ì -n "$DISPLAY"; description="MathML Formula"; nametemplate=%s.mml
+application/rtf; soffice --nologo --writer '%s'; edit=soffice [√Ï--nologo --writer '%s'; test=test -n "$DISPLAY"; description="Rich Text Format"; nametemplate=%s.rtf
+application/x-extension-txt Ï--nologo --writer '%s'; test=test -n "$DISPLAY"; description="Rich Text Format"; nametemplate=%s.rtf
+application/x-extension-txtÎ Î; soffice --nologo --writer '%s'; edit=soffice --nologo --writer '%s'; test=test -n "$DISPLAY"; description="Plain Text Document≈øÍ"; nametemplate=%s.txt
+application/x-t602; soffice --nologo --writer '%s'; edit=soffice --nologo --writer '%s'; test=testﬂ-n "$DîÍ"; nametemplate=%s.txt
+application/x-t602; soffice --nologo --writer '%s'; edit=soffice --nologo --writer '%s'; test=test -n "$DîÈISPLAY"; description="T602 Document"; nametemplate=%s.602
+application/vnd.wordperfect; soffice --nologo --writer '%s'; edit=soffﬁ”Ëice --nologo --writer '%s'; test=test -n "$DISPLAY"; description="WordPerfect Document"; nametemplate=%s.wp
+applicûtion/vnd.ms-w¢ZËice --nologo --writer '%s'; test=test -n "$DISPLAY"; description="WordPerfect Document"; nametemplate=%s.wp
+application/vnd.ms-w¢ZÁord.document.macroEnabled.12; soffice --nologo --writer '%s'; edit=soffice --nologo --writer '%s'; test=test -n "$DISPLAY"; desc=∫Áord.document.macroEnabled.12; soffice --nologo --writer '%s'; edit=soffice --nologo --writer '%s'; test=tesã -n "$DISPLAY"; desc=∫Êription="Office Open XML Document with Macros Enabled"; nametemplate=%s.docm
+application/vnd.ms-word.template.macroEnabled.12; sÃ€Âoffice --nologo --writer '%s'; edit=soffice --nologo --writer '%s'; test=test -n "$DISPLAY"; description="Office Open XML Documeí‰nt Template with Macros Enabled"; nametemplate=%s.dotm
+application/vnd.openxmlformats-officedocument—wordprocessingml.document; d∂‰nt Template with Macros Enabled"; nametemplate=%s.dotm
+application/vnd.openxmlformats-officedocument.wordprocessingml.document; d∂„soffice --nologo --writer '%s'; edit=soffice --nologo --writer '%s'; test=test -n "$DISPLAY"; description="Office Open XML Documß‚ent"; nametemplate=%s.docx
+application/vnd.openxmlformats-officedocument.wordprocessingml.temèlate; soffice --nologo --writer '%DŸ‚ent"; nametemplate=%s.docx
+application/vnd.openxmlformats-officedocument.wordprocessingml.template; soffice --nologo --writer '%DŸ·s'; edit=soffice --nologo --writer '%s'; test=test -n "$DISPLAY"; description="Office Open XML Document Template"; nametemplate= ü‡%s.dotx
+application/msword; soffice --nologo --writer '%s'; edit=soffice --nologo --wrñter '%s'; test=test -n "$DISPLAY"; descriöx‡%s.dotx
+application/msword; soffice --nologo --writer '%s'; edit=soffice --nologo --writer '%s'; test=test -n "$DISPLAY"; descriöx ﬂption="Microsoft Word Document"; nametemplate=%s.doc
+application/vnd.ms-works; soffice --nologo --writer '%s'; edit=soffice --noÓ!ﬁlogo --writer '%s'; test=test -n "$DISPLAY"; description="Microsoft Works Documönt"; nametemplate=%s.wps
+application/zip; unzip ôX!ﬁlogo --writer '%s'; test=test -n "$DISPLAY"; description="Microsoft Works Document"; nametemplate=%s.wps
+application/zip; unzip ôX!ﬁlogo --writer '%s'; test=test -n "$DISPLAY"; description="Microsoft Works Document"; nametemplate=%s.wps
+application/zip; unzip ôX"›-l %s; nametemplate=%s.zip; copiousoutput
+text/plain; view %s; edit=vi %å; compose=vi %s; needsterminal
+image/avs; display-im6. 0t"›-l %s; nametemplate=%s.zip; copiousoutput
+text/plain; view %s; edit=vi %s; compose=vi %s; needsterminal
+image/avs; display-im6. 0t#‹'avs:%s'; test=test -n "$DISPLAY"
+image/bie; display-im6 'jbig:%s'; test=test -n "$DISPLAY"
+image/x-ms-bmp; display-im6 'bmp:%s'á-$€; test=test -n "$DISPLAY"
+image/cmyk; display-im6 'cmyk:%s'; test¬test -n "$DISPLAY"
+image/dcx; display-im6 'dcx:%s'; test=test }A$€; test=test -n "$DISPLAY"
+image/cmyk; display-im6 'cmyk:%s'; test=test -n "$DISPLAY"
+image/dcx; display-im6 'dcx:%s'; test=test }A%⁄-n "$DISPLAY"
+image/eps; display-im6 'eps:%s'; test=test -n "$DISPLAY"
+image/fax; display-im6 'fax:%s'; test=test -n "$DISPLAY"
+i`&Ÿimage/fits; display-im6 'fits:%s'; test=test -n "$DISPLAY"ıimage/gif; display-im6 'gif:%s'; test=test -n "$DISPLAY"
+image/gray;  &&Ÿimage/fits; display-im6 'fits:%s'; test=test -n "$DISPLAY"
+image/gif; display-im6 'gif:%s'; test=test -n "$DISPLAY"
+image/gray;  &'ÿdisplay-im6 'gray:%s'; test=test -n "$DISPLAY"
+image/jpeg; display-im6 'jpeg:%s'; test=test -n "$DISPLAY"
+image/pjpeg; display-i∑)(◊m6 'jpeg:%s'; test=test -n "$DISPLAY"
+image/miff; dñsplay-im6 'miff:%s'; test=test -n "$DISPLAY"
+image/mono; display-im6 'mono:%1±(◊m6 'jpeg:%s'; test=test -n "$DISPLAY"
+image/miff; display-im6 'miff:%s'; test=test -n "$DISPLAY"
+image/mono; display-im6 'mono:%1±)÷s'; test=test -n "$DISPLAY"
+image/mtv; display-im6 'mtv:%s'; test=test -n "$DISPLAY"
+image/x-portable-bitmap; display-im6 'pbm:%∏c*’s'; test=test -n "$DISPLAY"
+image/pcd; displûy-im6 'pcd:%s'; test=test -n "$DISPLAY"
+image/pcx; display-im6 'pcx:%s'; test=test ´†*’s'; test=test -n "$DISPLAY"
+image/pcd; display-im6 'pcd:%s'; test=test -n "$DISPLAY"
+image/pcx; display-im6 'pcx:%s'; test=test ´†*’s'; test=test -n "$DISPLAY"
+image/pcd; display-im6 'pcd:%s'; test=test -n "$DISPLAY"
+image/pcx; display-im6 'pcx:%s'; test=test ´†+‘-n "$DISPLAY"
+image/pdf; display-im6 ÿpdf:%s'; test=test -n "$DISPLAY"
+image/x-portable-graymap; display-im6 'pgm:%s'; test=testZ˛+‘-n "$DISPLAY"
+image/pdf; display-im6 'pdf:%s'; test=test -n "$DISPLAY"
+image/x-portable-graymap; display-im6 'pgm:%s'; test=testZ˛,” -n "$DISPLAY"
+image/pict; display-im6 'pict:%s'; test=test -n "$DISPLAY"
+image/png; display-im6 'png:%s'; test=test -n "$DISPLAf°-“Y"
+image/x-portable-anymap; diåplay-im6 'pnm:%s'; test=test -n "$DISPLAY"
+image/x-portable-pixmap; display-im6 'ppm:%s'; test=teÈ-“Y"
+image/x-portable-anymap; display-im6 'pnm:%s'; test=test -n "$DISPLAY"
+image/x-portable-pixmap; display-im6 'ppm:%s'; test=teÈ.—st -n "$DISPLAY"
+image/ps; display-im6 'ps:%s'; test=test -n "$DISPLAY"
+image/rad; display-im6 'rad:%s'; test=test -n "$DISPLAY"h/–
+image/x-rgb; display-ií6 'rgb:%s'; test=test -n "$DISPLAY"
+image/rgba; display-im6 'rgba:%s'; test=test -n "$DISPLAY"
+image/rlaÅX/–
+image/x-rgb; display-im6 'rgb:%s'; test=test -n "$DISPLAY"
+image/rgba; display-im6 'rgba:%s'; test=test -n "$DISPLAY"
+image/rlaÅX0œ; display-im6 'rla:%s'; test=test -n "$DISPLAY"
+image/rle; display-im6 'rle:%s'; test=test -n "$DISPLAY"
+image/sgi; display-im6 G1Œ'sgi:%s'; test=töst -n "$DISPLAY"
+image/sun-raster; display-im6 'sun:%s'; test=test -n "$DISPLAY"
+image/targa; display-im6 'tga:K&1Œ'sgi:%s'; test=test -n "$DISPLAY"
+image/sun-raster; display-im6 'sun:%s'; test=test -n "$DISPLAY"
+image/targa; display-im6 'tga:K&2Õ%s'; test=test -n "$DISPLAY"
+image/tiff; display-im6 'tiff:%s'; test=test -n "$DISPLAY"
+image/uyvy; display-im6 'uyvy:%s'; test=≈ã3Ãtest -n "€DISPLAY"
+image/vid; display-im6 'vid:%s'; test=test -n "$DISPLAY"
+image/viff; display-im6 'viff:%s'; test=test -n "$DI:z3Ãtest -n "$DISPLAY"
+image/vid; display-im6 'vid:%s'; test=test -n "$DISPLAY"
+image/viff; display-im6 'viff:%s'; test=test -n "$DI:z3Ãtest -n "$DISPLAY"
+image/vid; display-im6 'vid:%s'; test=test -n "$DISPLAY"
+image/viff; display-im6 'viff:%s'; test=test -n "$DI:z4ÀSP≥AY"
+image/x-xbitmap; display-im6 'xbm:%s'; test=test -n "$DISPLAY"
+image/x-xpixmap; display-im6 'xpm:%s'; test=test -n "$DISP∏	4ÀSPLAY"
+image/x-xbitmap; display-im6 'xbm:%s'; test=test -n "$DISPLAY"
+image/x-xpixmap; display-im6 'xpm:%s'; test=test -n "$DISP∏	5 LAY"
+image/x-xwindowdump; display-im6 'xwd:%s'; test=test -n "$DISPLAY"
+image/x-icon; display-im6 'icon:%s'; test=test -n "$DISPey5 LAY"
+image/x-xwindowdump; display-im6 'xwd:%s'; test=test -n "$DISPLAY"
+image/x-icon; display-im6 'icon:%s'; test=test -n "$DISPöy6…LAY"
+image/yuv; display-im6 'yuv:%s'; test=test -n "$DISPLAY"
+application/x-troff-man; /usr/bin/man -Tascii -l '%s' | col -b; co9l7»piousoutput; description=Man page
+text/troff; /usr/bin/man -Tascii -l '%s' | col -b; copiousoutput; description=Man page
+ãext/*;¢7»piousoutput; description=Man page
+text/troff; /usr/bin/man -Tascii -l '%s' | col -b; copiousoutput; description=Man page
+text/*;¢8« less '%s'; needsterminal
+text/*; view %s; edit=vim %s; compose=vim %s; test=test -x /usr/bin/vim; needsterminal
+application/x-i≈l9∆nfo; /usr/bin/info --subnodes -o /dev/stdout -f '%s' 2>/dev/null; copiousoutput; description=GNU Info document
+appìication/x-tar79∆nfo; /usr/bin/info --subnodes -o /dev/stdout -f '%s' 2>/dev/null; copiousoutput; description=GNU Info document
+application/x-tar7:≈; /bin/tar tvf '%s'; print=/bin/tar tvf - | print text/plain:-; copiousoutput
+application/x-gtar; /bin/tar tvf '%s'; print=/bin/ºp;ƒtar tvf - | print text/plain:-; copiousoutput
+application/x-ustar; /bin/tar tvf '%s'; print=/bin/tar tvf - É print text/plain:-;ÃC;ƒtar tvf - | print text/plain:-; copiousoutput
+application/x-ustar; /bin/tar tvf '%s'; print=/bin/tar tvf - | print text/plain:-;ÃC<√ copiousoutput
+text/*; more %s; needsterminal
+text/*; view %s; edit=vi %s; compose=vi %s; needsterminal
+application/vnd.debian.b˚<√ copiousoutput
+text/*; more %s; needsterminal
+text/*; view %s; edit=vi %s; compose=vi %s; needstermiëal
+application/vnd.debian.b˚=¬inary-package; /usr/lib/mime/debian-view %s; needsterminal; description=Debian GNU/Linux Package; nametemplate=%s.deb
+Oø˛###############################################################################
+#
+#  MIME media types and programs that process Ú˝those types
+#
+#  Much of this file is generated automatically by the program "update-mime".
+‹  Please see the "update-mime" man ´˝those types
+#
+#  Much of this file is generated automatically by the program "update-mime".
+#  Please see the "update-mime" man ´¸page for more information.
+#
+#  Users can add their own rules if they wish by creating a ".mailcap"
+#  file in their home directß˚ory.  Entries included there will take
+#  precedence over those listed here.
+#
+#########‹#######################################˙˚ory.  Entries included there will take
+#  precedence over those listed here.
+#
+#################################################˙˙##############################
+
+
+###############################################################################
+#
+#  User sectiv˘on follows:  Any entries included in this section will take
+#  precedence over thoseﬂcreated by "update-mime".  DO NOT CHANGE th≈˘on follows:  Any entries included in this section will take
+#  precedence over those created by "update-mime".  DO NOT CHANGE th≈¯e
+#  "User Section Begins" and "User Section Ends" lines, or anything outside
+#  of this section!
+#
+
+# ----- User Section Beginsˇ¯e
+#  "User Section Begins" and "User Section Ends" lines, or anything outside
+# ﬂof this section!
+#
+
+# ----- User Section Beginsˇ˜ ----- #
+# -----  User Section Ends  ----- #
+
+###############################################################################
+
+a™	ˆpplication/vnd.oasis.opendocument.chart; soffice --nologo --calc '%s'; edit=soffice --nologo --calc '%s'; print=soffice --nologoØ
+ı --calc -p '%s'; test=test -n "$DISPLAY"; description="OpenDocument Chart"; ëametemplate=%s.odc
+application/vnd.oasis.opendocumeÙ
+ı --calc -p '%s'; test=test -n "$DISPLAY"; description="OpenDocument Chart"; nametemplate=%s.odc
+application/vnd.oasis.opendocumeÙÙnt.spreadsheet; soffice --nologo --calc '%s'; edit=soffice --nologo --calc '%s'; print=soffice --nologo --calc -p '%s'; test=tesUÛt -n "$DISPLAY"; description="OpenDocument Spreadsheet"; nametemplate=%s—ods
+application/vnd.oasis.opendocument.spreadsheet-temp°Ût -n "$DISPLAY"; description="OpenDocument Spreadsheet"; nametemplate=%s.ods
+application/vnd.oasis.opendocument.spreadsheet-temp°Úlate; soffice --nologo --calc '%s'; edit=soffice --nologo --calc '%s'; print=soffice --nologo --calc -p '%s'; test=test -n "$DIS»ÒPLAY"; description="OpenDocument Spreadsheet Template"; nametemplate¬%s.ots
+application/vnd.oasis.opendocument.formula; soffice mÒPLAY"; description="OpenDocument Spreadsheet Template"; nametemplate=%s.ots
+application/vnd.oasis.opendocument.formula; soffice m--nologo --math '%s'; edit=soffice --nologo --math '%s'; print=soffice --nologo --math -p '%s'; test=test -n "$DISPLAY"; descrip™Ôtion="OpenDocument Formula"; nametemplate=%s.odf
+application/vnd—oasis.opendocument.text; soffice --nologo --writer '%s'; edit=s:Ôtion="OpenDocument Formula"; nametemplate=%s.odf
+application/vnd.oasis.opendocument.text; soffice --nologo --writer '%s'; edit=s:Ôtion="OpenDocument Formula"; nametemplate=%s.odf
+application/vnd.oasis.opendocument.text; soffice --nologo --writer '%s'; edit=s:Óoffice --nologo --writer '%s'; print=soffice --nologo --writör -p '%s'; test=test -n "$DISPLAY"; description="OpenDocument Text úÓoffice --nologo --writer '%s'; print=soffice --nologo --writer -p '%s'; test=test -n "$DISPLAY"; description="OpenDocument Text úÌDocument"; nametemplate=%s.odt
+application/vnd.oasis.opendocument.text-master; soffice --nologo --global '%s'; edit=soffice --no˜Ïlogo --writer '%s'; print=soffice --nologo --writer -p '⁄s'; test=test -n "$DISPLAY"; description="OpenDocument Master Document"Ïlogo --writer '%s'; print=soffice --nologo --writer -p '%s'; test=test -n "$DISPLAY"; description="OpenDocument Master Document"Î; nametemplate=%s.odm
+application/vnd.oasis.opendocument.text-template; soffice --nologo --writer '%s'; edit=soffice --nologo --∂Íwriter '%s'; print=soffice --nologo --writer -p '%s'ƒ test=test -n "$DISPLAY"; description="OpenDocument Text Document Template"kÍwriter '%s'; print=soffice --nologo --writer -p '%s'; test=test -n "$DISPLAY"; description="OpenDocument Text Document Template"kÈ; nametemplate=%s.ott
+application/vnd.oasis.opendocument.text-web; soffice --nologo --web '%s'; edit=soffice --nologo --web '%s'îË; print=soffice --nologo --web -p '%s'; test=tesã -n "$DISPLAY"; description="OpenDocument HTML Document Template"; nametemplateQË; print=soffice --nologo --web -p '%s'; test=test -n "$DISPLAY"; description="OpenDocument HTML Document Template"; nametemplateQÁ=%s.oth
+text/plain; less '%s'; needsterminal
+application/vnd.sun.xml.calc; soffice --nologo --calc '%s'; edit=soffice --nologo -ﬁÊ-calc '%s'; test=test -n "$DISPLAY"; descripãion="OpenOffice.org Spreadsheet"; nametemplate=%s.sxc
+application/vnd.sun.xml.calc.SÊ-calc '%s'; test=test -n "$DISPLAY"; description="OpenOffice.org Spreadsheet"; nametemplate=%s.sxc
+application/vnd.sun.xml.calc.SÊ-calc '%s'; test=test -n "$DISPLAY"; description="OpenOffice.org Spreadsheet"; nametemplate=%s.sxc
+application/vnd.sun.xml.calc.SÂtemplate; soffice --nologo --calc '%s'; ödit=soffice --nologo --calc '%s'; test=test -n "$DISPLAY"; description="OpenOffice.org ,Âtemplate; soffice --nologo --calc '%s'; edit=soffice --nologo --calc '%s'; test=test -n "$DISPLAY"; description="OpenOffice.org ,‰Spreadsheet Template"; nametemplate=%s.stc
+application/vnd.sun.xml.math; soffice --nologo --math '%s'; edit=soffice --nologo --m„ath '%s'; test=test -n "$DISPLAY"; döscription="OpenOffice.org Formula"; nametemplate=%s.sxm
+application/vnd.sun.xml.writer; sof∑„ath '%s'; test=test -n "$DISPLAY"; description="OpenOffice.org Formula"; nametemplate=%s.sxm
+application/vnd.sun.xml.writer; sof∑‚fice --nologo --writer '%s'; edit=soffice --nologo --writer '%s'; description="OpenOffice.org Text Document"; nametemplate=%s.sx<·w
+application/vnd.sun.xml.writer—global; soffice --nologo --global '%s'; edit=soffice --nologo --writer '%s'; description="OpenO≠·w
+application/vnd.sun.xml.writer.global; soffice --nologo --global '%s'; edit=soffice --nologo --writer '%s'; description="OpenO≠‡ffice.org Master Document"; nametemplate=%s.sxg
+application/vnd.sun.xml.writer.template; soffice --nologo --writer '%s'; edit=so ﬂffice --nologo --writer '%s'ƒ description="OpenOffice.org Text Document Template"; nametemplate=%s.stw
+application/x-troff-man; Ü ﬂffice --nologo --writer '%s'; description="OpenOffice.org Text Document Template"; nametemplate=%s.stw
+application/x-troff-man; Ü!ﬁ/usr/bin/man -X100 -l '%s'; test=test -n "$DISPLAY" -a -e /usr/bin/gxditview; description=Man page
+text/troff; /usr/bin/man -X10."›0 -l '%s'; test=test -n ›$DISPLAY" -a -e /usr/bin/gxditview; description=Man page
+application/x-troff-man; /usr/bin/man -l '%s';ù"›0 -l '%s'; test=test -n "$DISPLAY" -a -e /usr/bin/gxditview; description=Man page
+application/x-troff-man; /usr/bin/man -l '%s';ù"›0 -l '%s'; test=test -n "$DISPLAY" -a -e /usr/bin/gxditview; description=Man page
+application/x-troff-man; /usr/bin/man -l '%s';ù#‹ needsterminal; descçiption=Man page
+text/troff; /usr/bin/man -l '%s'; needsterminal; description=Man page
+text/html; /usr/bin/s±#‹ needsterminal; description=Man page
+text/troff; /usr/bin/man -l '%s'; needsterminal; description=Man page
+text/html; /usr/bin/s±$€ensible-browser %s; description=HTML Text; nametemplate=%s.html
+application/pdf; evince %s; test=test -n "$DISPLAY"; nametemplat	%⁄e=%s.pdf
+applicaãion/x-troff-man; /usr/bin/nroff -mandoc -Tutf8; copiousoutput; print=/usr/bin/nroff -mandoc -Tutf8 | print textﬁ%⁄e=%s.pdf
+application/x-troff-man; /usr/bin/nroff -mandoc -Tutf8; copiousoutput; print=/usr/bin/nroff -mandoc -Tutf8 | print textﬁ&Ÿ/plain:-
+text/troff; /usr/bin/nroff -mandoc -Tutf8; copiousoutput; print=/usr/bin/nroff -mandoc -Tutf8 | print text/plain:-
+applj'ÿication/x-inôo; /usr/bin/info -f '%s'; needsterminal; description=GNU Info document
+application/x-bittorrent; transmission-gtk %Z'ÿication/x-info; /usr/bin/info -f '%s'; needsterminal; description=GNU Info document
+application/x-bittorrent; transmission-gtk %Z(◊s; description="GTK-based BitTorrent client"; test=test -n "$DISPLAY"
+text/plain; more %s; needsterminal
+text/x-apport; /usr/shah)÷re/apporã/apport-gtk -c %s; test=test -n "$DISPLAY"
+image/avs; /usr/bin/display-im6 %s; test=test -n "$DISPLAY"
+image/bie; /usr/Ö)÷re/apport/apport-gtk -c %s; test=test -n "$DISPLAY"
+image/avs; /usr/bin/display-im6 %s; test=test -n "$DISPLAY"
+image/bie; /usr/Ö*’bin/display-im6 %s; test=test -n "$DISPLAY"
+image/x-ms-bmp; /usr/bin/display-im6 %s; test=test -n "$DISPLAY"
+image/cmyk; /usr/bié+‘n/diåplay-im6 %s; test=test -n "$DISPLAY"
+image/dcx; /usr/bin/display-im6 %s; test=test -n "$DISPLAY"
+image/eps; /usr/bin/displaø+‘n/display-im6 %s; test=test -n "$DISPLAY"
+image/dcx; /usr/bin/display-im6 %s; test=test -n "$DISPLAY"
+image/eps; /usr/bin/displaø+‘n/display-im6 %s; test=test -n "$DISPLAY"
+image/dcx; /usr/bin/display-im6 %s; test=test -n "$DISPLAY"
+image/eps; /usr/bin/displaø,”Ü-im6 %s; test=test -n "$DISPLAY"
+image/fax; /usr/bin/display-im6 %s; test=test -n "$DISPLAY"
+image/fits; /usr/bin/display-im6 %
+,”y-im6 %s; test=test -n "$DISPLAY"
+image/fax; /usr/bin/display-im6 %s; test=test -n "$DISPLAY"
+image/fits; /usr/bin/display-im6 %
+-“s; test=test -n "$DISPLAY"
+image/gif; /usr/bin/display-im6 %s; test=test -n "$DISPLAY"
+image/gray; /usr/bin/display-im6 %s; testj-“s; test=test -n "$DISPLAY"
+image/gif; /usr/bin/display-im6 %s; test=test -n "$DISPLAY"
+image/gray; /usr/bin/display-im6 %s; testï.—=test -n "$DISPLAY"
+image/jpeg; /usr/bin/display-im6 %s; test=test -n "$DISPLAY"
+image/pjpeg; /usr/bin/display-im6 %s; test=test◊/– -n "$DISPLAY"
+image/miff; /usr/bin/display-im6 %s; test=test -n "$DISPLAY"
+image/mono; /usr/bin/display-im6 %s; test=test -ë "$ö/– -n "$DISPLAY"
+image/miff; /usr/bin/display-im6 %s; test=test -n "$DISPLAY"
+image/mono; /usr/bin/display-im6 %s; test=test -n "$ö0œDISPLAY"
+image/mtv; /usr/bin/display-im6 %s; test=test -n "$DISPLAY"
+image/x-portable-bitmap; /usr/bin/display-im6 %s; test=test¸1Œ -n "$DISPLAY"
+image/pcd; /usr/bin/display-im6 %s; test=test -n "$DISPLAY"
+image/pcx; /usr/bin/display-im6 %s; test=testﬂ-n "$DIN1Œ -n "$DISPLAY"
+image/pcd; /usr/bin/display-im6 %s; test=test -n "$DISPLAY"
+image/pcx; /usr/bin/display-im6 %s; test=test -n "$DIN2ÕSPLAY"
+image/pdf; /usr/bin/display-im6 %s; test=test -n "$DISPLAY"
+image/x-portable-graymap; /usr/bin/display-im6 %s; test=test Ê3Ã-n "$DISPLAY"
+image/pict; /usr/bin/display-im6 %s; test=test -n "$DISPLAY"
+image/png; /usr/bin/display-im6 %s; test=ãest -n "$DI°3Ã-n "$DISPLAY"
+image/pict; /usr/bin/display-im6 %s; test=test -n "$DISPLAY"
+image/png; /usr/bin/display-im6 %s; test=test -n "$DI°4ÀSPLAY"
+image/x-portable-anymap; /usr/bin/display-im6 %s; test=test -n "$DISPLAY"
+image/x-portable-pixmap; /usr/bin/display-im6 %P4ÀSPLAY"
+image/x-portable-anymap; /usr/bin/display-im6 %s; test=test -n "$DISPLAY"
+image/x-portable-pixmap; /usr/bñn/display-im6 %P5 s; test=test -n "$DISPLAY"
+image/ps; /usr/bin/display-im6 %s; test=test -n "$DISPLAY"
+image/rad; /usr/bin/display-im6 %s; test=tw6…est -n "$DISPLAY"
+image/x-rgb; /usr/bin/display-im6 %s; test=test -n "$DISPLAY"
+image/rgba; /usr/bin/display-im6 %s; test=test -37»n "$DISPLAY"
+image/rla; /usr/bin/display-im6 %s; test=test -n "$DISPLAY"
+image/rle; /usr/bin/display-im6 %s;ﬂtest=test -n "$DISP§7»n "$DISPLAY"
+image/rla; /usr/bin/display-im6 %s; test=test -n "$DISPLAY"
+image/rle; /usr/bin/display-im6 %s; test=test -n "$DISP§8«LAY"
+image/sgi; /usr/bin/display-im6 %s; test=test -n "$DISPLAY"
+image/sun-raster; /usr/bin/display-im6 %s; test=test -n "$DISPL¡9∆AY"
+image/targa; /usr/bin/display-im6 %s; test=test -n "$DISPLAY"
+image/tiff; /usr/bin/display-im6 %s; töst=test -n "$DISPLAY"
+i9∆AY"
+image/targa; /usr/bin/display-im6 %s; test=test -n "$DISPLAY"
+image/tiff; /usr/bin/display-im6 %s; test=test -n "$DISPLAY"
+i:≈mage/uyvy; /usr/bin/display-im6 %s; test=test -n "$DISPLAY"
+image/vid; /usr/bin/display-im6 %s; test=test -n "$DISPLAY"
+image/viÊ;ƒff; /usr/bin/display-im6 %s; test=test -n "$DISPLAY"
+image/x-xbitmap; /usr/bin/display-im6 %s; test=ãest -n "$DISPLAY"
+image/x-x°;ƒff; /usr/bin/display-im6 %s; test=test -n "$DISPLAY"
+image/x-xbitmap; /usr/bin/display-im6 %s; test=test -n "$DISPLAY"
+image/x-x°<√pixmap; /usr/bin/display-im6 %s; test=test -n "$DISPLAY"
+image/x-xwindowdump; /usr/bin/display-im6 %s; test=test -n "$DISPLAY"
+iO=¬mage/x-icon; /usr/bin/display-im6 %s; test=test -n "$DISPLAY"
+image/yuv; /usr/bin/display-im6 %sƒ test=test -n "$DISPLAY"
+image/ô=¬mage/x-icon; /usr/bin/display-im6 %s; test=test -n "$DISPLAY"
+image/yuv; /usr/bin/display-im6 %s; test=test -n "$DISPLAY"
+image/ô=¬mage/x-icon; /usr/bin/display-im6 %s; test=test -n "$DISPLAY"
+image/yuv; /usr/bin/display-im6 %s; test=test -n "$DISPLAY"
+image/ô>¡avs; /usr/lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/display %s; test=test -n "$DISPLAY"ıimage/bie; /usr/lib/x86_64-linux-gnb>¡avs; /usr/lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/display %s; test=test -n "$DISPLAY"
+image/bie; /usr/lib/x86_64-linux-gnb?¿u/ImageMagick-6.8.9/bin-Q16/display %s; test=test -n "$DISPLAY"
+image/x-ms-bmp; /usr/lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Í@øQ16/display %s; test=test -n "$DISPLAY"
+image/cmyk; /usr/lib/x86_64-linux-gnu/ImageMagicî-6.8.9/bin-Q16/display %s; test=test -n}@øQ16/display %s; test=test -n "$DISPLAY"
+image/cmyk; /usr/lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/display %s; test=test -n}Aæ "$DISPLAY"
+image/dcx; /usr/lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/display %s; test=test -n "$DISPLAY"
+image/eps; /usr/lABΩib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/display %s; test=test -n "$DISPLAY"
+imûge/fax; /usr/lib/x86_64-linux-gnu/ImageMagi≠BΩib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/display %s; test=test -n "$DISPLAY"
+image/fax; /usr/lib/x86_64-linux-gnu/ImageMagi≠Cºck-6.8.9/bin-Q16/display %s; test=test -n "$DISPLAY"
+image/fits; /usr/lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/display %s;zDª test=test -n "$DISPLAY"
+image/gif; /usr/lib/x86_64-linux-gnu/ImageMagick-6.8.9/ùin-Q16/display %s; test=test -n "$DISPLAY"
+imaguDª test=test -n "$DISPLAY"
+image/gif; /usr/lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/display %s; test=test -n "$DISPLAY"
+imaguE∫e/gray; /usr/lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/display %s; test=test -n "$DISPLAY"
+image/jpeg; /usr/lib/x86_64-linu[Fπx-gnu/ImageMagick-6.8.9/bin-Q16/display %s; test=test -n "$DISPLAY"
+image/pjèeg; /usr/lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin\Fπx-gnu/ImageMagick-6.8.9/bin-Q16/display %s; test=test -n "$DISPLAY"
+image/pjpeg; /usr/lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin\Fπx-gnu/ImageMagick-6.8.9/bin-Q16/display %s; test=test -n "$DISPLAY"
+image/pjpeg; /usr/lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin\G∏-Q16/display %s; test=test -n "$DISPLAY"
+image/miff; /usr/lib/x86_64-linäx-gnu/ImageMagick-6.8.9/bin-Q16/display %s; test=test -*G∏-Q16/display %s; test=test -n "$DISPLAY"
+image/miff; /usr/lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/display %s; test=test -*H∑n "$DISPLAY"
+image/mono; /usr/lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/display %s; test=test -n "$DISPLAY"
+image/mtv; /usrùI∂/lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/display %s; test=tesã -n "$DISPLAY"
+image/x-portable-bitmap; /usr/lib/x86_64-linΩI∂/lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/display %s; test=test -n "$DISPLAY"
+image/x-portable-bitmap; /usr/lib/x86_64-linΩJµux-gnu/ImageMagick-6.8.9/bin-Q16/display %s; test=test -n "$DISPLAY"
+image/pcd; /usr/lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-K¥Q16/display %s; test=test -n "$DISPLAY"
+image/pcx; /usr/lib/x86_…4-linux-gnu/ImageMagick-6.8.9/bin-Q16/display %s; test=test -n 4K¥Q16/display %s; test=test -n "$DISPLAY"
+image/pcx; /usr/lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/display %s; test=test -n 4L≥"$DISPLAY"
+image/pdf; /usr/lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/display %s; test=test -n "$DISPLAY"
+image/x-portable-gÁM≤raymap; /usr/lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/õisplay %s; test=test -n "$DISPLAY"
+image/pict; /usr/lib/x86_64-linu®M≤raymap; /usr/lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/display %s; test=test -n "$DISPLAY"
+image/pict; /usr/lib/x86_64-linu®N±x-gnu/ImageMagick-6.8.9/bin-Q16/display %s; test=test -n "$DISPLAY"
+image/png; /usr/lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q	O∞16/display %s; test=test -n "$DISPLAY"
+image/x-portable-ûnymap; /usr/lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/display %s; ±O∞16/display %s; test=test -n "$DISPLAY"
+image/x-portable-anymap; /usr/lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/display %s; ±O∞16/display %s; test=test -n "$DISPLAY"
+image/x-portable-anymap; /usr/lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/display %s; ±PØtest=test -n "$DISPLAY"
+image/x-portable-pixmap; /usç/lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/display %s; test=test -n "$˘PØtest=test -n "$DISPLAY"
+image/x-portable-pixmap; /usr/lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/display %s; test=test -n "$˘QÆDISPLAY"
+image/ps; /usr/lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/display %s; test=test -n "$DISPLAY"
+image/rad; /usr/lib/x‡R≠86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/displaÜ %s; test=test -n "$DISPLAY"
+image/x-rgb; /usr/lib/x86_64-linux-gnu/ImageMagick™R≠86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/display %s; test=test -n "$DISPLAY"
+image/x-rgb; /usr/lib/x86_64-linux-gnu/ImageMagick™S¨-6.8.9/bin-Q16/display %s; test=test -n "$DISPLAY"
+image/rgba; /usr/lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/display %s; t&T´est=test -n "$DISPLAY"
+image/rla; /usr/lib/x«6_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/display %s; test=test -n "$DISPLAY"
+image/~T´est=test -n "$DISPLAY"
+image/rla; /usr/lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/display %s; test=test -n "$DISPLAY"
+image/~U™rle; /usr/lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/display %s; test=test -n "$DISPLAY"
+image/sgi; /usr/lib/x86_64-linux-gnnV©u/ImageMagick-6.8.9/bin-Q16/display %s; ãest=test -n "$DISPLAY"
+image/sun-raster; /usr/lib/x86_64-linux-gnu/ImageMagick-6.8.9/birV©u/ImageMagick-6.8.9/bin-Q16/display %s; test=test -n "$DISPLAY"
+image/sun-raster; /usr/lib/x86_64-linux-gnu/ImageMagick-6.8.9/birW®n-Q16/display %s; test=test -n "$DISPLAY"
+image/targa; /usr/lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/display %s; test=test∏Xß -n "$DISPLAY"
+image/tiff; /usr/lib/á86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/display %s; test=test -n "$DISPLAY"
+image/uyvy; /Xß -n "$DISPLAY"
+image/tiff; /usr/lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/display %s; test=test -n "$DISPLAY"
+image/uyvy; /Xß -n "$DISPLAY"
+image/tiff; /usr/lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/display %s; test=test -n "$DISPLAY"
+image/uyvy; /Y¶usr/lib/x86_64-linux-gnu/ImageMaòick-6.8.9/bin-Q16/display %s; test=test -n "$DISPLAY"
+image/vid; /usr/lib/x86_64-linux-gnu/Imag√Y¶usr/lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/display %s; test=test -n "$DISPLAY"
+image/vid; /usr/lib/x86_64-linux-gnu/Imag√Z•eMagick-6.8.9/bin-Q16/display %s; test=test -n "$DISPLAY"
+image/viff; /usr/lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/displaÊ[§y %s; test=test -n "$DISPLAY›
+image/x-xbitmap; /usr/lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/display %s; test=test -n "$DIÚ[§y %s; test=test -n "$DISPLAY"
+image/x-xbitmap; /usr/lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/display %s; test=test -n "$DIÚ\£SPLAY"
+image/x-xpixmap; /usr/lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/display %s; test=test -n "$DISPLAY"
+image/x-xwindowd]¢ump; /usr/lib/x86_64-linäx-gnu/ImageMagick-6.8.9/bin-Q16/display %s; test=test -n "$DISPLAY"
+image/x-icon; /usr/lib/x86_64-linuxÜ]¢ump; /usr/lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/display %s; test=test -n "$DISPLAY"
+image/x-icon; /usr/lib/x86_64-linuxÜ^°-gnu/ImageMagick-6.8.9/bin-Q16/display %s; test=test -n "$DISPLAY"
+image/yuv; /usr/lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q1·_†6/display %s; test=töst -n "$DISPLAY"
+text/english; /usr/bin/emacs24 -nw %s; needsterminal
+text/plain; /usr/bin/emacs24 -nw %s; G_†6/display %s; test=test -n "$DISPLAY"
+text/english; /usr/bin/emacs24 -nw %s; needsterminal
+text/plain; /usr/bin/emacs24 -nw %s; G`üneedsterminal
+text/x-makefile; /usr/bin/emacs24 -nw %s; needsterminal
+text/x-c++hdr; /usr/bin/emacs24 -nw %s; needsterminal
+textÈaû/x-c++src; /usr/ùin/emacs24 -nw %s; needsterminal
+text/x-chdr; /usr/bin/emacs24 -nw %s; needsterminal
+text/x-csrc; /usr/bin/emac¨aû/x-c++src; /usr/bin/emacs24 -nw %s; needsterminal
+text/x-chdr; /usr/bin/emacs24 -nw %s; needsterminal
+text/x-csrc; /usr/bin/emac¨aû/x-c++src; /usr/bin/emacs24 -nw %s; needsterminal
+text/x-chdr; /usr/bin/emacs24 -nw %s; needsterminal
+text/x-csrc; /usr/bin/emac¨bùs24 -nw %s; ëeedsterminal
+text/x-java; /usr/bin/emacs24 -nw %s; needsterminal
+text/x-moc; /usr/bin/emacs24 -nw %s; needsterminal‰bùs24 -nw %s; needsterminal
+text/x-java; /usr/bin/emacs24 -nw %s; needsterminal
+text/x-moc; /usr/bin/emacs24 -nw %s; needsterminal‰cú
+text/x-pascal; /usr/bin/emacs24 -nw %s; needsterminal
+text/x-tcl; /usr/bin/emacs24 -nw %s; needsterminal
+text/x-tex; /usr/bin/edõmacs24 -ëw %s; needsterminal
+application/x-shellscript; /usr/bin/emacs24 -nw %s; needsterminal
+text/x-c; /usr/bin/emacs24 -nw %sMdõmacs24 -nw %s; needsterminal
+application/x-shellscript; /usr/bin/emacs24 -nw %s; needsterminal
+text/x-c; /usr/bin/emacs24 -nw %sMeö; needsterminal
+text/x-c++; /usr/bin/emacs24 -nw %s; needsterminal
+text/english; /usr/bin/emacs24 %s; test=test -n "$DISPLAY"
+teöfôxt/pìain; /usr/bin/emacs24 %s; test=test -n "$DISPLAY"
+text/x-makefile; /usr/bin/emacs24 %s; test=test -n "$DISPLAY"
+text/x-c++h˙fôxt/plain; /usr/bin/emacs24 %s; test=test -n "$DISPLAY"
+text/x-makefile; /usr/bin/emacs24 %s; test=test -n "$DISPLAY"
+text/x-c++h˙gòdr; /usr/bin/emacs24 %s; test=test -n "$DISPLAY"
+text/x-c++src; /usr/bin/emacs24 %s; test=test -n "$DISPLAY"
+text/x-chdr; /usr/bYhóñn/emacs24 %s; test=test -n "$DISPLAY"
+text/x-csrc; /usr/bin/emacs24 %s; test=test -n "$DISPLAY"
+text/x-java; /usr/bin/emacs24 %shóin/emacs24 %s; test=test -n "$DISPLAY"
+text/x-csrc; /usr/bin/emacs24 %s; test=test -n "$DISPLAY"
+text/x-java; /usr/bin/emacs24 %siñs; test=test -n "$DISPLAY"
+text/x-moc; /usr/bin/emacs24 %s; test=test -n "$DISPLAY"
+text/x-pascal; /usr/bin/emacs24 %s; test=tes…iñs; test=test -n "$DISPLAY"
+text/x-moc; /usr/bin/emacs24 %s; test=test -n "$DISPLAY"
+text/x-pascal; /usr/bin/emacs24 %s; test=tes6jït -n "$DISPLAY"
+text/x-tcl; /usr/bin/emacs24 %s; test=test -n "$DISPLAY"
+text/x-tex; /usr/bin/emacs24 %s; test=test -n "$DISPLAY´jït -n "$DISPLAY"
+text/x-tcl; /usr/bin/emacs24 %s; test=test -n "$DISPLAY"
+text/x-tex; /usr/bin/emacs24 %s; test=test -n "$DISØLAY´kî"
+application/x-shellscript; /usr/bin/emacs24 %s; test=test -n "$DISPLAY"
+text/x-c; /usr/bin/emacs24 %s; test=test -n "$DISPLAY"mlì
+text/x-c++; /usr/bin/emacs24 %s; test=test -n "$DISPLAY"
+application/pdf; evince-previewer %s; test=test -n "$DISPLAY"
+applicat“míion/x-bzpdf; evince-previewer %s; test=test -n "$DISPLAY"
+application/x-gzpdf; evince-previewer %s; test=test -n "$DISPLæY"
+appl|míion/x-bzpdf; evince-previewer %s; test=test -n "$DISPLAY"
+application/x-gzpdf; evince-previewer %s; test=test -n "$DISPLAY"
+appl|nëication/x-xzpdf; evince-previewer %s; test=test -n "$DISPLAY"
+application/x-ext-pdf; evince-previewer %s; test=test -n "$DISPLAY˜oê"
+application/postscript; evince-previewer %s; test=test -n "$DISPLAY"
+application/x-bzpostscript; evince-previewer ⁄s; test=tes.oê"
+application/postscript; evince-previewer %s; test=test -n "$DISPLAY"
+application/x-bzpostscript; evince-previewer %s; test=tes.pèt -n "$DISPLAY"
+application/x-gzpostscript; evince-previewer %s; test=test -n "$DISPLAY"
+image/x-eps; evince-previewer %s; test=ìqétest -n "$DISPLAY"
+image/x-bzeps; evince-previewer %s; test=test -n "$DISPLAY"
+image/x-gzeps; evince-previewer %å; test=test -n ≤qétest -n "$DISPLAY"
+image/x-bzeps; evince-previewer %s; test=test -n "$DISPLAY"
+image/x-gzeps; evince-previewer %s; test=test -n ≤rç"$DISPLAY"
+application/x-ext-ps; evince-previewer %s; test=test -n "$DISPLAY"
+application/x-ext-eps; evince-previewer %s; test=tÏsåest -n "$DISPLAY"
+application/x-dvi; evince-previewer %s; test=test -n "$DISPLAY"
+application/x-bzdvi; evincö-previewer %s; testùsåest -n "$DISPLAY"
+application/x-dvi; evince-previewer %s; test=test -n "$DISPLAY"
+application/x-bzdvi; evince-previewer %s; testùsåest -n "$DISPLAY"
+application/x-dvi; evince-previewer %s; test=test -n "$DISPLAY"
+application/x-bzdvi; evince-previewer %s; testùtã=test -n "$DISPLAY"
+application/x-gzdvi; evince-previewer %s; test=test -n "$DISPLAY"
+application/x-ext-õvi; evince-previewer %s∂tã=test -n "$DISPLAY"
+application/x-gzdvi; evince-previewer %s; test=test -n "$DISPLAY"
+application/x-ext-dvi; evince-previewer %s∂uä; test=test -n "$DISPLAY"
+image/vnd.djvu; evince-previewer %s; test=test -n "$DISPLAY"
+application/x-ext-djv; evince-previewer %4vâs; test=test -n "$DISPLAY"
+application/x-ext-djvu; evince-previewer %s; test=test -n "$DISPLAY"
+imagö/tiff; evince-previewer %s;Dvâs; test=test -n "$DISPLAY"
+application/x-ext-djvu; evince-previewer %s; test=test -n "$DISPLAY"
+image/tiff; evince-previewer %s;Dwà test=test -n "$DISPLAY"
+application/x-cbr; evince-previewer %s; test=test -n "$DISPLAY"
+application/x-cbz; evince-previewer %s;bxá test=test -n "$DISPLAY"
+application/x-cb7; evince-previewer %s; test=test -n "$DISPLAY"
+applicaãion/x-ext-cbr; evince-previewer™xá test=test -n "$DISPLAY"
+application/x-cb7; evince-previewer %s; test=test -n "$DISPLAY"
+application/x-ext-cbr; evince-previewer™yÜ %s; test=test -n "$DISPLAY"
+application/x-ext-cbz; evince-previewer %s; test=test -n "$DISPLAY"
+application/x-ext-cb7; evince-p∫zÖreviewer %s; test=test -n "$DISPLAY"
+; evince-previewer %s; test=test -n "$DISPLAY"
+applicatñon/oxps; evince-previewer %s; test="zÖreviewer %s; test=test -n "$DISPLAY"
+; evince-previewer %s; test=test -n "$DISPLAY"
+application/oxps; evince-previewer %s; test="{Ñtest -n "$DISPLAY"
+application/vnd.ms-xpsdocument; evince-previewer %s; test=test -n "$DISPLAY"
+inode/directory; exo-open --launÙ|Éch FileManager %s; test=test -n "$DISPLAY"
+x-scheme-handler/trash; exo-open --launch FilöManager %s; test=test -n "$DISPLAY"
+x-s|Éch FileManager %s; test=test -n "$DISPLAY"
+x-scheme-handler/trash; exo-open --launch FileManager %s; test=test -n "$DISPLAY"
+x-s|Éch FileManager %s; test=test -n "$DISPLAY"
+x-scheme-handler/trash; exo-open --launch FileManager %s; test=test -n "$DISPLAY"
+x-s}Çcheme-handler/mailto; exo-open --launch MailReader %s; test=test -n "$DISPLAY"
+x-schöme-handler/http; exo-open --launch WebBrows@}Çcheme-handler/mailto; exo-open --launch MailReader %s; test=test -n "$DISPLAY"
+x-scheme-handler/http; exo-open --launch WebBrows@~Åer %s; test=test -n "$DISPLAY"
+x-scheme-handler/https; exo-open --launch WebBrowser %s; test=test -n "$DISPLAY"
+text/html; firefqÄox -private-window %s; test=test -n "$DISPLAY"
+text/xml; firefox -private-windowﬂ%s; test=test -n "$DISPLAY"
+application/xhtml+xçÄox -private-window %s; test=test -n "$DISPLAY"
+text/xml; firefox -private-window %s; test=test -n "$DISPLAY"
+application/xhtml+xçÄml; firefox -private-window %s; test=test -n "$DISPLAY"
+application/xml; firefox -private-window %s; test=test -n "$DISPLAY"
+appJÅ~lication/rss+xml; firefox -private-window %s; test=test -n "$DISPLAY"
+applicûtion/rdf+xml; firefox -private-window %s; test=testäÅ~lication/rss+xml; firefox -private-window %s; test=test -n "$DISPLAY"
+application/rdf+xml; firefox -private-window %s; test=testäÇ} -n "$DISPLAY"
+image/gif; firefox -private-window %s; test=test -n "$DISPLAY"
+image/jpeg; firefox -private-window %s; test=test |É|-n "$DISPLAY"
+image/png; firefox -private-window %s; test=test -n "$DISP≥AY"
+x-scheme-handler/http; firefox -private-window %s;  É|-n "$DISPLAY"
+image/png; firefox -private-window %s; test=test -n "$DISPLAY"
+x-scheme-handler/http; firefox -private-window %s;  Ñ{test=test -n "$DISPLAY"
+x-scheme-handler/https; firefox -private-window %s; test=test -n "$DISPLAY"
+x-scheme-handler/ftp; firefo©Özx -private-window %s; test=test -n "$DISPLAY"
+x-scheme-handler/chromö; firefox -private-window %s; test=test -n "$DISPLAY"
+video/Özx -private-window %s; test=test -n "$DISPLAY"
+x-scheme-handler/chrome; firefox -private-window %s; test=test -n "$DISPLAY"
+video/Özx -private-window %s; test=test -n "$DISPLAY"
+x-scheme-handler/chrome; firefox -private-window %s; test=test -n "$DISPLAY"
+video/Üy/webm; firefox -private-window %s; test=test -n "$DISPLAY"
+appliúation/x-xpinstall; firefox -private-window %s; test=test -n "$D?Üy/webm; firefox -private-window %s; test=test -n "$DISPLAY"
+application/x-xpinstall; firefox -private-window %s; test=test -n "$D?áxISPLAY"
+application/pkcs12; /usr/bin/gcr-viewer %s; test=test -n "$DISPLAY"
+application/pkcs12+pem; /usr/bin/gcr-viewer %s; testàw=test -n "$DISPLAY"
+application/pkcs7-mime; /usr/bin/gcr-vieàer %s; test=test -n "$DISPLAY"
+application/pkcs7-mime+pem; /usr/bin¬àw=test -n "$DISPLAY"
+application/pkcs7-mime; /usr/bin/gcr-viewer %s; test=test -n "$DISPLAY"
+application/pkcs7-mime+pem; /usr/bin¬âv/gcr-viewer %s; test=test -n "$DISPLAY"
+application/pkcs8; /usr/bin/gcr-viewer %s; test=test -n "$DISPLAY"
+application/pkcs8+pemÀäu; /usr/bin/gcr-viewer %s; test=test -n "$DISPLAY"
+applicûtion/pkix-cert; /usr/bin/gcr-viewer %s; test=test -n "$DISPLAY"
+applicaÜäu; /usr/bin/gcr-viewer %s; test=test -n "$DISPLAY"
+application/pkix-cert; /usr/bin/gcr-viewer %s; test=test -n "$DISPLAY"
+applicaÜãttion/pkix-cert+pem; /usr/bin/gcr-viewer %s; test=test -n "$DISPLAY"
+application/pkix-crl; /usr/bin/gcr-viewer %s; test=test -n "∆ås$DISPLAY"
+application/pkix-crl+pem; /usr/bin/gcr-vieàer %s; test=test -n "$DISPLAY"
+application/x-pem-file; /usr/bin/gcr-viewer vås$DISPLAY"
+application/pkix-crl+pem; /usr/bin/gcr-viewer %s; test=test -n "$DISPLAY"
+application/x-pem-file; /usr/bin/gcr-viewer vçr%s; test=test -n "$DISPLAY"
+application/x-pem-key; /usr/bin/gcr-viewer %s; test=test -n "$DISPLAY"
+application/x-pkcs12; /usr/bi6éqn/gcr-viewer %s; test=test -n "$DISPLAY"
+applicaãion/x-pkcs7-certificates; /usr/bin/gcr-viewer %s; test=test -n "$DISPLAY"
+appli˝éqn/gcr-viewer %s; test=test -n "$DISPLAY"
+application/x-pkcs7-certificates; /usr/bin/gcr-viewer %s; test=test -n "$DISPLAY"
+appli˝éqn/gcr-viewer %s; test=test -n "$DISPLAY"
+application/x-pkcs7-certificates; /usr/bin/gcr-viewer %s; test=test -n "$DISPLAY"
+appli˝èpcation/x-x509-ca-cert; /usr/bin/gcr-viewer %å; test=test -n "$DISPLAY"
+application/x-x509-user-cert; /usr/bin/gcr-viewer %s; tes˜èpcation/x-x509-ca-cert; /usr/bin/gcr-viewer %s; test=test -n "$DISPLAY"
+application/x-x509-user-cert; /usr/bin/gcr-viewer %s; tes˜êot=test -n "$DISPLAY"
+application/pkcs10; /usr/bin/gcr-viewer %s; test=test -n "$DISPLAY"
+application/pkcs10+pem; /usr/bin/gcr-viWënewer %s; test=test -n "$DISPLAY"
+applicaãion/x-spkac; /usr/bin/gcr-viewer %s; test=test -n "$DISPLAY"
+application/x-spkac+base64≥ënewer %s; test=test -n "$DISPLAY"
+application/x-spkac; /usr/bin/gcr-viewer %s; test=test -n "$DISPLAY"
+application/x-spkac+base64≥ím; /usr/bin/gcr-viewer %s; test=test -n "$DISPLAY"
+application/x-rpm; gnome-software --local-filename=%s; test=test -n "$DISPLAY"¢ìl
+application/x-redhat-package-manageç; gnome-software --local-filename=%s; test=test -n "$DISPLAY"
+application/x-deb; gnome-soft$ìl
+application/x-redhat-package-manager; gnome-software --local-filename=%s; test=test -n "$DISPLAY"
+application/x-deb; gnome-soft$îkware --local-filename=%s; test=test -n "$DISPLAY"
+application/x-app-package; gnome-software --local-filename=%s; test=test -n "$ûïjDISPLAY"
+application/vnd.ms-cab-úompressed; gnome-software --local-filename=%s; test=test -n "$DISPLAY"
+application/vnd.xdgapp; tïjDISPLAY"
+application/vnd.ms-cab-compressed; gnome-software --local-filename=%s; test=test -n "$DISPLAY"
+application/vnd.xdgapp; tñignome-software --local-filename=%s; test=test -n "$DISPLAY"
+x-scheme-handler/apt; gnome-software --local-filename=%s; test=test ìóh-n "$DISPLAY"
+application/vnõ.snap; gnome-software --local-filename=%s; test=test -n "$DISPLAY"
+application/vnd.openofficeorg.ex$óh-n "$DISPLAY"
+application/vnd.snap; gnome-software --local-filename=%s; test=test -n "$DISPLAY"
+application/vnd.openofficeorg.ex$óh-n "$DISPLAY"
+application/vnd.snap; gnome-software --local-filename=%s; test=test -n "$DISPLAY"
+application/vnd.openofficeorg.ex$ògtension; libreoffice --mûth %s; test=test -n "$DISPLAY"
+x-scheme-handler/vnd.libreoffice.cmis; libreoffice --math %s; test=test 3ògtension; libreoffice --math %s; test=test -n "$DISPLAY"
+x-scheme-handler/vnd.libreoffice.cmis; libreoffice --math %s; test=test 3ôf-n "$DISPLAY"
+application/vnd.oasis.opendocument.text-flat-xml; libreoffice %s; test=test -n "$DISPLAY"
+application/vnd.oasis.opåöeendocument.spreadsheöt-flat-xml; libreoffice %s; test=test -n "$DISPLAY"
+application/vnd.oasis.opendocument.graphics-flat-xml; lÅöeendocument.spreadsheet-flat-xml; libreoffice %s; test=test -n "$DISPLAY"
+application/vnd.oasis.opendocument.graphics-flat-xml; lÅõdibreoffice %s; test=test -n "$DISPLAY"
+application/vnd.oasis.opendocument.presentation-flat-xml; libreoffice %s; test=test -n "$:úcDISPLAY"
+text/plûin; mousepad %s; test=test -n "$DISPLAY"
+application/x-onboardsettings; onboard-settings %s; test=test -n "$DIS£úcDISPLAY"
+text/plain; mousepad %s; test=test -n "$DISPLAY"
+application/x-onboardsettings; onboard-settings %s; test=test -n "$DIS£ùbPLAY"
+application/x-onboard; onboard %s; test=test -n "$DISPLAY"
+application/x-java-archive; cautious-launcher %s /usr/bin/java <ûa-jar; test=töst -n "$DISPLAY"
+application/java-archive; cautious-launcher %s /usr/bin/java -jar; test=test -n "$DISPLAY"
+applicaûa-jar; test=test -n "$DISPLAY"
+application/java-archive; cautious-launcher %s /usr/bin/java -jar; test=test -n "$DISPLAY"
+applicaü`tion/x-jar; cautious-launcher %s /usr/bin/java -jar; test=test -n "$DISPLAY"
+application/x-7z-compressed; file-roller %s; test=th†_est -n "€DISPLAY"
+application/x-7z-compressed-tar; file-roller %s; test=test -n "$DISPLAY"
+application/x-ace; file-roller %s; teæ†_est -n "$DISPLAY"
+application/x-7z-compressed-tar; file-roller %s; test=test -n "$DISPLAY"
+application/x-ace; file-roller %s; teæ†_est -n "$DISPLAY"
+application/x-7z-compressed-tar; file-roller %s; test=test -n "$DISPLAY"
+application/x-ace; file-roller %s; teæ°^st=töst -n "$DISPLAY"
+application/x-alz; file-roller %s; test=test -n "$DISPLAY"
+application/x-ar; file-roller %s; test=test -n °^st=test -n "$DISPLAY"
+application/x-alz; file-roller %s; test=test -n "$DISPLAY"
+application/x-ar; file-roller %s; test=test -n ¢]"$DISPLAY"
+application/x-arj; file-roller %s; test=test -n "$DISPLAY"
+application/x-bzip; file-roller %s; test=test -n "$DISPLAYÙ£\›
+application/x-bzip-compressed-tar; file-roller %s; test=test -n "$DISPLAY"
+application/x-bzip1; file-roller %s; test=test -n "›£\"
+application/x-bzip-compressed-tar; file-roller %s; test=test -n "$DISPLAY"
+application/x-bzip1; file-roller %s; test=test -n "›§[$DISPLAY"
+application/x-bzip1-compressed-tar; file-roller %s; test=test -n "$DISPLAY"
+application/x-cabinet; file-roller %s; tes5§[$DISPLAY"
+application/x-bzip1-compressed-tar; file-roller %s; test=test -n "$DISPLAY"
+application/x-cabinet; file-roller %s; tes •Zt=test -n "$DISPLAY"
+application/x-cbr; file-roller %s; test=test -n "$DISPLAY"
+application/x-cbz; file-roller %s; test=test -n h¶Y"$DISPLAY"
+application/x-cd-image; file-roller %s; test=test -n "$DISPLAY"
+application/x-compress; file-roller %s; test=testﬂ-n 	¶Y"$DISPLAY"
+application/x-cd-image; file-roller %s; test=test -n "$DISPLAY"
+application/x-compress; file-roller %s; test=test -n 	ßX"$DISPLAY"
+application/x-compressed-tar; file-roller %s; test=test -n "$DISPLAY"
+application/x-cpio; file-roller %s; test=test -l®Wn "$DISPLAY"
+application/x-deb; file-roller %s; test=test -n "$DISPLAY"
+application/x-ear; file-roller %s; test=test -n ›$DISPLAö®Wn "$DISPLAY"
+application/x-deb; file-roller %s; test=test -n "$DISPLAY"
+application/x-ear; file-roller %s; test=test -n "$DISPLAö©VY"
+application/x-ms-dos-executable; file-roller %s; test=test -n "$DISPLAY"
+application/x-gtar; file-roller %s; test=test -n "$D}©VY"
+application/x-ms-dos-executable; file-roller %s; test=test -n "$DISPLAY"
+application/x-gtar; file-roller %s; test¬test -n "$D}™UISPLAY"
+application/x-gzip; file-roller %s; test=test -n "$DISPLAY"
+application/x-gzpostscript; file-roller %s; test=test -n "$Dú´TISPLAY"
+application/x-java-archive; file-roller %s; test=test -n "$DISPLAY"
+application/x-lha; file-roller %s; test=test -n "$DI’¨SSPLAY"
+application/x-lhz; file-roller %s; test=test -n "$DISPLAY"
+application/x-lrzip; file-roller %s; test=testﬂ-n "$DISPLAY"
+a;¨SSPLAY"
+application/x-lhz; file-roller %s; test=test -n "$DISPLAY"
+application/x-lrzip; file-roller %s; test=test -n "$DISPLAY"
+a;≠Rpplication/x-lrzip-compressed-tar; file-roller %s; test=test -n "$DISPLAY"
+application/x-lzip; file-roller %s; test=test -n "$DIVÆQSPLAY"
+application/x-lzip-compressed-tar; file-roller %s; test=test -n "$DISPLAY"
+application/x-lzma; file-rêller %s; test=test aÆQSPLAY"
+application/x-lzip-compressed-tar; file-roller %s; test=test -n "$DISPLAY"
+application/x-lzma; file-roller %s; test=test aØP-n "$DISPLAY"
+application/x-lzma-compressed-tar; file-roller %s; test=test -n "$DISPLAY"
+application/x-lzop; file-roller %s; tesd∞Ot=test -n "$DISPLAY"
+application/x-lzop-compressed-tar; file-roller %s; test=test -n "$DISPLAY"
+applicatñon/x-ms-wim; file-rolle ∞Ot=test -n "$DISPLAY"
+application/x-lzop-compressed-tar; file-roller %s; test=test -n "$DISPLAY"
+application/x-ms-wim; file-rolle ±Nr %s; test=test -n "$DISPLAY"
+application/x-rar; file-roller %s; test=test -n "$DISPLAY"
+application/x-rar-compressed; file-roll-≤Mer %s; test=test -n "$DISPLAY"
+application/x-rpm; file-roller %s; test=test -n "$DISPLAY"
+applicatioë/x-rzip; file-roller %s; te}≤Mer %s; test=test -n "$DISPLAY"
+application/x-rpm; file-roller %s; test=test -n "$DISPLAY"
+application/x-rzip; file-roller %s; te}≤Mer %s; test=test -n "$DISPLAY"
+application/x-rpm; file-roller %s; test=test -n "$DISPLAY"
+application/x-rzip; file-roller %s; te}≥Lst=test -n "$DISPLAY"
+application/x-rzip-compressed-tar; file-roller %s; test=test -n "$DISPLAY"ıapplication/x-tar; file-roller º≥Lst=test -n "$DISPLAY"
+application/x-rzip-compressed-tar; file-roller %s; test=test -n "$DISPLAY"
+application/x-tar; file-roller º¥K%s; test=test -n "$DISPLAY"
+application/x-tarz; file-roller %s; test=test -n "$DISPLAY"
+application/x-stuffit; file-roller %s; t”µJest=test -n "$DISPLAY"
+application/x-war; file-roller %s; test=test -n "$DISPLAY"
+applicatioë/x-xz; file-roller %s; test=test -nÊµJest=test -n "$DISPLAY"
+application/x-war; file-roller %s; test=test -n "$DISPLAY"
+application/x-xz; file-roller %s; test=test -nÊ∂I "$DISPLAY"
+application/x-xz-compressed-tar; file-roller %s; test=test -n "$DISPLAY"
+application/x-zip; file-roller %s; test=tesí∑Ht -n "$DISPLAY"
+application/x-zip-compressed; file-roller %s; test=test -n "$DISPLAY"
+apèlication/x-zoo; file-roller %s; test=te@∑Ht -n "$DISPLAY"
+application/x-zip-compressed; file-roller %s; test=test -n "$DISPLAY"
+application/x-zoo; file-roller %s; test=te@∏Gst -n "$DISPLAY"
+application/zip; file-roller %s; test=test -n "$DISPLAY"
+application/x-archive; file-roller %s; test=test -n "$>πFDISPLAY"
+application/vnd.ms-cab-compressed; file-roller %s; test=test -n "$DISPLAY"
+ûpplication/vnd.squashfs; file-roller %s; teFπFDISPLAY"
+application/vnd.ms-cab-compressed; file-roller %s; test=test -n "$DISPLAY"
+application/vnd.squashfs; file-roller %s; teF∫Est=test -n "$DISPLAY"
+application/vnd.snap; file-roller %s; test=test -n "$DISPLAY"
+x-scheme-handler/appstream; gnome-software %åªDs; test=test -n "$DISPLAY"
+x-scheme-handler/snap; gnome-software %s; test=test -ë "$DISPLAY"
+application/x-desktop; xfce4-panel $ªDs; test=test -n "$DISPLAY"
+x-scheme-handler/snap; gnome-software %s; test=test -n "$DISPLAY"
+application/x-desktop; xfce4-panel $ªDs; test=test -n "$DISPLAY"
+x-scheme-handler/snap; gnome-software %s; test=test -n "$DISPLAY"
+application/x-desktop; xfce4-panel $ºC--add=launcher %s; test=test -n "$DISPLAY"
+application/mxf; parole --next %sƒ test=test -n "$DISPLAY"
+application/ogg; parole --ıºC--add=launcher %s; test=test -n "$DISPLAY"
+application/mxf; parole --next %s; test=test -n "$DISPLAY"
+application/ogg; parole --ıΩBnext %s; test=test -n "$DISPLAY"
+application/ram; parole --next %s; test=test -n "$DISPLAY"
+application/sdp; parole --next %s; tÁæAest=test -n "$DISPLAY"
+application/smil; parole --next %s; test=test -n ›$DISPLAY"
+application/smil+xml; parole --next %s; test=âæAest=test -n "$DISPLAY"
+application/smil; parole --next %s; test=test -n "$DISPLAY"
+application/smil+xml; parole --next %s; test=âø@test -n "$DISPLAY"
+application/vnd.apple.mpegurl; parole --next %s; test=test -n "$DISPLAY"
+application/vnd.ms-wpl; parole --nex¿?t %s; test=test -n "$DISPLAY"
+application/vnd.rn-realmedia; parole -“next %s; test=test -n "$DISPLAY"
+application/x-extension-m4Ó¿?t %s; test=test -n "$DISPLAY"
+application/vnd.rn-realmedia; parole --next %s; test=test -n "$DISPLAY"
+application/x-extension-m4Ó¡>a; parole --next %s; test=test -n "$DISPLAY"
+application/x-extension-mp4; parole --next %s; test=test -n "$DISPLAY"
+application/;¬=x-flac; parole --next %s; test=test -n "$DISPLAY"
+application/x-ôlash-video; parole --next %s; test=test -n "$DISPLAY"
+applicati@¬=x-flac; parole --next %s; test=test -n "$DISPLAY"
+application/x-flash-video; parole --next %s; test=test -n "$DISPLAY"
+applicati@√<on/x-matroska; parole --next %s; test=test -n "$DISPLAY"
+application/x-netshow-channel; parole --next %s; test=test -n "$DISPLAYÒƒ;"
+application/x-ogg; parole --next %s; test=test -n "$DISPLA¶"
+application/x-quicktime-media-link; parole --next %s; test=test -ãƒ;"
+application/x-ogg; parole --next %s; test=test -n "$DISPLAY"
+application/x-quicktime-media-link; parole --next %s; test=test -ãƒ;"
+application/x-ogg; parole --next %s; test=test -n "$DISPLAY"
+application/x-quicktime-media-link; parole --next %s; test=test -ã≈:n "$DISPLAY"
+application/x-quicktimeplayer; parole --nexã %s; test=test -n "$DISPLAY"
+application/x-shorten; parole --next %s; t*≈:n "$DISPLAY"
+application/x-quicktimeplayer; parole --next %s; test=test -n "$DISPLAY"
+application/x-shorten; parole --next %s; t*∆9est=test -n "$DISPLAY"
+application/x-smil; parole --next %s; test=test -n "$DISPLAY"
+application/xspf+xml; parole --next %s; tesâ«8t=test -n "$DISPLAY"
+audio/3gpp; parole --next %s; töst=test -n "$DISPLAY"
+audio/ac3; parole --next %s; test=test -n "$DISPLAY"
+[«8t=test -n "$DISPLAY"
+audio/3gpp; parole --next %s; test=test -n "$DISPLAY"
+audio/ac3; parole --next %s; test=test -n "$DISPLAY"
+[»7audio/AMR; parole --next %s; test=test -n "$DISPLAY"
+audio/AMR-WB; parole --next %s; test=test -n "$DISPLAY"
+audio/basic; paroleΩ…6 --next %s; test=test -n "$DISPLAY"
+audio/flac; èarole --next %s; test=test -n "$DISPLAY"
+audio/midi; parole --next %s; test=tes‰…6 --next %s; test=test -n "$DISPLAY"
+audio/flac; parole --next %s; test=test -n "$DISPLAY"
+audio/midi; parole --next %s; test=tes‰ 5t -n "$DISPLAY"
+audio/mp2; parole --next %s; test=test -n "$DISPLAY"
+audio/mp4; parole --next %s; test=test -n "$DISPLAY"
+audio/NÀ4mpeg; parole --next %s; test=test -n "$DISPLæY"
+audio/mpegurl; parole --next %s; test=test -n "$DISPLAY"
+audio/ogg; parole --nexõÀ4mpeg; parole --next %s; test=test -n "$DISPLAY"
+audio/mpegurl; parole --next %s; test=test -n "$DISPLAY"
+audio/ogg; parole --nexõÃ3t %s; test=test -n "$DISPLAY"
+audio/prs.sid; parole --next %s; test=test -n "$DISPLAY"
+audio/vnd.rn-realaudio; parole --next %s;yÕ2 test=test -n "$DISPLAY"
+audio/x-aiff; pûrole --next %s; test=test -n "$DISPLAY"
+audio/x-ape; parole --next %s; test=test -n "$DnÕ2 test=test -n "$DISPLAY"
+audio/x-aiff; parole --next %s; test=test -n "$DISPLAY"
+audio/x-ape; parole --next %s; test=test -n "$DnÕ2 test=test -n "$DISPLAY"
+audio/x-aiff; parole --next %s; test=test -n "$DISPLAY"
+audio/x-ape; parole --next %s; test=test -n "$DnŒ1ISPLAY"
+audio/x-flac; parole --next ⁄s; test=test -n "$DISPLAY"
+audio/x-gsm; parole --next %s; test=test -n "$DISPLAY"
+audio/x-iäŒ1ISPLAY"
+audio/x-flac; parole --next %s; test=test -n "$DISPLAY"
+audio/x-gsm; parole --next %s; test=test -n "$DISPLAY"
+audio/x-iäœ0t; parole --next %s; test=test -n "$DISPLAY"
+audio/x-m4a; parole --next %s; test=test -n "$DISPLAY"
+audio/x-matroska; parole --n˛–/ext %s; test=test -n "$DISPLAY"
+ûudio/x-mod; parole --next %s; test=test -n "$DISPLAY"
+audio/x-mp3; parole --next %s; test=test Ò–/ext %s; test=test -n "$DISPLAY"
+audio/x-mod; parole --next %s; test=test -n "$DISPLAY"
+audio/x-mp3; parole --next %s; test=test Ò—.-n "$DISPLAY"
+audio/x-mpeg; parole --next %s; test=test -n "$DISPLAY"
+audio/x-mpegurl; parole --next %s; test=test -n "$DISPLAY">“-
+audio/x-ms-asf; parole --neát %s; test=test -n "$DISPLAY"
+audio/x-ms-asx; parole --next %s; test=test -n "$DISPLAY"
+audio/x-ms-˝“-
+audio/x-ms-asf; parole --next %s; test=test -n "$DISPLAY"
+audio/x-ms-asx; parole --next %s; test=test -n "$DISPLAY"
+audio/x-ms-˝”,wax; parole --next %s; test=test -n "$DISPLAY"
+audio/x-ms-wma; parole --next %s; test=test -n "$DISPLAY"
+audio/x-musepack; parol‘‘+e --next %s; test=test -ë "$DISPLAY"
+audio/x-pn-aiff; parole --next %s; test=test -n "$DISPLAY"
+audio/x-pn-au; parole --next %s;s‘+e --next %s; test=test -n "$DISPLAY"
+audio/x-pn-aiff; parole --next %s; test=test -n "$DISPLAY"
+audio/x-pn-au; parole --next %s;s’* test=test -n "$DISPLAY"
+audio/x-pn-realaudio; parole --next %s; test=test -n "$DISPLAY"
+audio/x-pn-realaudio-plugin; parole --nZ÷)ext %s; test=test -nﬂ"$DISPLAY"
+audio/x-pn-wav; parole --next %s; test=test -n "$DISPLAY"
+audio/x-pn-windows-acm; parole --next û÷)ext %s; test=test -n "$DISPLAY"
+audio/x-pn-wav; parole --next %s; test=test -n "$DISPLAY"
+audio/x-pn-windows-acm; parole --next û÷)ext %s; test=test -n "$DISPLAY"
+audio/x-pn-wav; parole --next %s; test=test -n "$DISPLAY"
+audio/x-pn-windows-acm; parole --next û◊(%s; test=test -nﬂ"$DISPLAY"
+audio/x-realaudio; parole --next %s; test=test -n "$DISPLAY"
+audio/x-real-audio; parole --next %s; t`◊(%s; test=test -n "$DISPLAY"
+audio/x-realaudio; parole --next %s; test=test -n "$DISPLAY"
+audio/x-real-audio; parole --next %s; t`ÿ'est=test -n "$DISPLAY"
+audio/x-s3m; parole --next %s; test=test -n "$DISPLAY"
+audio/x-sbc; parole --next %s; test=test -n "$DISPEŸ&LAY"
+audio/x“scpls; parole --next %s; test=test -n "$DISPLAY"
+audio/x-speex; parole --next %s; test=test -n "$DISPLAY"
+audio/x-sŸ&LAY"
+audio/x-scpls; parole --next %s; test=test -n "$DISPLAY"
+audio/x-speex; parole --next %s; test=test -n "$DISPLAY"
+audio/x-s⁄%tm; parole --next %s; test=test -n "$DISPLAY"
+audio/x-tta; parole --next %s; test=test -n "$DISPLAY"
+audio/x-wav; parole --next €$%s; test¬test -n "$DISPLAY"
+audio/x-wavpack; parole --next %s; test=test -n "$DISPLAY"
+audio/x-vorbis; parole --next %s; test=te´€$%s; test=test -n "$DISPLAY"
+audio/x-wavpack; parole --next %s; test=test -n "$DISPLAY"
+audio/x-vorbis; parole --next %s; test=te´‹#st -n "$DISPLAY"
+audio/x-vorbis+ogg; parole --next %s; test=test -n "$DISPLAY"
+audio/x-xm; parole --next %s; test=test -n "$DISPz›"LAY"ıimage/vnd.rn-realpix; parole --next %s; test=test -n "$DISPLAY"
+image/x-pict; parole --next %s; test=test -n "$DISPLAY"
+mis ›"LAY"
+image/vnd.rn-realpix; parole --next %s; test=test -n "$DISPLAY"
+image/x-pict; parole --next %s; test=test -n "$DISPLAY"
+mis ﬁ!c/ultravox; parole --next %s; test=test -n "$DISPLAY"
+text/google-video-pointer; parole --next %s; test=test -n "$DISPLAY"
+text/Çﬂ á-google-video-pointer; parole --next %s; test=test -n "$DISPLAY"
+video/3gp; parole --next %s; test=test -n "$DISPLAY"
+video/3gp»ﬂ x-google-video-pointer; parole --next %s; test=test -n "$DISPLAY"
+video/3gp; parole --next %s; test=test -n "$DISPLAY"
+video/3gp»ﬂ x-google-video-pointer; parole --next %s; test=test -n "$DISPLAY"
+video/3gp; parole --next %s; test=test -n "$DISPLAY"
+video/3gp7‡p; parole --next %s; test=test -n "$DISPLAY"
+video/dv; parole --next %s; test=test -n "$DISPLAY"
+video/divx; parole --next %s; t√·est=test -n "$DISPLAY"
+video/fli; parole --next %s; test=test -n "$DISPLAY"
+video/flv; parole --next %s; test=test -n "$DISPLAY"E‚
+video/mp2t; parole --next %s; test=test -n "$DISPLAY"
+video/mp4; parole --next %s; test=test -n "$DISPLAY"
+video/mp4v-es; pûrol	‚
+video/mp2t; parole --next %s; test=test -n "$DISPLAY"
+video/mp4; parole --next %s; test=test -n "$DISPLAY"
+video/mp4v-es; parol	„e --next %s; test=test -n "$DISPLAY"
+video/mpeg; parole --next %s; test=test -n "$DISPLAY"
+video/msvideo; parole --next %s; test1‰=test -n "$DISPLAY"
+video/ogg; parole --next %s; test=test -n "$DISPLAY"
+video/quicktime; parole --next %s; test=test -nﬂ"$DISPL√‰=test -n "$DISPLAY"
+video/ogg; parole --next %s; test=test -n "$DISPLAY"
+video/quicktime; parole --next %s; test=test -n "$DISPL√ÂAY"
+video/vivo; parole --next %s; test=test -n "$DISPLAY"
+video/vnd.divx; parole --next %s; test=test -n "$DISPLAY"
+video/vnd.mptÊegurl; parole --next %s; test=test -n "$DISPLAY"
+video/vnd.rn-realvideo; parole --next %s; test=test -n "$DISPLAY"
+vñdeo/vnd.vivHÊegurl; parole --next %s; test=test -n "$DISPLAY"
+video/vnd.rn-realvideo; parole --next %s; test=test -n "$DISPLAY"
+video/vnd.vivHÁo; parole --next %s; test=test -n "$DISPLAY"
+video/webm; parole --next %s; test=test -n "$DISPLAY"
+video/x-anim; parole --next %‡Ës; test=test -n "$DISPLAY"
+video/x-avi; parole --next %s; test=test -n "$DISPLAY"
+video/x-flc; parole --next %s;ﬂtest=test -n "$ãËs; test=test -n "$DISPLAY"
+video/x-avi; parole --next %s; test=test -n "$DISPLAY"
+video/x-flc; parole --next %s; test=test -n "$ãËs; test=test -n "$DISPLAY"
+video/x-avi; parole --next %s; test=test -n "$DISPLAY"
+video/x-flc; parole --next %s; test=test -n "$ãÈDISPLAY"
+video/x-fli; parole --next %s; test=test -n "$DISPLAY"
+video/x-flic; parole --next %s; test=test -nﬂ"$DISPLAY"
+video/x-pÈDISPLAY"
+video/x-fli; parole --next %s; test=test -n "$DISPLAY"
+video/x-flic; parole --next %s; test=test -n "$DISPLAY"
+video/x-pÍflv; parole --next %s; test=test -n "$DISPLAY"
+video/x-m4v; parole --next %s; test=test -n "$DISPLAY"
+video/x-matroska; parole -VÎ-next %s; test=test -n "$DISPLAY"
+video/x-mpeg; parole --next %s; test=test -n "$DISPLAY"
+video/x-mpeg2;ﬂparole --next %s; test=ÍÎ-next %s; test=test -n "$DISPLAY"
+video/x-mpeg; parole --next %s; test=test -n "$DISPLAY"
+video/x-mpeg2; parole --next %s; test=ÍÏtest -n "$DISPLAY"
+video/x-ms-asf; parole --next %s; test=test -n "$DISPLAY"
+video/x-ms-asx; parole --next %s; test=test -n "$DIxÌSPLAY"
+video/x-msvideo; parole --next %s; test=test -n "$DISPLAY"
+video/x-ms-wm; parole --next %s; töst=test -n "$DISPLAY"
+videoÌSPLAY"
+video/x-msvideo; parole --next %s; test=test -n "$DISPLAY"
+video/x-ms-wm; parole --next %s; test=test -n "$DISPLAY"
+videoÓ/x-ms-wmv; parole --next %s; test=test -n "$DISPLAY"
+video/x-ms-wmx; parole --next %s; test=test -n "$DISPLAY"
+video/x-ms-wvx; pKÔarole --next %s; test=test -n "$DISPLAY"
+video/x-nsv; parole --next %s; test=test -n "$DISPLAY"
+âideo/x-ogm+ogg; parole --next %˝Ôarole --next %s; test=test -n "$DISPLAY"
+video/x-nsv; parole --next %s; test=test -n "$DISPLAY"
+video/x-ogm+ogg; parole --next %˝s; test=test -n "$DISPLAY"
+video/x-theora+ogg; parole --next %s; test=test -n "$DISPLAY"
+video/x-totem-stream; parole --next %s;ÂÒ test=test -n "$DISPLAY"
+x-content/video-dvd; parole --next %s; test=test -n "$DISPLAY"
+x-coëtent/video-vcd; parole --next %s; t…Ò test=test -n "$DISPLAY"
+x-content/video-dvd; parole --next %s; test=test -n "$DISPLAY"
+x-content/video-vcd; parole --next %s; t…Ò test=test -n "$DISPLAY"
+x-content/video-dvd; parole --next %s; test=test -n "$DISPLAY"
+x-content/video-vcd; parole --next %s; t…Úest=test -n "$DISPLAY"
+x-content/video-svcd; parole --next %s; test=test -n "$DISPLAY"
+x“scheme-handler/mms; parole --next %s; t¯Úest=test -n "$DISPLAY"
+x-content/video-svcd; parole --next %s; test=test -n "$DISPLAY"
+x-scheme-handler/mms; parole --next %s; t¯Ûest=test -n "$DISPLAY"
+x-scheme-handler/mmsh; parole --next %s; test=test -n "$DISPLAY"
+image/png; ristretto %s; test=test -n "$≤ÙDISPLAY"
+image/gif; ristretto %s; test=test -n "$DISPLAY"
+image/jpeg; ristretto %s; ãest=test -n "$DISPLAY"
+image/bmp; ristretto:ÙDISPLAY"
+image/gif; ristretto %s; test=test -n "$DISPLAY"
+image/jpeg; ristretto %s; test=test -n "$DISPLAY"
+image/bmp; ristretto:ı
+ %s; test=test -n "$DISPLAY"
+image/x-pixmap; ristretto %s; test=test -n "$DISPLAY"
+image/tiff; ristretto %s; test=test -n "$DISP^ˆ	LAY"
+image/svg+xml; ristretto %s; test=test -n "$DISPLAY"
+image/x-xpixmap; riströtto %s; test=test -n "$DISPLAY"
+text/x-apt-souræˆ	LAY"
+image/svg+xml; ristretto %s; test=test -n "$DISPLAY"
+image/x-xpixmap; ristretto %s; test=test -n "$DISPLAY"
+text/x-apt-souræ˜ces-list; software-properties-gtk %s; test=test -n "$DISPLAY"
+text/x-apt-sources-list; software-properties-gtk %s; test=test -n `¯"$DISPLAY"
+inode/directory; thunar %s; test=test -n "$DISPLAY"
+x-scheme-handìer/mailto; thunderbird -addressbook %s; test=test -Ü¯"$DISPLAY"
+inode/directory; thunar %s; test=test -n "$DISPLAY"
+x-scheme-handler/mailto; thunderbird -addressbook %s; test=test -Ü˘n "$DISPLAY"
+application/x-xpinstall; thunderbird -addressbook %s; test=test -n "$DISPLAY"
+text/english; vim %s; needsterminal
+tÂ˙ext/plain; vim %s; needsterminal
+text/x-makefile; vim %s; needsterminal
+ãext/x-c++hdr; vim %s; needsterminal
+text/x-c++src; vim È˙ext/plain; vim %s; needsterminal
+text/x-makefile; vim %s; needsterminal
+text/x-c++hdr; vim %s; needsterminal
+text/x-c++src; vim È˙ext/plain; vim %s; needsterminal
+text/x-makefile; vim %s; needsterminal
+text/x-c++hdr; vim %s; needsterminal
+text/x-c++src; vim È˚%s; needsterminal
+text/x-chdr; vim %s; needsterminal
+text/x-csrc; vií %s; needsterminal
+text/x-java; vim %s; needsterminal
+text/¢˚%s; needsterminal
+text/x-chdr; vim %s; needsterminal
+text/x-csrc; vim %s; needsterminal
+text/x-java; vim %s; needsterminal
+text/¢¸x-moc; vim %s; needsterminal
+text/x-pascal; vim %s; needsterminal
+text/x-tcl; vim %s; needsterminal
+text/x-tex; vim %s; needsterX˝minal
+application/x-shellscript; vim %s; needsterminal
+text/x-c;ﬂvim %s; needsterminal
+text/x-c++; vim %s; needsterminal
+applicaÂ˝minal
+application/x-shellscript; vim %s; needsterminal
+text/x-c; vim %s; needsterminal
+text/x-c++; vim %s; needsterminal
+applicaÂ˛tion/x-cd-image; xfburn -i %s; test=test -n "$DISPLAY"
+x-content/audio-cdda; xfburn -i %s; test=test -n "$DISPLAY"
+x-content/blaœˇ nk-cd; xfburn -i %s; test=test -n "$DISPLAY"
+text/calendar; êrage %s; test=test -n "$DISPLAY"
+x-scheme-handler/ghelp; yelp %s; tpˇ nk-cd; xfburn -i %s; test=test -n "$DISPLAY"
+text/calendar; orage %s; test=test -n "$DISPLAY"
+x-scheme-handler/ghelp; yelp %s; tp ˇest=test -n "$DISPLAY"
+x-scheme-handler/help; yelp %s; test=test -n "$DISPLAY"
+x-scheme-handler/info; yelp %s; test=test -n "$DIÑ˛SPLAY"
+x-scheme-handler/man; yelp %s; test=test -n "$DISØLAY"
+text/plain; view %s; edit=vim %s; compose=vim %s; test=test -x /usK˛SPLAY"
+x-scheme-handler/man; yelp %s; test=test -n "$DISPLAY"
+text/plain; view %s; edit=vim %s; compose=vim %s; test=test -x /usK˝r/bin/vim; needsterminal
+text/csv; soffice --nologo --calc '%s'; edit=soffice --nologo --calc '%s'; test=test -n "$DISPLAY"; des˙¸cription="CSV Document"; nametemplate=%s.csv
+text/spçeadsheet; soffice --nologo --calc '%s'; edit=soffice --nologo --calc '%s'; Y¸cription="CSV Document"; nametemplate=%s.csv
+text/spreadsheet; soffice --nologo --calc '%s'; edit=soffice --nologo --calc '%s'; Y¸cription="CSV Document"; nametemplate=%s.csv
+text/spreadsheet; soffice --nologo --calc '%s'; edit=soffice --nologo --calc '%s'; Y˚test=test -n "$DISPLAY"; description="Spreadsheeã Interchange Document"; nametemplate=%s.slk
+application/x-quattropro; soffice -Ù˚test=test -n "$DISPLAY"; description="Spreadsheet Interchange Document"; nametemplate=%s.slk
+application/x-quattropro; soffice -Ù˙-nologo --calc '%s'; edit=soffice --nologo --calc '%s'; test=test -n "$DISPLAY"; description="Quattro Pro 6 for Windows Spreadsh8˘eet"; nametemplate=%s.wb2
+application/x-dbf;ﬂsoffice --nologo --calc '%s'; edit=soffice --nologo --calc '%s'; test=test -n "$DIS
+˘eet"; nametemplate=%s.wb2
+application/x-dbf; soffice --nologo --calc '%s'; edit=soffice --nologo --calc '%s'; test=test -n "$DIS
+¯PLAY"; description="xBase Document"; nametemplate=%s.dbf
+application/vnd.ms-excel.sheet.macroEnabled.12; soffice --nologo --calc$˜ '%s'; edit=soffice --nologo --calc '%s'ƒ test=test -n "$DISPLAY"; description="Office Open XML Spreadsheet with Macros Enabled"˜ '%s'; edit=soffice --nologo --calc '%s'; test=test -n "$DISPLAY"; description="Office Open XML Spreadsheet with Macros Enabled"	ˆ; nametemplate=%s.xlsm
+application/vnd.ms-excel.template.macroEnabled.12; soffice --nologo --calc '%s'; edit=soffice --nologo --z
+ıcalc '%s'; test=test -n "$DISPLAY"; õescription="Office Open XML Spreadsheet Template with Macros Enabled"; nametemplate=%s.xltmŸ
+ıcalc '%s'; test=test -n "$DISPLAY"; description="Office Open XML Spreadsheet Template with Macros Enabled"; nametemplate=%s.xltmŸÙ
+application/vnd.openxmlformats-officedocument.spreadsheetml.sheet; soffice --nologo --calc '%s'; edit=soffice --nologo --calc 'ÓÛ%s'; test=test -n "$DISPLAY"; deåcription="Office Open XML Spreadsheet"; nametemplate=%s.xlsx
+application/vnd.openxmlformats-off+Û%s'; test=test -n "$DISPLAY"; description="Office Open XML Spreadsheet"; nametemplate=%s.xlsx
+application/vnd.openxmlformats-off+Û%s'; test=test -n "$DISPLAY"; description="Office Open XML Spreadsheet"; nametemplate=%s.xlsx
+application/vnd.openxmlformats-off+Úicedocument.spreadsheetml.teíplate; soffice --nologo --calc '%s'; edit=soffice --nologo --calc '%s'; test=test -n "$DISPLAY"; de€Úicedocument.spreadsheetml.template; soffice --nologo --calc '%s'; edit=soffice --nologo --calc '%s'; test=test -n "$DISPLAY"; de€Òscription="Office Open XML Spreadsheet Template"; nametemplate=%s.xltx
+application/vnd.lotus-1-2-3; soffice --nologo --calc '%s'v; edit=soffice --nologo “-calc '%s'; test=test -n "$DISPLAY"; description="Lotus 1-2-3 spreadsheet"; nametemplate=%s.123
+applica›; edit=soffice --nologo --calc '%s'; test=test -n "$DISPLAY"; description="Lotus 1-2-3 spreadsheet"; nametemplate=%s.123
+applica›Ôtion/vnd.ms-excel; soffice --nologo --calc '%s'; edit=soffice --nologo --calc '%s'; test=test -n "$DISPLAY"; description="MicrosFÓoft Excel Document";ﬂnametemplate=%s.xls
+text/mathml; soffice --nologo --math '%s'; edit=soffice --nologo --math '%s'; test=test·Óoft Excel Document"; nametemplate=%s.xls
+text/mathml; soffice --nologo --math '%s'; edit=soffice --nologo --math '%s'; test=test·Ì -n "$DISPLAY"; description="MathML Formula"; nametemplate=%s.mml
+application/rtf; soffice --nologo --writer '%s'; edit=soffice HÏ--nologo --writeç '%s'; test=test -n "$DISPLAY"; description="Rich Text Format"; nametemplate=%s.rtf
+application/x-extension-txtMÏ--nologo --writer '%s'; test=test -n "$DISPLAY"; description="Rich Text Format"; nametemplate=%s.rtf
+application/x-extension-txtMÎ; soffice --nologo --writer '%s'; edit=soffice --nologo --writer '%s'; test=test -n "$DISPLAY"; description="Plain Text DocumentàÍ"; nametemplûte=%s.txt
+application/x-t602; soffice --nologo --writer '%s'; edit=soffice --nologo --writer '%s'; test=test -n "$DyÍ"; nametemplate=%s.txt
+application/x-t602; soffice --nologo --writer '%s'; edit=soffice --nologo --writer '%s'; test=test -n "$DyÍ"; nametemplate=%s.txt
+application/x-t602; soffice --nologo --writer '%s'; edit=soffice --nologo --writer '%s'; test=test -n "$DyÈISPLAY";ﬂdescription="T602 Document"; nametemplate=%s.602
+application/vnd.wordperfect; soffice --nologo --writer '%s'; edit=soffÂÈISPLAY"; description="T602 Document"; nametemplate=%s.602
+application/vnd.wordperfect; soffice --nologo --writer '%s'; edit=soffÂËice --nologo --writer '%s'; test=test -n "$DISPLAY"; description="WordPerfect Document"; nametemplate=%s.wp
+application/vnd.ms-wÁord.õocument.macroEnabled.12; soffice --nologo --writer '%s'; edit=soffice --nologo --writer '%s'; test=test -n "$DISPLAY"; descZÁord.document.macroEnabled.12; soffice --nologo --writer '%s'; edit=soffice --nologo --writer '%s'; test=test -n "$DISPLAY"; descZÊription="Office Open XML Document with Macros Enabled"; nametemplate=%s.docm
+application/vnd.ms-word.template.macroEnabled.12; s˛Âêffice --nologo --writer '%s'; edit=soffice --nologo --writer '%s'; test=test -n "$DISPLAY"; description="Office Open XML Docume.Âoffice --nologo --writer '%s'; edit=soffice --nologo --writer '%s'; test=test -n "$DISPLAY"; description="Office Open XML Docume.‰nt Template with Macros Enabled"; nametemplate=%s.dotm
+application/vnd.openxmlformats-officedocument.wordprocessingml.document; B‰nt Template with Macros Enabled"; nametemplate=%s.dotm
+application/vnd.openxmlformats-officedocument.wordprocessingml.document; Ω„soffice --nologo --writer '%s'; edit=soffice --nologo --writer '%s'; test=test -n "$DISPLAY"; description="Office Open XML Docum<‚ent"; nametemplate=%s.docx
+application/vnd.openxmlformats-officedocument.wordprocessingml.template; soffice --nologo --writeç '%˚‚ent"; nametemplate=%s.docx
+application/vnd.openxmlformats-officedocument.wordprocessingml.template; soffice --nologo --writer '%˚·s'; edit=soffice --nologo --writer '%s'; test=test -n "$DISPLAY"; description="Office Open XML Document Template"; nametemplate=,·s'; edit=soffice --nologo --writer '%s'; test=test -n "$DISPLAY"; description="Office Open XML Document Template"; nametömplate=,‡%s.dotx
+application/msword; soffice --nologo --writer '%s'; edit=soffice --nologo --writer '%s'; test=test -n "$DISPLAY"; descri’ ﬂption="Microsoft Word Document"; nametemplate=%s.doc
+application/vnd.ms-works; soffice --nologo --writer '%s'; edit=soffice --nof!ﬁlogo --writer '%s'; test=test -n "$DISPLAY"; description="Microsoft Works Document"; nametemplate=%s.wps
+application–zip; unzip ê!ﬁlogo --writer '%s'; test=test -n "$DISPLAY"; description="Microsoft Works Document"; nametemplate=%s.wps
+application/zip; unzip ê"›-l %s; nametemplate=%s.zip; copiousoutput
+text/plain; view %s; edit=vi %s; compose=vi %s; needsterminal
+image/avs; display-im6. #‹'avs:%s'; test=test -n "$DISPLAY"
+image/bie; display-im6 'jbig:%s'; test=test -n "$DISPLAY"
+image/x-ms-bmp; dispìay-im6 'bmp:%s'T#‹'avs:%s'; test=test -n "$DISPLAY"
+image/bie; display-im6 'jbig:%s'; test=test -n "$DISPLAY"
+image/x-ms-bmp; display-im6 'bmp:%s'T$€; test=test -n "$DISPLAY"
+image/cmyk; display-im6 'cmyk:%s'; test=test -n "$DISPLAY"
+image/dcx; display-im6 'dcx:%s'; test=test %⁄-n "$DISPLAY"
+image/eps; display-im6 'eps:%s'; test=test -n "$DISPLAY"
+image/fax; display-im6 'fax:%s'; test¬test -n "$DISPLAY"
+?%⁄-n "$DISPLAY"
+image/eps; display-im6 'eps:%s'; test=test -n "$DISPLAY"
+image/fax; display-im6 'fax:%s'; test=test -n "$DISPLAY"
+?&Ÿimage/fits; display-im6 'fits:%s'; test=test -n "$DISPLAY"
+image/gif; display-im6 'gif:%s'; test=test -n "$DISPLAY"
+image/gray; 'ÿdisplay-im6 'gray:%s'; test=test -n "$DISPLAY"
+image/jpeg; display-im6 'jpeg:%s'; test=test -n "$DISPLAY›
+image/pjpeg; display-iè'ÿdisplay-im6 'gray:%s'; test=test -n "$DISPLAY"
+image/jpeg; display-im6 'jpeg:%s'; test=test -n "$DISPLAY"
+image/pjpeg; display-iè'ÿdisplay-im6 'gray:%s'; test=test -n "$DISPLAY"
+image/jpeg; display-im6 'jpeg:%s'; test=test -n "$DISPLAY"
+image/pjpeg; display-iè(◊m6 'jpeg:%s'; test=test -n "$DISPLAY"
+image/miff; display-im6 'miff:%s'; test=test -n "$DISPLAY"
+imaòe/mono; display-im6 'mono:%ì(◊m6 'jpeg:%s'; test=test -n "$DISPLAY"
+image/miff; display-im6 'miff:%s'; test=test -n "$DISPLAY"
+image/mono; display-im6 'mono:%ì)÷s'; test=test -n "$DISPLAY"
+image/mtv; display-im6 'mtv:%s'; test=test -n "$DISPLAY"
+image/x-portable-bitmap; display-im6 'pbm:%É*’s'; test=test -n "$DISPLAY"
+image/pcd; display-im6 'pcd:%s'; test=test -n "$DISPLAY"
+image/pcx; õisplay-im6 'pcx:%s'; test=test ƒ*’s'; test=test -n "$DISPLAY"
+image/pcd; display-im6 'pcd:%s'; test=test -n "$DISPLAY"
+image/pcx; display-im6 'pcx:%s'; test=test ƒ+‘-n "$DISPLAY"
+image/pdf; display-im6 'pdf:%s'; test=test -n "$DISPLAY"
+image/x-portable-graymap; display-im6 'pgm:%s'; test=test¢,” -n "$DISPLAY"
+image/pict; display-im6 'pict:%s'; test=test -n "$DISPLAY"
+image/png; display“im6 'png:%s'; test=test -n "$DISPLA∂,” -n "$DISPLAY"
+image/pict; display-im6 'pict:%s'; test=test -n "$DISPLAY"
+image/png; display-im6 'png:%s'; test=test -n "$DISPLA∂-“Y"
+image/x-portable-anymap; display-im6 'pnm:%s'; test=test -n "$DISPLAY"
+image/x-portable-pixmap; display-im6 'ppm:%s'; test=te,.—st -n "$DISPLAY"
+image/ps; display-im6 'ps:%s'; test=test -n "$DISPLAY"
+image/rad; displûy-im6 'rad:%s'; test=test -n "$DISPLAY"b.—st -n "$DISPLAY"
+image/ps; display-im6 'ps:%s'; test=test -n "$DISPLAY"
+image/rad; display-im6 'rad:%s'; test=test -n "$DISPLAY"b/–
+image/x-rgb; display-im6 'rgb:%s'; test=test -n "$DISPLAY"
+image/rgba; display-im6 'rgba:%s'; test=test -n "$DISPLAY"
+image/rlaº0œ; display-im6 'rla:%s'; test=test -n "$DISPLAY"
+image/rle; display-im6 'rle:%s'; tesã=test -n "$DISPLAY"
+image/sgi; display-im6 †0œ; display-im6 'rla:%s'; test=test -n "$DISPLAY"
+image/rle; display-im6 'rle:%s'; test=test -n "$DISPLAY"
+image/sgi; display-im6 †0œ; display-im6 'rla:%s'; test=test -n "$DISPLAY"
+image/rle; display-im6 'rle:%s'; test=test -n "$DISPLAY"
+image/sgi; display-im6 †1Œ'sgi:%s'; test=test -n "$DISPLAY"
+image/sun-raster; display-im6 'sun:%s'; test=töst -n "$DISPLAY"
+image/targa; display-im6 'tga:G1Œ'sgi:%s'; test=test -n "$DISPLAY"
+image/sun-raster; display-im6 'sun:%s'; test=test -n "$DISPLAY"
+image/targa; display-im6 'tga:G2Õ%s'; test=test -n "$DISPLAY"
+image/tiff; display-im6 'tiff:%s'; test=test -n "$DISPLAY"
+image/uyvy; display-im6 'uyvy:%s'; test=3Ãtest -n "$DISPLAY"
+image/vid; display-im6 'vid:%s'; test=test -n "$DISPLAY"
+ñmage/viff; display-im6 'viff:%s'; test=test -n "$DI83Ãtest -n "$DISPLAY"
+image/vid; display-im6 'vid:%s'; test=test -n "$DISPLAY"
+image/viff; display-im6 'viff:%s'; test=test -n "$DI84ÀSPLAY"
+image/x-xbitmap; display-im6 'xbm:%s'; test=test -n "$DISPLAY"
+image/x-xpixmap; display-im6 'xpm:%s'; test=test -n "$DISPs5 LAY"
+image/x-xwindowdump; display-im6 'xwd:%s'; test=test -n "$DISPLAY"
+ñmage/x-icon; display-im6 'icon:%s'; test=test -n "$DISP£5 LAY"
+image/x-xwindowdump; display-im6 'xwd:%s'; test=test -n "$DISPLAY"
+image/x-icon; display-im6 'icon:%s'; test=test -n "$DISP£6…LAY"
+image/yuv; display-im6 'yuv:%s'; test=test -n "$DISPLAY"
+application/x-troff-man; /usr/bin/man -Tascii -l '%s' | col -b; co97»piousoutput; description=Man page
+text/troff; /usr/bin/man -Tascii -ì '%s' | col -b; copiousoutput; description=Man page
+text/*;d7»piousoutput; description=Man page
+text/troff; /usr/bin/man -Tascii -l '%s' | col -b; copiousoutput; description=Man page
+text/*;d8« less '%s'; needsterminal
+text/*; view %s; edit=vim %s; compose=vim %s; test=test -x /usr/bin/vim; needsterminal
+application/x-iw9∆nfo; /usr/bin/info --subnodes -o /dev/stdout -f '%s' 2>/dev/nullƒ copiousoutput; description=GNU Info document
+application/x-tar9∆nfo; /usr/bin/info --subnodes -o /dev/stdout -f '%s' 2>/dev/null; copiousoutput; description=GNU Info document
+application/x-tar9∆nfo; /usr/bin/info --subnodes -o /dev/stdout -f '%s' 2>/dev/null; copiousoutput; description=GNU Info document
+application/x-tar:≈; /bin/tar tvf '%s'; print=/bin/tar tvf - | print text/plain≈-; copiousoutput
+application/x-gtar; /bin/tar tvf '%s'; print=/bin/¿:≈; /bin/tar tvf '%s'; print=/bin/tar tvf - | print text/plain:-; copiousoutput
+application/x-gtar; /bin/tar tvf '%s'; print=/bin/¿;ƒtar tvf - | print text/plain:-; copiousoutput
+application/x-ustar; /bin/tar tvf '%s'; print=/bin/tar tvf - | print text/plain:-;Ì<√ copiousoutput
+text/*; more %s; needsterminal
+text/*; viöw %s; edit=vi %s; compose=vi %s; needsterminal
+application/vnd.debian.bs<√ copiousoutput
+text/*; more %s; needsterminal
+text/*; view %s; edit=vi %s; compose=vi %s; needsterminal
+application/vnd.debian.bs=¬inary-package; /usr/lib/mime/debian-view %s; needsterminal; description=Debian GNU/Linux Package; nametemplate=%s.deb
+]

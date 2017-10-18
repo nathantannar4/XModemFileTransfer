@@ -1,15 +1,6 @@
-16:15:16 **** Incremental Build of configuration Debug for project Ensc351Part2 ****
+19:42:51 **** Incremental Build of configuration Debug for project Ensc351Part2 ****
 make all 
-Building file: ../src/myIO.cpp
-Invoking: GCC C++ Compiler
-g++ -std=c++1y -I"/media/sf_U_ensc251/workspace-cpp-Neon3/Ensc351" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/myIO.d" -MT"src/myIO.o" -o "src/myIO.o" "../src/myIO.cpp"
-Finished building: ../src/myIO.cpp
- 
-Building target: Ensc351Part2
-Invoking: GCC C++ Linker
-g++ -L"/media/sf_U_ensc251/workspace-cpp-Neon3/Ensc351/Debug" -o "Ensc351Part2"  ./src/Ensc351Part2.o ./src/Medium.o ./src/PeerX.o ./src/ReceiverSS.o ./src/ReceiverX.o ./src/SenderSS.o ./src/SenderX.o ./src/myIO.o   -lEnsc351 -lpthread
-Finished building target: Ensc351Part2
- 
+make: Nothing to be done for 'all'.
 
-16:15:17 Build Finished (took 1s.11ms)
+19:42:51 Build Finished (took 128ms)
 
