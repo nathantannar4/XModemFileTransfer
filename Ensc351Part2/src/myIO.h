@@ -1,8 +1,16 @@
 #ifndef MYSOCKET_H_
 #define MYSOCKET_H_
 
-#include <unistd.h> 	// for size_t
-#include <sys/stat.h>	// for mode_t
+#ifdef __cplusplus
+extern "C"
+{
+#endif
+
+#include <unistd.h> // for size_t
+
+// for mode_t
+//#include <fcntl.h>
+#include <sys/stat.h>
 
 /* int myOpen( const char * path,
           int oflag,
@@ -19,4 +27,9 @@ int myClose(int des);
 int myTcdrain(int des); //is also included for purposes of the course.
 int myReadcond(int des, void * buf, int n, int min, int time, int timeout);
 
+#ifdef __cplusplus
+}
+#endif
+
 #endif /*MYSOCKET_H_*/
+
