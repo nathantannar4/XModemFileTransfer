@@ -159,7 +159,7 @@ public:
 
 	void get_write_pointers( T *pPointers[2], unsigned pSizes[2] )
 	{
-		const int wpos = write_pos.load(std::memory_order_release);
+		const int wpos = write_pos.load(std::memory_order_relaxed);
 		const int rpos = read_pos.load(std::memory_order_acquire);
 
 		if( rpos <= wpos )
@@ -201,7 +201,7 @@ public:
 
 	void get_read_pointers( T *pPointers[2], unsigned pSizes[2] )
 	{
-		const int wpos = write_pos.load(std::memory_order_release);
+		const int wpos = write_pos.load(std::memory_order_relaxed);
 		const int rpos = read_pos.load(std::memory_order_acquire);
 
 		if( rpos < wpos )
