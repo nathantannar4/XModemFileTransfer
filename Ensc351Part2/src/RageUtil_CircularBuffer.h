@@ -145,7 +145,7 @@ public:
 	void advance_write_pointer( int n )
 	{
 		//write_pos = (write_pos + n) % size;
-		const int wpos = (write_pos.load(std::memory_order_acquire) + n) % size;
+		const int wpos = (write_pos.load(std::memory_order_relaxed) + n) % size;
 		write_pos.store(wpos, std::memory_order_release);
 	}
 
@@ -153,14 +153,14 @@ public:
 	void advance_read_pointer( int n )
 	{
 		//read_pos = (read_pos + n) % size;
-		const int rpos = (read_pos.load(std::memory_order_acquire) + n) % size;
+		const int rpos = (read_pos.load(std::memory_order_relaxed) + n) % size;
 		read_pos.store(rpos, std::memory_order_release);
 	}
 
 	void get_write_pointers( T *pPointers[2], unsigned pSizes[2] )
 	{
+		const int wpos = write_pos.load(std::memory_order_release);
 		const int rpos = read_pos.load(std::memory_order_acquire);
-		const int wpos = write_pos.load(std::memory_order_relaxed);
 
 		if( rpos <= wpos )
 		{
@@ -201,8 +201,8 @@ public:
 
 	void get_read_pointers( T *pPointers[2], unsigned pSizes[2] )
 	{
+		const int wpos = write_pos.load(std::memory_order_release);
 		const int rpos = read_pos.load(std::memory_order_acquire);
-		const int wpos = write_pos.load(std::memory_order_relaxed);
 
 		if( rpos < wpos )
 		{
