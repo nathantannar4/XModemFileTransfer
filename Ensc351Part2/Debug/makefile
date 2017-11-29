@@ -41,13 +41,13 @@ endif
 all: Ensc351Part2
 
 dependents:
-	-cd /media/sf_U_ensc251/workspace-cpp-Neon3/Ensc351/Debug && $(MAKE) all
+	-cd /home/osboxes/XModemFileTransfer/Ensc351/Debug && $(MAKE) all
 
 # Tool invocations
-Ensc351Part2: $(OBJS) $(USER_OBJS) /media/sf_U_ensc251/workspace-cpp-Neon3/Ensc351/Debug/libEnsc351.a
+Ensc351Part2: $(OBJS) $(USER_OBJS) /home/osboxes/XModemFileTransfer/Ensc351/Debug/libEnsc351.a
 	@echo 'Building target: $@'
 	@echo 'Invoking: GCC C++ Linker'
-	g++ -L"/media/sf_U_ensc251/workspace-cpp-Neon3/Ensc351/Debug" -o "Ensc351Part2" $(OBJS) $(USER_OBJS) $(LIBS)
+	g++ -L"/home/osboxes/XModemFileTransfer/Ensc351/Debug" -o "Ensc351Part2" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
@@ -57,7 +57,6 @@ clean:
 	-@echo ' '
 
 .PHONY: all clean dependents
-.SECONDARY:
-/media/sf_U_ensc251/workspace-cpp-Neon3/Ensc351/Debug/libEnsc351.a:
+/home/osboxes/XModemFileTransfer/Ensc351/Debug/libEnsc351.a:
 
 -include ../makefile.targets

@@ -79,6 +79,7 @@ public:
 	{
 		const int rpos = read_pos;
 		const int wpos = write_pos;
+
 		if( rpos < wpos )
 			/* The buffer looks like "eeeeDDDDeeee" (e = empty, D = data). */
 			return wpos - rpos;
@@ -159,8 +160,8 @@ public:
 
 	void get_write_pointers( T *pPointers[2], unsigned pSizes[2] )
 	{
-		const int wpos = write_pos.load(std::memory_order_relaxed);
-		const int rpos = read_pos.load(std::memory_order_acquire);
+		const int rpos = read_pos.load(std::memory_order_relaxed);
+		const int wpos = write_pos.load(std::memory_order_acquire);
 
 		if( rpos <= wpos )
 		{
@@ -201,8 +202,8 @@ public:
 
 	void get_read_pointers( T *pPointers[2], unsigned pSizes[2] )
 	{
-		const int wpos = write_pos.load(std::memory_order_relaxed);
-		const int rpos = read_pos.load(std::memory_order_acquire);
+		const int rpos = read_pos.load(std::memory_order_relaxed);
+		const int wpos = write_pos.load(std::memory_order_acquire);
 
 		if( rpos < wpos )
 		{

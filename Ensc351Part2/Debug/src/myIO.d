@@ -1,4 +1,24 @@
 src/myIO.o: ../src/myIO.cpp \
- /media/sf_U_ensc251/workspace-cpp-Neon3/Ensc351/SocketReadcond.h
+ /home/osboxes/XModemFileTransfer/Ensc351/AtomicCOUT.h \
+ /home/osboxes/XModemFileTransfer/Ensc351/ScopedMutex.h \
+ /home/osboxes/XModemFileTransfer/Ensc351/AtomicConsole.h \
+ /home/osboxes/XModemFileTransfer/Ensc351/SocketReadcond.h \
+ /home/osboxes/XModemFileTransfer/Ensc351/VNPE.h \
+ /home/osboxes/XModemFileTransfer/Ensc351/VNPE_reenable.h ../src/myIO.h \
+ ../src/RageUtil_CircularBuffer.h
 
-/media/sf_U_ensc251/workspace-cpp-Neon3/Ensc351/SocketReadcond.h:
+/home/osboxes/XModemFileTransfer/Ensc351/AtomicCOUT.h:
+
+/home/osboxes/XModemFileTransfer/Ensc351/ScopedMutex.h:
+
+/home/osboxes/XModemFileTransfer/Ensc351/AtomicConsole.h:
+
+/home/osboxes/XModemFileTransfer/Ensc351/SocketReadcond.h:
+
+/home/osboxes/XModemFileTransfer/Ensc351/VNPE.h:
+
+/home/osboxes/XModemFileTransfer/Ensc351/VNPE_reenable.h:
+
+../src/myIO.h:
+
+../src/RageUtil_CircularBuffer.h:
